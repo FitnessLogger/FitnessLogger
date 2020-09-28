@@ -1,0 +1,2 @@
+# FitnessLogger
+Log training data
