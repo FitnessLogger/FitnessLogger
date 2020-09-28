@@ -8,11 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		ED6813AF2521CA290055CBA7 /* FitnessLoggerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6813AE2521CA290055CBA7 /* FitnessLoggerApp.swift */; };
-		ED6813B12521CA290055CBA7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6813B02521CA290055CBA7 /* ContentView.swift */; };
+		ED6813B12521CA290055CBA7 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6813B02521CA290055CBA7 /* MainView.swift */; };
 		ED6813B32521CA2A0055CBA7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED6813B22521CA2A0055CBA7 /* Assets.xcassets */; };
 		ED6813B62521CA2A0055CBA7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED6813B52521CA2A0055CBA7 /* Preview Assets.xcassets */; };
 		ED6813C12521CA2A0055CBA7 /* FitnessLoggerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6813C02521CA2A0055CBA7 /* FitnessLoggerTests.swift */; };
 		ED6813CC2521CA2A0055CBA7 /* FitnessLoggerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6813CB2521CA2A0055CBA7 /* FitnessLoggerUITests.swift */; };
+		ED6813E62521D6E60055CBA7 /* TrainingProgramView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6813E52521D6E60055CBA7 /* TrainingProgramView.swift */; };
+		ED6813EB2521DEBE0055CBA7 /* MainViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6813EA2521DEBE0055CBA7 /* MainViewViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +37,7 @@
 /* Begin PBXFileReference section */
 		ED6813AB2521CA290055CBA7 /* FitnessLogger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitnessLogger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED6813AE2521CA290055CBA7 /* FitnessLoggerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitnessLoggerApp.swift; sourceTree = "<group>"; };
-		ED6813B02521CA290055CBA7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		ED6813B02521CA290055CBA7 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		ED6813B22521CA2A0055CBA7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ED6813B52521CA2A0055CBA7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		ED6813B72521CA2A0055CBA7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -45,6 +47,8 @@
 		ED6813C72521CA2A0055CBA7 /* FitnessLoggerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FitnessLoggerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED6813CB2521CA2A0055CBA7 /* FitnessLoggerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitnessLoggerUITests.swift; sourceTree = "<group>"; };
 		ED6813CD2521CA2A0055CBA7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ED6813E52521D6E60055CBA7 /* TrainingProgramView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingProgramView.swift; sourceTree = "<group>"; };
+		ED6813EA2521DEBE0055CBA7 /* MainViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,8 +99,10 @@
 		ED6813AD2521CA290055CBA7 /* FitnessLogger */ = {
 			isa = PBXGroup;
 			children = (
+				ED6813DE2521D6760055CBA7 /* Services */,
+				ED6813DD2521D66F0055CBA7 /* ViewModels */,
+				ED6813DC2521D6680055CBA7 /* Views */,
 				ED6813AE2521CA290055CBA7 /* FitnessLoggerApp.swift */,
-				ED6813B02521CA290055CBA7 /* ContentView.swift */,
 				ED6813B22521CA2A0055CBA7 /* Assets.xcassets */,
 				ED6813B72521CA2A0055CBA7 /* Info.plist */,
 				ED6813B42521CA2A0055CBA7 /* Preview Content */,
@@ -128,6 +134,30 @@
 				ED6813CD2521CA2A0055CBA7 /* Info.plist */,
 			);
 			path = FitnessLoggerUITests;
+			sourceTree = "<group>";
+		};
+		ED6813DC2521D6680055CBA7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				ED6813B02521CA290055CBA7 /* MainView.swift */,
+				ED6813E52521D6E60055CBA7 /* TrainingProgramView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		ED6813DD2521D66F0055CBA7 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				ED6813EA2521DEBE0055CBA7 /* MainViewViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		ED6813DE2521D6760055CBA7 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,7 +289,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ED6813B12521CA290055CBA7 /* ContentView.swift in Sources */,
+				ED6813E62521D6E60055CBA7 /* TrainingProgramView.swift in Sources */,
+				ED6813B12521CA290055CBA7 /* MainView.swift in Sources */,
+				ED6813EB2521DEBE0055CBA7 /* MainViewViewModel.swift in Sources */,
 				ED6813AF2521CA290055CBA7 /* FitnessLoggerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
