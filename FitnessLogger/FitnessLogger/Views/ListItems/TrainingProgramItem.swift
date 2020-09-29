@@ -7,7 +7,7 @@ struct TrainingProgramItem: View {
     var body: some View {
         VStack(alignment: .leading) {
             CustomTextLabel(text: trainingProgram.name, fontType: .heading)
-            Text("\(trainingProgram.exercises.count) exercises")
+            Text("\(trainingProgram.exercises.count) exercises").font(.custom(Font.oswaldLight, size: 16))
         }
     }
 }

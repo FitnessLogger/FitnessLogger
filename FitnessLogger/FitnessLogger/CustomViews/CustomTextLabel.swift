@@ -25,14 +25,14 @@ struct CustomTextLabel: View {
             self.textSize = FontSize.heading
         }
         
-        self.isTextBold = fontType == .heading || isBold
+        self.isTextBold = isBold
         self.alignment = alignment
     }
     
     var body: some View {
         Text(self.text)
             .foregroundColor(Color.blackWhite)
-            .font(.custom(self.isTextBold ? Font.oswaldHeavy : Font.oswaldMedium, size: self.textSize))
+            .font(.custom(self.isTextBold ? Font.oswaldHeavy : Font.oswaldRegular, size: self.textSize))
             .multilineTextAlignment(self.alignment)
     }
 }
