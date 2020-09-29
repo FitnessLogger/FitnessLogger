@@ -17,7 +17,7 @@ struct TrainingProgramView: View {
             } else {
                 List(viewmodel.trainingPrograms) { trainingProgram in
                     TrainingProgramItem(trainingProgram: trainingProgram)
-                }.padding([.leading, .trailing], -20)
+                }
             }
         }
     }
