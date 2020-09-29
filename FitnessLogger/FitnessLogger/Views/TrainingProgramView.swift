@@ -7,15 +7,17 @@ struct TrainingProgramView: View {
     @State var trainedSeparately = false
     
     var body: some View {
-        HStack {
+        VStack {
             if viewmodel.trainingPrograms.isEmpty {
                 Button("Add training program", action: {
                     self.showingAddProgramSheet.toggle()
                 }).sheet(isPresented: $showingAddProgramSheet) {
-                    AddTrainingProgramView(showingAddProgramSheet: self.$showingAddProgramSheet, trainedSeparately: self.$trainedSeparately)
+                    AddTrainingProgramView(showingAddProgramSheet: self.$showingAddProgramSheet, trainedSeparately: self.$trainedSeparately, trainingProgramViewModel: self.viewmodel)
                 }
             } else {
-                // Show list
+                List(viewmodel.trainingPrograms) { trainingProgram in
+                    TrainingProgramItem(trainingProgram: trainingProgram)
+                }.padding([.leading, .trailing], -20)
             }
         }
     }

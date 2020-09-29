@@ -5,6 +5,9 @@ struct AddExerciseView: View {
     @Binding var showingAddExercise: Bool
     @Binding var trainedSeparately: Bool
     @State var exerciseName: String = ""
+    
+    var trainingProgram: TrainingProgram
+    
     let strings = ["this", "is", "a", "test"]
     
     var body: some View {
@@ -22,7 +25,9 @@ struct AddExerciseView: View {
                 Spacer()
                 
                 Button("Save", action: {
-                    print("Exercise saved")
+                    let exercise: Exercise = Exercise(name: self.exerciseName, category: .arms, trainTogether: false)
+                    self.trainingProgram.exercises.append(exercise)
+                    self.showingAddExercise = false
                 })
                 
             }.padding()

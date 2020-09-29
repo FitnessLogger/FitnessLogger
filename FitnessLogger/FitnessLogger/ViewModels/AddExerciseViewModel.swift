@@ -1,6 +1,6 @@
 import Foundation
 import SwiftUI
 
-class AddProgramViewModel: ObservableObject {
+class AddExerciseViewModel: ObservableObject {
     @Published var exercises: [Exercise] = [Exercise]()
 }

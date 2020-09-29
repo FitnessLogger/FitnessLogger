@@ -19,10 +19,11 @@
 		ED11C227252318E6001451DB /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED11C225252318E6001451DB /* Exercise.swift */; };
 		ED11C228252318E6001451DB /* TrainingProgram.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED11C226252318E6001451DB /* TrainingProgram.swift */; };
 		ED11C22F25231919001451DB /* TrainingProgramViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED11C22D25231919001451DB /* TrainingProgramViewModel.swift */; };
-		ED11C23025231919001451DB /* AddProgramViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED11C22E25231919001451DB /* AddProgramViewModel.swift */; };
+		ED11C23025231919001451DB /* AddExerciseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED11C22E25231919001451DB /* AddExerciseViewModel.swift */; };
 		ED11C2382523194D001451DB /* AddExerciseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED11C2352523194C001451DB /* AddExerciseView.swift */; };
 		ED11C2392523194D001451DB /* TrainingProgramView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED11C2362523194C001451DB /* TrainingProgramView.swift */; };
 		ED11C23A2523194D001451DB /* AddTrainingProgramView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED11C2372523194D001451DB /* AddTrainingProgramView.swift */; };
+		ED83040C25232C90005104B1 /* TrainingProgramItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED83040B25232C90005104B1 /* TrainingProgramItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,10 +62,11 @@
 		ED11C225252318E6001451DB /* Exercise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
 		ED11C226252318E6001451DB /* TrainingProgram.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrainingProgram.swift; sourceTree = "<group>"; };
 		ED11C22D25231919001451DB /* TrainingProgramViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrainingProgramViewModel.swift; sourceTree = "<group>"; };
-		ED11C22E25231919001451DB /* AddProgramViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddProgramViewModel.swift; sourceTree = "<group>"; };
+		ED11C22E25231919001451DB /* AddExerciseViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddExerciseViewModel.swift; sourceTree = "<group>"; };
 		ED11C2352523194C001451DB /* AddExerciseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddExerciseView.swift; sourceTree = "<group>"; };
 		ED11C2362523194C001451DB /* TrainingProgramView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrainingProgramView.swift; sourceTree = "<group>"; };
 		ED11C2372523194D001451DB /* AddTrainingProgramView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTrainingProgramView.swift; sourceTree = "<group>"; };
+		ED83040B25232C90005104B1 /* TrainingProgramItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingProgramItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,7 +177,7 @@
 		ED11C22C252318F8001451DB /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				ED11C22E25231919001451DB /* AddProgramViewModel.swift */,
+				ED11C22E25231919001451DB /* AddExerciseViewModel.swift */,
 				ED11C22D25231919001451DB /* TrainingProgramViewModel.swift */,
 			);
 			path = ViewModels;
@@ -184,12 +186,21 @@
 		ED11C23425231928001451DB /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				ED83040A25232C6B005104B1 /* ListItems */,
 				ED11C2352523194C001451DB /* AddExerciseView.swift */,
 				ED11C2372523194D001451DB /* AddTrainingProgramView.swift */,
 				ED11C2362523194C001451DB /* TrainingProgramView.swift */,
 				043DBF6C25231611002F0394 /* ContentView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		ED83040A25232C6B005104B1 /* ListItems */ = {
+			isa = PBXGroup;
+			children = (
+				ED83040B25232C90005104B1 /* TrainingProgramItem.swift */,
+			);
+			path = ListItems;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -327,9 +338,10 @@
 				ED11C2392523194D001451DB /* TrainingProgramView.swift in Sources */,
 				ED11C23A2523194D001451DB /* AddTrainingProgramView.swift in Sources */,
 				ED11C2382523194D001451DB /* AddExerciseView.swift in Sources */,
-				ED11C23025231919001451DB /* AddProgramViewModel.swift in Sources */,
+				ED11C23025231919001451DB /* AddExerciseViewModel.swift in Sources */,
 				043DBF6925231611002F0394 /* AppDelegate.swift in Sources */,
 				043DBF6B25231611002F0394 /* SceneDelegate.swift in Sources */,
+				ED83040C25232C90005104B1 /* TrainingProgramItem.swift in Sources */,
 				043DBF6D25231611002F0394 /* ContentView.swift in Sources */,
 				ED11C228252318E6001451DB /* TrainingProgram.swift in Sources */,
 				ED11C22F25231919001451DB /* TrainingProgramViewModel.swift in Sources */,

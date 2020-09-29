@@ -1,6 +1,7 @@
 import Foundation
 
-class TrainingProgram {
+class TrainingProgram: Identifiable {
+    var id = UUID()
     var name: String
     var exercises: [Exercise]
     
