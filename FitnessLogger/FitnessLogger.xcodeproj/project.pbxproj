@@ -15,6 +15,15 @@
 		043DBF7525231612002F0394 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 043DBF7325231612002F0394 /* LaunchScreen.storyboard */; };
 		043DBF8025231612002F0394 /* FitnessLoggerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043DBF7F25231612002F0394 /* FitnessLoggerTests.swift */; };
 		043DBF8B25231612002F0394 /* FitnessLoggerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043DBF8A25231612002F0394 /* FitnessLoggerUITests.swift */; };
+		045905F4252318A10064209C /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045905F3252318A10064209C /* CustomButton.swift */; };
+		045905F6252318FE0064209C /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045905F5252318FE0064209C /* Colors.swift */; };
+		045905FE25231C1D0064209C /* Oswald-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 045905FC25231C1D0064209C /* Oswald-Medium.ttf */; };
+		045905FF25231C1D0064209C /* Oswald-Heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 045905FD25231C1D0064209C /* Oswald-Heavy.ttf */; };
+		0459060125231FDB0064209C /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0459060025231FDB0064209C /* Font.swift */; };
+		04590604252320BF0064209C /* CustomTextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04590603252320BF0064209C /* CustomTextButton.swift */; };
+		04590606252323150064209C /* CustomTextLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04590605252323150064209C /* CustomTextLabel.swift */; };
+		04590608252323E50064209C /* FontType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04590607252323E50064209C /* FontType.swift */; };
+		0459060A252324580064209C /* FontSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04590609252324580064209C /* FontSize.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +58,15 @@
 		043DBF8625231612002F0394 /* FitnessLoggerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FitnessLoggerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		043DBF8A25231612002F0394 /* FitnessLoggerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitnessLoggerUITests.swift; sourceTree = "<group>"; };
 		043DBF8C25231612002F0394 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		045905F3252318A10064209C /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		045905F5252318FE0064209C /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		045905FC25231C1D0064209C /* Oswald-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oswald-Medium.ttf"; sourceTree = "<group>"; };
+		045905FD25231C1D0064209C /* Oswald-Heavy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oswald-Heavy.ttf"; sourceTree = "<group>"; };
+		0459060025231FDB0064209C /* Font.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
+		04590603252320BF0064209C /* CustomTextButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextButton.swift; sourceTree = "<group>"; };
+		04590605252323150064209C /* CustomTextLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextLabel.swift; sourceTree = "<group>"; };
+		04590607252323E50064209C /* FontType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontType.swift; sourceTree = "<group>"; };
+		04590609252324580064209C /* FontSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontSize.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +117,8 @@
 		043DBF6725231611002F0394 /* FitnessLogger */ = {
 			isa = PBXGroup;
 			children = (
+				0459060B252329E00064209C /* CustomViews */,
+				045905F725231BE00064209C /* Resources */,
 				043DBF6825231611002F0394 /* AppDelegate.swift */,
 				043DBF6A25231611002F0394 /* SceneDelegate.swift */,
 				043DBF6C25231611002F0394 /* ContentView.swift */,
@@ -134,6 +154,46 @@
 				043DBF8C25231612002F0394 /* Info.plist */,
 			);
 			path = FitnessLoggerUITests;
+			sourceTree = "<group>";
+		};
+		045905F725231BE00064209C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				045905F825231BEF0064209C /* Fonts */,
+				045905F5252318FE0064209C /* Colors.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		045905F825231BEF0064209C /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				045905FB25231C1D0064209C /* Oswald */,
+				0459060025231FDB0064209C /* Font.swift */,
+				04590607252323E50064209C /* FontType.swift */,
+				04590609252324580064209C /* FontSize.swift */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		045905FB25231C1D0064209C /* Oswald */ = {
+			isa = PBXGroup;
+			children = (
+				045905FC25231C1D0064209C /* Oswald-Medium.ttf */,
+				045905FD25231C1D0064209C /* Oswald-Heavy.ttf */,
+			);
+			name = Oswald;
+			path = "../../../../../FootballPracticeFeasibilityAppleWatch/KickDetection/KickDetection WatchKit Extension/Resources/Fonts/Oswald";
+			sourceTree = "<group>";
+		};
+		0459060B252329E00064209C /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				045905F3252318A10064209C /* CustomButton.swift */,
+				04590603252320BF0064209C /* CustomTextButton.swift */,
+				04590605252323150064209C /* CustomTextLabel.swift */,
+			);
+			path = CustomViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -241,6 +301,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				043DBF7525231612002F0394 /* LaunchScreen.storyboard in Resources */,
+				045905FE25231C1D0064209C /* Oswald-Medium.ttf in Resources */,
+				045905FF25231C1D0064209C /* Oswald-Heavy.ttf in Resources */,
 				043DBF7225231612002F0394 /* Preview Assets.xcassets in Resources */,
 				043DBF6F25231612002F0394 /* Assets.xcassets in Resources */,
 			);
@@ -267,6 +329,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04590606252323150064209C /* CustomTextLabel.swift in Sources */,
+				0459060A252324580064209C /* FontSize.swift in Sources */,
+				04590604252320BF0064209C /* CustomTextButton.swift in Sources */,
+				0459060125231FDB0064209C /* Font.swift in Sources */,
+				045905F4252318A10064209C /* CustomButton.swift in Sources */,
+				04590608252323E50064209C /* FontType.swift in Sources */,
+				045905F6252318FE0064209C /* Colors.swift in Sources */,
 				043DBF6925231611002F0394 /* AppDelegate.swift in Sources */,
 				043DBF6B25231611002F0394 /* SceneDelegate.swift in Sources */,
 				043DBF6D25231611002F0394 /* ContentView.swift in Sources */,

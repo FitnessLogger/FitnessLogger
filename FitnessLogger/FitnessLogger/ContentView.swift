@@ -10,7 +10,13 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, World!")
+        VStack {
+            CustomTextLabel(text: "Tap the button")
+            
+            CustomTextButton(action: {
+                print("Hello World!")
+                }, label: "Hello World!").padding()
+        }
     }
 }
 
