@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct MainView: View {
+struct TempView: View {
     var body: some View {
         VStack {
             CustomTextLabel(text: "Tap the button")
@@ -22,6 +22,6 @@ struct MainView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        MainView()
+        TempView()
     }
 }

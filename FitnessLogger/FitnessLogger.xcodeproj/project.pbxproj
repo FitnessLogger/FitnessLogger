@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		043DBF6925231611002F0394 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043DBF6825231611002F0394 /* AppDelegate.swift */; };
 		043DBF6B25231611002F0394 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043DBF6A25231611002F0394 /* SceneDelegate.swift */; };
-		043DBF6D25231611002F0394 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043DBF6C25231611002F0394 /* MainView.swift */; };
+		043DBF6D25231611002F0394 /* TempView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043DBF6C25231611002F0394 /* TempView.swift */; };
 		043DBF6F25231612002F0394 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 043DBF6E25231612002F0394 /* Assets.xcassets */; };
 		043DBF7225231612002F0394 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 043DBF7125231612002F0394 /* Preview Assets.xcassets */; };
 		043DBF7525231612002F0394 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 043DBF7325231612002F0394 /* LaunchScreen.storyboard */; };
@@ -47,7 +47,7 @@
 		043DBF6525231611002F0394 /* FitnessLogger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitnessLogger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		043DBF6825231611002F0394 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		043DBF6A25231611002F0394 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		043DBF6C25231611002F0394 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		043DBF6C25231611002F0394 /* TempView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempView.swift; sourceTree = "<group>"; };
 		043DBF6E25231612002F0394 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		043DBF7125231612002F0394 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		043DBF7425231612002F0394 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -117,7 +117,7 @@
 		043DBF6725231611002F0394 /* FitnessLogger */ = {
 			isa = PBXGroup;
 			children = (
-				ED83042525233961005104B1 /* Views */,
+				ED83042525233961005104B1 /* Temp */,
 				0459060B252329E00064209C /* CustomViews */,
 				045905F725231BE00064209C /* Resources */,
 				043DBF6825231611002F0394 /* AppDelegate.swift */,
@@ -196,12 +196,12 @@
 			path = CustomViews;
 			sourceTree = "<group>";
 		};
-		ED83042525233961005104B1 /* Views */ = {
+		ED83042525233961005104B1 /* Temp */ = {
 			isa = PBXGroup;
 			children = (
-				043DBF6C25231611002F0394 /* MainView.swift */,
+				043DBF6C25231611002F0394 /* TempView.swift */,
 			);
-			path = Views;
+			path = Temp;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -346,7 +346,7 @@
 				045905F6252318FE0064209C /* Colors.swift in Sources */,
 				043DBF6925231611002F0394 /* AppDelegate.swift in Sources */,
 				043DBF6B25231611002F0394 /* SceneDelegate.swift in Sources */,
-				043DBF6D25231611002F0394 /* MainView.swift in Sources */,
+				043DBF6D25231611002F0394 /* TempView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
