@@ -8,13 +8,13 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct MainView: View {
     var body: some View {
         VStack {
             CustomTextLabel(text: "Tap the button")
             
             CustomTextButton(action: {
-                print("Hello World!")
+                print("Hello World!") 
                 }, label: "Hello World!").padding()
         }
     }
@@ -22,6 +22,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        MainView()
     }
 }

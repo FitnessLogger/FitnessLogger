@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		043DBF6925231611002F0394 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043DBF6825231611002F0394 /* AppDelegate.swift */; };
 		043DBF6B25231611002F0394 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043DBF6A25231611002F0394 /* SceneDelegate.swift */; };
-		043DBF6D25231611002F0394 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043DBF6C25231611002F0394 /* ContentView.swift */; };
+		043DBF6D25231611002F0394 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043DBF6C25231611002F0394 /* MainView.swift */; };
 		043DBF6F25231612002F0394 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 043DBF6E25231612002F0394 /* Assets.xcassets */; };
 		043DBF7225231612002F0394 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 043DBF7125231612002F0394 /* Preview Assets.xcassets */; };
 		043DBF7525231612002F0394 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 043DBF7325231612002F0394 /* LaunchScreen.storyboard */; };
@@ -17,13 +17,13 @@
 		043DBF8B25231612002F0394 /* FitnessLoggerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043DBF8A25231612002F0394 /* FitnessLoggerUITests.swift */; };
 		045905F4252318A10064209C /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045905F3252318A10064209C /* CustomButton.swift */; };
 		045905F6252318FE0064209C /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045905F5252318FE0064209C /* Colors.swift */; };
-		045905FE25231C1D0064209C /* Oswald-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 045905FC25231C1D0064209C /* Oswald-Medium.ttf */; };
-		045905FF25231C1D0064209C /* Oswald-Heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 045905FD25231C1D0064209C /* Oswald-Heavy.ttf */; };
 		0459060125231FDB0064209C /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0459060025231FDB0064209C /* Font.swift */; };
 		04590604252320BF0064209C /* CustomTextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04590603252320BF0064209C /* CustomTextButton.swift */; };
 		04590606252323150064209C /* CustomTextLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04590605252323150064209C /* CustomTextLabel.swift */; };
 		04590608252323E50064209C /* FontType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04590607252323E50064209C /* FontType.swift */; };
 		0459060A252324580064209C /* FontSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04590609252324580064209C /* FontSize.swift */; };
+		EDC585A725233A0900B1B9D1 /* Oswald-Heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EDC585A525233A0900B1B9D1 /* Oswald-Heavy.ttf */; };
+		EDC585A825233A0900B1B9D1 /* Oswald-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EDC585A625233A0900B1B9D1 /* Oswald-Medium.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,7 +47,7 @@
 		043DBF6525231611002F0394 /* FitnessLogger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitnessLogger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		043DBF6825231611002F0394 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		043DBF6A25231611002F0394 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		043DBF6C25231611002F0394 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		043DBF6C25231611002F0394 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		043DBF6E25231612002F0394 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		043DBF7125231612002F0394 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		043DBF7425231612002F0394 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -60,13 +60,13 @@
 		043DBF8C25231612002F0394 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		045905F3252318A10064209C /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		045905F5252318FE0064209C /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
-		045905FC25231C1D0064209C /* Oswald-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oswald-Medium.ttf"; sourceTree = "<group>"; };
-		045905FD25231C1D0064209C /* Oswald-Heavy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oswald-Heavy.ttf"; sourceTree = "<group>"; };
 		0459060025231FDB0064209C /* Font.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		04590603252320BF0064209C /* CustomTextButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextButton.swift; sourceTree = "<group>"; };
 		04590605252323150064209C /* CustomTextLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextLabel.swift; sourceTree = "<group>"; };
 		04590607252323E50064209C /* FontType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontType.swift; sourceTree = "<group>"; };
 		04590609252324580064209C /* FontSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontSize.swift; sourceTree = "<group>"; };
+		EDC585A525233A0900B1B9D1 /* Oswald-Heavy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oswald-Heavy.ttf"; sourceTree = "<group>"; };
+		EDC585A625233A0900B1B9D1 /* Oswald-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oswald-Medium.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,11 +117,11 @@
 		043DBF6725231611002F0394 /* FitnessLogger */ = {
 			isa = PBXGroup;
 			children = (
+				ED83042525233961005104B1 /* Views */,
 				0459060B252329E00064209C /* CustomViews */,
 				045905F725231BE00064209C /* Resources */,
 				043DBF6825231611002F0394 /* AppDelegate.swift */,
 				043DBF6A25231611002F0394 /* SceneDelegate.swift */,
-				043DBF6C25231611002F0394 /* ContentView.swift */,
 				043DBF6E25231612002F0394 /* Assets.xcassets */,
 				043DBF7325231612002F0394 /* LaunchScreen.storyboard */,
 				043DBF7625231612002F0394 /* Info.plist */,
@@ -179,8 +179,8 @@
 		045905FB25231C1D0064209C /* Oswald */ = {
 			isa = PBXGroup;
 			children = (
-				045905FC25231C1D0064209C /* Oswald-Medium.ttf */,
-				045905FD25231C1D0064209C /* Oswald-Heavy.ttf */,
+				EDC585A525233A0900B1B9D1 /* Oswald-Heavy.ttf */,
+				EDC585A625233A0900B1B9D1 /* Oswald-Medium.ttf */,
 			);
 			name = Oswald;
 			path = "../../../../../FootballPracticeFeasibilityAppleWatch/KickDetection/KickDetection WatchKit Extension/Resources/Fonts/Oswald";
@@ -194,6 +194,14 @@
 				04590605252323150064209C /* CustomTextLabel.swift */,
 			);
 			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		ED83042525233961005104B1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				043DBF6C25231611002F0394 /* MainView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -300,9 +308,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDC585A725233A0900B1B9D1 /* Oswald-Heavy.ttf in Resources */,
 				043DBF7525231612002F0394 /* LaunchScreen.storyboard in Resources */,
-				045905FE25231C1D0064209C /* Oswald-Medium.ttf in Resources */,
-				045905FF25231C1D0064209C /* Oswald-Heavy.ttf in Resources */,
+				EDC585A825233A0900B1B9D1 /* Oswald-Medium.ttf in Resources */,
 				043DBF7225231612002F0394 /* Preview Assets.xcassets in Resources */,
 				043DBF6F25231612002F0394 /* Assets.xcassets in Resources */,
 			);
@@ -338,7 +346,7 @@
 				045905F6252318FE0064209C /* Colors.swift in Sources */,
 				043DBF6925231611002F0394 /* AppDelegate.swift in Sources */,
 				043DBF6B25231611002F0394 /* SceneDelegate.swift in Sources */,
-				043DBF6D25231611002F0394 /* ContentView.swift in Sources */,
+				043DBF6D25231611002F0394 /* MainView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
