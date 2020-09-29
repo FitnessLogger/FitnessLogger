@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		043DBF6925231611002F0394 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043DBF6825231611002F0394 /* AppDelegate.swift */; };
 		043DBF6B25231611002F0394 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043DBF6A25231611002F0394 /* SceneDelegate.swift */; };
-		043DBF6D25231611002F0394 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043DBF6C25231611002F0394 /* ContentView.swift */; };
+		043DBF6D25231611002F0394 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043DBF6C25231611002F0394 /* MainView.swift */; };
 		043DBF6F25231612002F0394 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 043DBF6E25231612002F0394 /* Assets.xcassets */; };
 		043DBF7225231612002F0394 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 043DBF7125231612002F0394 /* Preview Assets.xcassets */; };
 		043DBF7525231612002F0394 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 043DBF7325231612002F0394 /* LaunchScreen.storyboard */; };
@@ -47,7 +47,7 @@
 		043DBF6525231611002F0394 /* FitnessLogger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitnessLogger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		043DBF6825231611002F0394 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		043DBF6A25231611002F0394 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		043DBF6C25231611002F0394 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		043DBF6C25231611002F0394 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		043DBF6E25231612002F0394 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		043DBF7125231612002F0394 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		043DBF7425231612002F0394 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -190,7 +190,7 @@
 				ED11C2352523194C001451DB /* AddExerciseView.swift */,
 				ED11C2372523194D001451DB /* AddTrainingProgramView.swift */,
 				ED11C2362523194C001451DB /* TrainingProgramView.swift */,
-				043DBF6C25231611002F0394 /* ContentView.swift */,
+				043DBF6C25231611002F0394 /* MainView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -342,7 +342,7 @@
 				043DBF6925231611002F0394 /* AppDelegate.swift in Sources */,
 				043DBF6B25231611002F0394 /* SceneDelegate.swift in Sources */,
 				ED83040C25232C90005104B1 /* TrainingProgramItem.swift in Sources */,
-				043DBF6D25231611002F0394 /* ContentView.swift in Sources */,
+				043DBF6D25231611002F0394 /* MainView.swift in Sources */,
 				ED11C228252318E6001451DB /* TrainingProgram.swift in Sources */,
 				ED11C22F25231919001451DB /* TrainingProgramViewModel.swift in Sources */,
 				ED11C220252318C6001451DB /* TrainingCategory.swift in Sources */,
