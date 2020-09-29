@@ -1,7 +1,11 @@
 import Foundation
 
-struct TrainingProgram {
+class TrainingProgram {
     var name: String
-    var category: TrainingCategory
-    var trainTogether: Bool
+    var exercises: [Exercise]
+    
+    init(name: String, exercises: [Exercise]) {
+        self.name = name
+        self.exercises = exercises
+    }
 }

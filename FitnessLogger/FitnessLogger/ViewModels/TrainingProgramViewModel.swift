@@ -1,5 +1,5 @@
 import Foundation
 
-class MainViewViewModel: ObservableObject {
+class TrainingProgramViewModel: ObservableObject {
     var trainingPrograms: [TrainingProgram] = []
 }

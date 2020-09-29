@@ -14,9 +14,13 @@
 		ED6813C12521CA2A0055CBA7 /* FitnessLoggerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6813C02521CA2A0055CBA7 /* FitnessLoggerTests.swift */; };
 		ED6813CC2521CA2A0055CBA7 /* FitnessLoggerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6813CB2521CA2A0055CBA7 /* FitnessLoggerUITests.swift */; };
 		ED6813E62521D6E60055CBA7 /* TrainingProgramView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6813E52521D6E60055CBA7 /* TrainingProgramView.swift */; };
-		ED6813EB2521DEBE0055CBA7 /* MainViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6813EA2521DEBE0055CBA7 /* MainViewViewModel.swift */; };
-		ED6813F12521E2A20055CBA7 /* TrainingProgram.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6813F02521E2A20055CBA7 /* TrainingProgram.swift */; };
+		ED6813EB2521DEBE0055CBA7 /* TrainingProgramViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6813EA2521DEBE0055CBA7 /* TrainingProgramViewModel.swift */; };
+		ED6813F12521E2A20055CBA7 /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6813F02521E2A20055CBA7 /* Exercise.swift */; };
 		ED6813FD2521E30F0055CBA7 /* TrainingCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6813FC2521E30F0055CBA7 /* TrainingCategory.swift */; };
+		ED6814032521E7440055CBA7 /* AddTrainingProgramView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6814022521E7440055CBA7 /* AddTrainingProgramView.swift */; };
+		ED6814082521F7A30055CBA7 /* AddExerciseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6814072521F7A30055CBA7 /* AddExerciseView.swift */; };
+		ED6814162521F9F20055CBA7 /* AddProgramViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6814152521F9F20055CBA7 /* AddProgramViewModel.swift */; };
+		ED68141E2521FA780055CBA7 /* TrainingProgram.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED68141D2521FA780055CBA7 /* TrainingProgram.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,9 +54,13 @@
 		ED6813CB2521CA2A0055CBA7 /* FitnessLoggerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitnessLoggerUITests.swift; sourceTree = "<group>"; };
 		ED6813CD2521CA2A0055CBA7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ED6813E52521D6E60055CBA7 /* TrainingProgramView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingProgramView.swift; sourceTree = "<group>"; };
-		ED6813EA2521DEBE0055CBA7 /* MainViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewViewModel.swift; sourceTree = "<group>"; };
-		ED6813F02521E2A20055CBA7 /* TrainingProgram.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingProgram.swift; sourceTree = "<group>"; };
+		ED6813EA2521DEBE0055CBA7 /* TrainingProgramViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingProgramViewModel.swift; sourceTree = "<group>"; };
+		ED6813F02521E2A20055CBA7 /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
 		ED6813FC2521E30F0055CBA7 /* TrainingCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingCategory.swift; sourceTree = "<group>"; };
+		ED6814022521E7440055CBA7 /* AddTrainingProgramView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTrainingProgramView.swift; sourceTree = "<group>"; };
+		ED6814072521F7A30055CBA7 /* AddExerciseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExerciseView.swift; sourceTree = "<group>"; };
+		ED6814152521F9F20055CBA7 /* AddProgramViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProgramViewModel.swift; sourceTree = "<group>"; };
+		ED68141D2521FA780055CBA7 /* TrainingProgram.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingProgram.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +155,8 @@
 			children = (
 				ED6813B02521CA290055CBA7 /* MainView.swift */,
 				ED6813E52521D6E60055CBA7 /* TrainingProgramView.swift */,
+				ED6814022521E7440055CBA7 /* AddTrainingProgramView.swift */,
+				ED6814072521F7A30055CBA7 /* AddExerciseView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -154,7 +164,8 @@
 		ED6813DD2521D66F0055CBA7 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				ED6813EA2521DEBE0055CBA7 /* MainViewViewModel.swift */,
+				ED6813EA2521DEBE0055CBA7 /* TrainingProgramViewModel.swift */,
+				ED6814152521F9F20055CBA7 /* AddProgramViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -169,7 +180,8 @@
 		ED6813EF2521E2950055CBA7 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				ED6813F02521E2A20055CBA7 /* TrainingProgram.swift */,
+				ED6813F02521E2A20055CBA7 /* Exercise.swift */,
+				ED68141D2521FA780055CBA7 /* TrainingProgram.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -311,11 +323,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED6814032521E7440055CBA7 /* AddTrainingProgramView.swift in Sources */,
 				ED6813E62521D6E60055CBA7 /* TrainingProgramView.swift in Sources */,
+				ED68141E2521FA780055CBA7 /* TrainingProgram.swift in Sources */,
+				ED6814162521F9F20055CBA7 /* AddProgramViewModel.swift in Sources */,
 				ED6813B12521CA290055CBA7 /* MainView.swift in Sources */,
-				ED6813F12521E2A20055CBA7 /* TrainingProgram.swift in Sources */,
+				ED6813F12521E2A20055CBA7 /* Exercise.swift in Sources */,
 				ED6813FD2521E30F0055CBA7 /* TrainingCategory.swift in Sources */,
-				ED6813EB2521DEBE0055CBA7 /* MainViewViewModel.swift in Sources */,
+				ED6814082521F7A30055CBA7 /* AddExerciseView.swift in Sources */,
+				ED6813EB2521DEBE0055CBA7 /* TrainingProgramViewModel.swift in Sources */,
 				ED6813AF2521CA290055CBA7 /* FitnessLoggerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
