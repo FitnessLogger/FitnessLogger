@@ -24,7 +24,7 @@ struct AddTrainingProgramView: View {
                 Button("Add exercise", action: {
                     self.showingAddExercise.toggle()
                 }).sheet(isPresented: $showingAddExercise) {
-                    AddExerciseView(showingAddExercise: self.$showingAddExercise, trainedSeparately: $trainedSeparately, trainingProgram: self.trainingProgram)
+                    AddExerciseView(showingAddExercise: self.$showingAddExercise, trainedSeparately: self.$trainedSeparately, trainingProgram: self.trainingProgram)
                 }
                 
                 Spacer()
