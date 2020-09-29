@@ -15,6 +15,14 @@
 		043DBF7525231612002F0394 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 043DBF7325231612002F0394 /* LaunchScreen.storyboard */; };
 		043DBF8025231612002F0394 /* FitnessLoggerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043DBF7F25231612002F0394 /* FitnessLoggerTests.swift */; };
 		043DBF8B25231612002F0394 /* FitnessLoggerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043DBF8A25231612002F0394 /* FitnessLoggerUITests.swift */; };
+		ED11C220252318C6001451DB /* TrainingCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED11C21F252318C6001451DB /* TrainingCategory.swift */; };
+		ED11C227252318E6001451DB /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED11C225252318E6001451DB /* Exercise.swift */; };
+		ED11C228252318E6001451DB /* TrainingProgram.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED11C226252318E6001451DB /* TrainingProgram.swift */; };
+		ED11C22F25231919001451DB /* TrainingProgramViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED11C22D25231919001451DB /* TrainingProgramViewModel.swift */; };
+		ED11C23025231919001451DB /* AddProgramViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED11C22E25231919001451DB /* AddProgramViewModel.swift */; };
+		ED11C2382523194D001451DB /* AddExerciseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED11C2352523194C001451DB /* AddExerciseView.swift */; };
+		ED11C2392523194D001451DB /* TrainingProgramView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED11C2362523194C001451DB /* TrainingProgramView.swift */; };
+		ED11C23A2523194D001451DB /* AddTrainingProgramView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED11C2372523194D001451DB /* AddTrainingProgramView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +57,14 @@
 		043DBF8625231612002F0394 /* FitnessLoggerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FitnessLoggerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		043DBF8A25231612002F0394 /* FitnessLoggerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitnessLoggerUITests.swift; sourceTree = "<group>"; };
 		043DBF8C25231612002F0394 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ED11C21F252318C6001451DB /* TrainingCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrainingCategory.swift; sourceTree = "<group>"; };
+		ED11C225252318E6001451DB /* Exercise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
+		ED11C226252318E6001451DB /* TrainingProgram.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrainingProgram.swift; sourceTree = "<group>"; };
+		ED11C22D25231919001451DB /* TrainingProgramViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrainingProgramViewModel.swift; sourceTree = "<group>"; };
+		ED11C22E25231919001451DB /* AddProgramViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddProgramViewModel.swift; sourceTree = "<group>"; };
+		ED11C2352523194C001451DB /* AddExerciseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddExerciseView.swift; sourceTree = "<group>"; };
+		ED11C2362523194C001451DB /* TrainingProgramView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrainingProgramView.swift; sourceTree = "<group>"; };
+		ED11C2372523194D001451DB /* AddTrainingProgramView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTrainingProgramView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,9 +115,12 @@
 		043DBF6725231611002F0394 /* FitnessLogger */ = {
 			isa = PBXGroup;
 			children = (
+				ED11C23425231928001451DB /* Views */,
+				ED11C22C252318F8001451DB /* ViewModels */,
+				ED11C224252318D1001451DB /* Models */,
+				ED11C21E25231899001451DB /* Enums */,
 				043DBF6825231611002F0394 /* AppDelegate.swift */,
 				043DBF6A25231611002F0394 /* SceneDelegate.swift */,
-				043DBF6C25231611002F0394 /* ContentView.swift */,
 				043DBF6E25231612002F0394 /* Assets.xcassets */,
 				043DBF7325231612002F0394 /* LaunchScreen.storyboard */,
 				043DBF7625231612002F0394 /* Info.plist */,
@@ -134,6 +153,43 @@
 				043DBF8C25231612002F0394 /* Info.plist */,
 			);
 			path = FitnessLoggerUITests;
+			sourceTree = "<group>";
+		};
+		ED11C21E25231899001451DB /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				ED11C21F252318C6001451DB /* TrainingCategory.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		ED11C224252318D1001451DB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				ED11C225252318E6001451DB /* Exercise.swift */,
+				ED11C226252318E6001451DB /* TrainingProgram.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		ED11C22C252318F8001451DB /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				ED11C22E25231919001451DB /* AddProgramViewModel.swift */,
+				ED11C22D25231919001451DB /* TrainingProgramViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		ED11C23425231928001451DB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				ED11C2352523194C001451DB /* AddExerciseView.swift */,
+				ED11C2372523194D001451DB /* AddTrainingProgramView.swift */,
+				ED11C2362523194C001451DB /* TrainingProgramView.swift */,
+				043DBF6C25231611002F0394 /* ContentView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,9 +323,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED11C227252318E6001451DB /* Exercise.swift in Sources */,
+				ED11C2392523194D001451DB /* TrainingProgramView.swift in Sources */,
+				ED11C23A2523194D001451DB /* AddTrainingProgramView.swift in Sources */,
+				ED11C2382523194D001451DB /* AddExerciseView.swift in Sources */,
+				ED11C23025231919001451DB /* AddProgramViewModel.swift in Sources */,
 				043DBF6925231611002F0394 /* AppDelegate.swift in Sources */,
 				043DBF6B25231611002F0394 /* SceneDelegate.swift in Sources */,
 				043DBF6D25231611002F0394 /* ContentView.swift in Sources */,
+				ED11C228252318E6001451DB /* TrainingProgram.swift in Sources */,
+				ED11C22F25231919001451DB /* TrainingProgramViewModel.swift in Sources */,
+				ED11C220252318C6001451DB /* TrainingCategory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
