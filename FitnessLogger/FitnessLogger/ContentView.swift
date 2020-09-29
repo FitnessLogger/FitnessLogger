@@ -2,15 +2,15 @@
 //  ContentView.swift
 //  FitnessLogger
 //
-//  Created by Jaafar Mahdi on 28/09/2020.
+//  Created by Marcus August Christiansen on 29/09/2020.
+//  Copyright © 2020 FitnessLogger. All rights reserved.
 //
 
 import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        Text("Hello, World!")
     }
 }
 
