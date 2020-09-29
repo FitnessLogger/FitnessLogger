@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		043DBF6925231611002F0394 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043DBF6825231611002F0394 /* AppDelegate.swift */; };
 		043DBF6B25231611002F0394 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043DBF6A25231611002F0394 /* SceneDelegate.swift */; };
-		043DBF6D25231611002F0394 /* TempView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043DBF6C25231611002F0394 /* TempView.swift */; };
 		043DBF6F25231612002F0394 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 043DBF6E25231612002F0394 /* Assets.xcassets */; };
 		043DBF7225231612002F0394 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 043DBF7125231612002F0394 /* Preview Assets.xcassets */; };
 		043DBF7525231612002F0394 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 043DBF7325231612002F0394 /* LaunchScreen.storyboard */; };
@@ -22,6 +21,17 @@
 		04590606252323150064209C /* CustomTextLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04590605252323150064209C /* CustomTextLabel.swift */; };
 		04590608252323E50064209C /* FontType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04590607252323E50064209C /* FontType.swift */; };
 		0459060A252324580064209C /* FontSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04590609252324580064209C /* FontSize.swift */; };
+		ED4B712525233D0C00F8A297 /* TrainingCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4B712425233D0C00F8A297 /* TrainingCategory.swift */; };
+		ED4B713425233D4200F8A297 /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4B713225233D4200F8A297 /* Exercise.swift */; };
+		ED4B713525233D4200F8A297 /* TrainingProgram.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4B713325233D4200F8A297 /* TrainingProgram.swift */; };
+		ED4B713D25233DA200F8A297 /* AddExerciseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4B713A25233DA200F8A297 /* AddExerciseViewModel.swift */; };
+		ED4B713E25233DA200F8A297 /* TrainingProgramViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4B713B25233DA200F8A297 /* TrainingProgramViewModel.swift */; };
+		ED4B713F25233DA200F8A297 /* AddTrainingProgramViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4B713C25233DA200F8A297 /* AddTrainingProgramViewModel.swift */; };
+		ED4B714825233DF500F8A297 /* TrainingProgramView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4B714425233DF400F8A297 /* TrainingProgramView.swift */; };
+		ED4B714925233DF500F8A297 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4B714525233DF400F8A297 /* MainView.swift */; };
+		ED4B714A25233DF500F8A297 /* AddExerciseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4B714625233DF500F8A297 /* AddExerciseView.swift */; };
+		ED4B714B25233DF500F8A297 /* AddTrainingProgramView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4B714725233DF500F8A297 /* AddTrainingProgramView.swift */; };
+		ED4B715125233E1700F8A297 /* TrainingProgramItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4B715025233E1700F8A297 /* TrainingProgramItem.swift */; };
 		EDC585A725233A0900B1B9D1 /* Oswald-Heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EDC585A525233A0900B1B9D1 /* Oswald-Heavy.ttf */; };
 		EDC585A825233A0900B1B9D1 /* Oswald-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EDC585A625233A0900B1B9D1 /* Oswald-Medium.ttf */; };
 /* End PBXBuildFile section */
@@ -47,7 +57,6 @@
 		043DBF6525231611002F0394 /* FitnessLogger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitnessLogger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		043DBF6825231611002F0394 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		043DBF6A25231611002F0394 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		043DBF6C25231611002F0394 /* TempView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempView.swift; sourceTree = "<group>"; };
 		043DBF6E25231612002F0394 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		043DBF7125231612002F0394 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		043DBF7425231612002F0394 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -65,6 +74,17 @@
 		04590605252323150064209C /* CustomTextLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextLabel.swift; sourceTree = "<group>"; };
 		04590607252323E50064209C /* FontType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontType.swift; sourceTree = "<group>"; };
 		04590609252324580064209C /* FontSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontSize.swift; sourceTree = "<group>"; };
+		ED4B712425233D0C00F8A297 /* TrainingCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrainingCategory.swift; sourceTree = "<group>"; };
+		ED4B713225233D4200F8A297 /* Exercise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
+		ED4B713325233D4200F8A297 /* TrainingProgram.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrainingProgram.swift; sourceTree = "<group>"; };
+		ED4B713A25233DA200F8A297 /* AddExerciseViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddExerciseViewModel.swift; sourceTree = "<group>"; };
+		ED4B713B25233DA200F8A297 /* TrainingProgramViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrainingProgramViewModel.swift; sourceTree = "<group>"; };
+		ED4B713C25233DA200F8A297 /* AddTrainingProgramViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTrainingProgramViewModel.swift; sourceTree = "<group>"; };
+		ED4B714425233DF400F8A297 /* TrainingProgramView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrainingProgramView.swift; sourceTree = "<group>"; };
+		ED4B714525233DF400F8A297 /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		ED4B714625233DF500F8A297 /* AddExerciseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddExerciseView.swift; sourceTree = "<group>"; };
+		ED4B714725233DF500F8A297 /* AddTrainingProgramView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTrainingProgramView.swift; sourceTree = "<group>"; };
+		ED4B715025233E1700F8A297 /* TrainingProgramItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrainingProgramItem.swift; sourceTree = "<group>"; };
 		EDC585A525233A0900B1B9D1 /* Oswald-Heavy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oswald-Heavy.ttf"; sourceTree = "<group>"; };
 		EDC585A625233A0900B1B9D1 /* Oswald-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oswald-Medium.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -117,7 +137,10 @@
 		043DBF6725231611002F0394 /* FitnessLogger */ = {
 			isa = PBXGroup;
 			children = (
-				ED83042525233961005104B1 /* Temp */,
+				ED4B714325233DDF00F8A297 /* Views */,
+				ED4B713925233D8A00F8A297 /* ViewModels */,
+				ED4B713125233D3500F8A297 /* Models */,
+				ED4B712325233CF900F8A297 /* Enums */,
 				0459060B252329E00064209C /* CustomViews */,
 				045905F725231BE00064209C /* Resources */,
 				043DBF6825231611002F0394 /* AppDelegate.swift */,
@@ -196,12 +219,51 @@
 			path = CustomViews;
 			sourceTree = "<group>";
 		};
-		ED83042525233961005104B1 /* Temp */ = {
+		ED4B712325233CF900F8A297 /* Enums */ = {
 			isa = PBXGroup;
 			children = (
-				043DBF6C25231611002F0394 /* TempView.swift */,
+				ED4B712425233D0C00F8A297 /* TrainingCategory.swift */,
 			);
-			path = Temp;
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		ED4B713125233D3500F8A297 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				ED4B713225233D4200F8A297 /* Exercise.swift */,
+				ED4B713325233D4200F8A297 /* TrainingProgram.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		ED4B713925233D8A00F8A297 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				ED4B713A25233DA200F8A297 /* AddExerciseViewModel.swift */,
+				ED4B713C25233DA200F8A297 /* AddTrainingProgramViewModel.swift */,
+				ED4B713B25233DA200F8A297 /* TrainingProgramViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		ED4B714325233DDF00F8A297 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				ED4B714F25233E0100F8A297 /* ListItems */,
+				ED4B714625233DF500F8A297 /* AddExerciseView.swift */,
+				ED4B714725233DF500F8A297 /* AddTrainingProgramView.swift */,
+				ED4B714525233DF400F8A297 /* MainView.swift */,
+				ED4B714425233DF400F8A297 /* TrainingProgramView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		ED4B714F25233E0100F8A297 /* ListItems */ = {
+			isa = PBXGroup;
+			children = (
+				ED4B715025233E1700F8A297 /* TrainingProgramItem.swift */,
+			);
+			path = ListItems;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -337,16 +399,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED4B713525233D4200F8A297 /* TrainingProgram.swift in Sources */,
+				ED4B714A25233DF500F8A297 /* AddExerciseView.swift in Sources */,
+				ED4B714925233DF500F8A297 /* MainView.swift in Sources */,
+				ED4B714825233DF500F8A297 /* TrainingProgramView.swift in Sources */,
+				ED4B715125233E1700F8A297 /* TrainingProgramItem.swift in Sources */,
 				04590606252323150064209C /* CustomTextLabel.swift in Sources */,
+				ED4B713D25233DA200F8A297 /* AddExerciseViewModel.swift in Sources */,
 				0459060A252324580064209C /* FontSize.swift in Sources */,
 				04590604252320BF0064209C /* CustomTextButton.swift in Sources */,
 				0459060125231FDB0064209C /* Font.swift in Sources */,
 				045905F4252318A10064209C /* CustomButton.swift in Sources */,
+				ED4B713425233D4200F8A297 /* Exercise.swift in Sources */,
 				04590608252323E50064209C /* FontType.swift in Sources */,
 				045905F6252318FE0064209C /* Colors.swift in Sources */,
 				043DBF6925231611002F0394 /* AppDelegate.swift in Sources */,
 				043DBF6B25231611002F0394 /* SceneDelegate.swift in Sources */,
-				043DBF6D25231611002F0394 /* TempView.swift in Sources */,
+				ED4B714B25233DF500F8A297 /* AddTrainingProgramView.swift in Sources */,
+				ED4B712525233D0C00F8A297 /* TrainingCategory.swift in Sources */,
+				ED4B713E25233DA200F8A297 /* TrainingProgramViewModel.swift in Sources */,
+				ED4B713F25233DA200F8A297 /* AddTrainingProgramViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
