@@ -25,7 +25,7 @@ struct AddExerciseView: View {
                 Spacer()
                 
                 Button("Save", action: {
-                    let exercise: Exercise = Exercise(name: self.exerciseName, category: .arms, trainTogether: false)
+                    let exercise: Exercise = Exercise(name: self.exerciseName, category: .arms, trainTogether: false, log: [])
                     self.trainingProgram.exercises.append(exercise)
                     self.showingAddExercise = false
                 })

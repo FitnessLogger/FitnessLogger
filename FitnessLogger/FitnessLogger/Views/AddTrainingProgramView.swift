@@ -44,13 +44,13 @@ struct AddTrainingProgramView: View {
                 }
             }.padding()
             .navigationBarTitle(Text("Add program"), displayMode: .inline)
-                .navigationBarItems(trailing: Button(action: {
-                    self.trainingProgram.name = self.name
-                    self.trainingProgramViewModel.trainingPrograms.append(self.trainingProgram)
-                    self.showingAddProgramSheet = false
-                }) {
-                    Text("Save").bold()
-                })
+            .navigationBarItems(trailing: Button(action: {
+                self.trainingProgram.name = self.name
+                self.trainingProgramViewModel.trainingPrograms.append(self.trainingProgram)
+                self.showingAddProgramSheet = false
+            }) {
+                Text("Save").bold()
+            })
         }
     }
 }

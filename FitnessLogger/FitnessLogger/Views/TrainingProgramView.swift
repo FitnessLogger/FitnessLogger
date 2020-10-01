@@ -16,7 +16,9 @@ struct TrainingProgramView: View {
                 }
             } else {
                 List(viewmodel.trainingPrograms) { trainingProgram in
-                    TrainingProgramItem(trainingProgram: trainingProgram)
+                    NavigationLink(destination: ProgramDetailView(trainingProgram: trainingProgram)) {
+                        TrainingProgramItem(trainingProgram: trainingProgram)
+                    }
                 }.navigationBarItems(trailing:
                     HStack {
                         Button(action: {
