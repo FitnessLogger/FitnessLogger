@@ -1,6 +1,8 @@
 import Foundation
+import SwiftUI
 
-class Exercise {
+class Exercise: Identifiable {
+    var id = UUID()
     var name: String
     var category: TrainingCategory
     var trainTogether: Bool

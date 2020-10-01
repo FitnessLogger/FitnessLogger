@@ -17,7 +17,17 @@ struct TrainingProgramView: View {
             } else {
                 List(viewmodel.trainingPrograms) { trainingProgram in
                     TrainingProgramItem(trainingProgram: trainingProgram)
-                }
+                }.navigationBarItems(trailing:
+                    HStack {
+                        Button(action: {
+                            self.showingAddProgramSheet.toggle()
+                        }) {
+                            Image(systemName: "plus").imageScale(.large)
+                        }.sheet(isPresented: $showingAddProgramSheet) {
+                            AddTrainingProgramView(showingAddProgramSheet: self.$showingAddProgramSheet, trainedSeparately: self.$trainedSeparately, trainingProgramViewModel: self.viewmodel)
+                        }
+                    }
+                )
             }
         }
     }

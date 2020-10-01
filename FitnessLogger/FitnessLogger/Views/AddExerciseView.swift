@@ -20,7 +20,7 @@ struct AddExerciseView: View {
                 }
                 
                 
-                Toggle("Trained separately", isOn: $trainedSeparately)
+                Toggle("Trained separately", isOn: self.$trainedSeparately)
                 
                 Spacer()
                 

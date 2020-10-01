@@ -36,6 +36,7 @@
 		EDC585A825233A0900B1B9D1 /* Oswald-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EDC585A625233A0900B1B9D1 /* Oswald-Medium.ttf */; };
 		EDFCE6142525F89B00FD9486 /* Oswald-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EDFCE6122525F89B00FD9486 /* Oswald-Regular.ttf */; };
 		EDFCE6152525F89B00FD9486 /* Oswald-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EDFCE6132525F89B00FD9486 /* Oswald-ExtraLight.ttf */; };
+		EDFCE61D25260F5D00FD9486 /* ExerciseItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFCE61C25260F5D00FD9486 /* ExerciseItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +92,7 @@
 		EDC585A625233A0900B1B9D1 /* Oswald-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oswald-Medium.ttf"; sourceTree = "<group>"; };
 		EDFCE6122525F89B00FD9486 /* Oswald-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oswald-Regular.ttf"; sourceTree = "<group>"; };
 		EDFCE6132525F89B00FD9486 /* Oswald-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oswald-ExtraLight.ttf"; sourceTree = "<group>"; };
+		EDFCE61C25260F5D00FD9486 /* ExerciseItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -268,6 +270,7 @@
 			isa = PBXGroup;
 			children = (
 				ED4B715025233E1700F8A297 /* TrainingProgramItem.swift */,
+				EDFCE61C25260F5D00FD9486 /* ExerciseItem.swift */,
 			);
 			path = ListItems;
 			sourceTree = "<group>";
@@ -426,6 +429,7 @@
 				ED4B714B25233DF500F8A297 /* AddTrainingProgramView.swift in Sources */,
 				ED4B712525233D0C00F8A297 /* TrainingCategory.swift in Sources */,
 				ED4B713E25233DA200F8A297 /* TrainingProgramViewModel.swift in Sources */,
+				EDFCE61D25260F5D00FD9486 /* ExerciseItem.swift in Sources */,
 				ED4B713F25233DA200F8A297 /* AddTrainingProgramViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

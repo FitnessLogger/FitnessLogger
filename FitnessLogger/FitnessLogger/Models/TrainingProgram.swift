@@ -1,9 +1,10 @@
 import Foundation
+import SwiftUI
 
-class TrainingProgram: Identifiable {
+class TrainingProgram: Identifiable, ObservableObject {
     var id = UUID()
     var name: String
-    var exercises: [Exercise]
+    @Published var exercises: [Exercise]
     
     init(name: String, exercises: [Exercise]) {
         self.name = name
