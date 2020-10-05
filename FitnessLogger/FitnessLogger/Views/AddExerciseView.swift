@@ -3,7 +3,7 @@ import SwiftUI
 
 struct AddExerciseView: View {
     @Binding var showingAddExercise: Bool
-    @Binding var trainedSeparately: Bool
+    @State private var trainedSeparately: Bool = false
     @State var exerciseName: String = ""
     
     var trainingProgram: TrainingProgram
@@ -25,7 +25,7 @@ struct AddExerciseView: View {
                 Spacer()
                 
                 Button("Save", action: {
-                    let exercise: Exercise = Exercise(name: self.exerciseName, category: .arms, trainTogether: false, log: [])
+                    let exercise: Exercise = Exercise(name: self.exerciseName, category: .arms, trainTogether: self.trainedSeparately, log: [])
                     self.trainingProgram.exercises.append(exercise)
                     self.showingAddExercise = false
                 })

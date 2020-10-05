@@ -3,7 +3,7 @@ import SwiftUI
 
 struct AddTrainingProgramView: View {
     @Binding var showingAddProgramSheet: Bool
-    @Binding var trainedSeparately: Bool
+//    @Binding var trainedSeparately: Bool
     @State var showingAddExercise = false
     @State private var name: String = ""
     
@@ -24,7 +24,7 @@ struct AddTrainingProgramView: View {
                     Button("Add exercise", action: {
                         self.showingAddExercise.toggle()
                     }).sheet(isPresented: $showingAddExercise) {
-                        AddExerciseView(showingAddExercise: self.$showingAddExercise, trainedSeparately: self.$trainedSeparately, trainingProgram: self.trainingProgram)
+                        AddExerciseView(showingAddExercise: self.$showingAddExercise, trainingProgram: self.trainingProgram)
                     }
                     
                     Spacer()
@@ -38,7 +38,7 @@ struct AddTrainingProgramView: View {
                     Button("Add more exercise", action: {
                         self.showingAddExercise.toggle()
                     }).sheet(isPresented: $showingAddExercise) {
-                        AddExerciseView(showingAddExercise: self.$showingAddExercise, trainedSeparately: self.$trainedSeparately, trainingProgram: self.trainingProgram)
+                        AddExerciseView(showingAddExercise: self.$showingAddExercise, trainingProgram: self.trainingProgram)
                     }.padding()
                 }
             }.padding()
