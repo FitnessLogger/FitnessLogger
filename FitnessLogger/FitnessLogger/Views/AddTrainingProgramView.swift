@@ -17,11 +17,10 @@ struct AddTrainingProgramView: View {
     var body: some View {
         NavigationView {
             VStack {
+                TextField("Enter program name", text: $name)
+                Spacer()
+                
                 if self.trainingProgram.exercises.isEmpty {
-                    TextField("Enter program name", text: $name)
-                    
-                    Spacer()
-                    
                     Button("Add exercise", action: {
                         self.showingAddExercise.toggle()
                     }).sheet(isPresented: $showingAddExercise) {
