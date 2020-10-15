@@ -2,7 +2,7 @@ import Foundation
 import SwiftUI
 
 struct ExerciseDetailItem: View {
-    var exercise: Exercise
+    @ObservedObject var exercise: Exercise
     
     var body: some View {
         HStack {
@@ -13,7 +13,7 @@ struct ExerciseDetailItem: View {
             
             Spacer()
             
-            Text(exercise.log.last != nil ? exercise.log.last!.getResistance() : "")
+            Text(exercise.log.last != nil ? exercise.log.last!.getResistance(for: self.exercise.trainTogether) : "")
         }
     }
 }

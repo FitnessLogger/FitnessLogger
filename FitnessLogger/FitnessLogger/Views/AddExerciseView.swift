@@ -32,11 +32,11 @@ struct AddExerciseView: View {
                 
             }.padding()
             .navigationBarTitle(Text("Add Exercise"), displayMode: .inline)
-                .navigationBarItems(trailing: Button(action: {
-                    self.showingAddExercise = false
-                }) {
-                    Text("Done").bold()
-                })
+            .navigationBarItems(trailing: Button(action: {
+                self.showingAddExercise = false
+            }) {
+                Text("Done").bold()
+            })
         }
     }
 }

@@ -2,7 +2,6 @@ import Foundation
 
 struct Log: Identifiable {
     var id = UUID()
-    var trainedSeparatly: Bool
     var left: Int
     var right: Int
     var time: Int64
@@ -14,8 +13,8 @@ struct Log: Identifiable {
         return formatter.string(from: Date.init(milliseconds: time))
     }
     
-    func getResistance() -> String {
-        if trainedSeparatly {
+    func getResistance(for both: Bool) -> String {
+        if both {
             return "L: \(left) | R: \(right)"
         }
         

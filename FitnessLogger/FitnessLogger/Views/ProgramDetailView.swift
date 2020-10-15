@@ -3,18 +3,31 @@ import SwiftUI
 
 struct ProgramDetailView: View {
     var trainingProgram: TrainingProgram
-    @State private var showSheet: Bool = false
+    @State var showSheet: Bool = false
+    @State var globalExercise: Exercise
     
     var body: some View {
         VStack {
             List(trainingProgram.exercises) { exercise in
                 Button("", action: {
-                    print(exercise.name)
+                    globalExercise = exercise
                     self.showSheet.toggle()
                 })
                 ExerciseDetailItem(exercise: exercise)
             }.sheet(isPresented: self.$showSheet) {
-                Text("Hello world")
+                if !globalExercise.trainTogether {
+                    if let left = globalExercise.log.first?.left {
+                        UpdateExerciseLogView(showSheet: self.$showSheet, left: left, right: 0, exercise: globalExercise)
+                    } else {
+                        UpdateExerciseLogView(showSheet: self.$showSheet, left: 0, right: 0, exercise: globalExercise)
+                    }
+                } else {
+                    if let left = globalExercise.log.first?.left, let right = globalExercise.log.first?.right {
+                        UpdateExerciseLogView(showSheet: self.$showSheet, left: left, right: right, exercise: globalExercise)
+                    } else {
+                        UpdateExerciseLogView(showSheet: self.$showSheet, left: 0, right: 0, exercise: globalExercise)
+                    }
+                }
             }
         }
         .navigationBarTitle(Text(self.trainingProgram.name))

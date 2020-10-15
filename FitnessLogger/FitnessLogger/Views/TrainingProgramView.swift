@@ -15,7 +15,7 @@ struct TrainingProgramView: View {
                 }
             } else {
                 List(viewmodel.trainingPrograms) { trainingProgram in
-                    NavigationLink(destination: ProgramDetailView(trainingProgram: trainingProgram)) {
+                    NavigationLink(destination: ProgramDetailView(trainingProgram: trainingProgram, globalExercise: trainingProgram.exercises.first!)) {
                         TrainingProgramItem(trainingProgram: trainingProgram)
                     }
                 }.navigationBarItems(trailing:

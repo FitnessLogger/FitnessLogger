@@ -41,6 +41,7 @@
 		EDFCE62725261A5400FD9486 /* ExerciseDetailItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFCE62625261A5400FD9486 /* ExerciseDetailItem.swift */; };
 		EDFCE62C25261B0A00FD9486 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFCE62B25261B0A00FD9486 /* Log.swift */; };
 		EDFCE63225261C4D00FD9486 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFCE63125261C4D00FD9486 /* Date.swift */; };
+		EDFCE637252B0F7100FD9486 /* UpdateExerciseLogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFCE636252B0F7100FD9486 /* UpdateExerciseLogView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +102,7 @@
 		EDFCE62625261A5400FD9486 /* ExerciseDetailItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseDetailItem.swift; sourceTree = "<group>"; };
 		EDFCE62B25261B0A00FD9486 /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		EDFCE63125261C4D00FD9486 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		EDFCE636252B0F7100FD9486 /* UpdateExerciseLogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateExerciseLogView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -273,6 +275,7 @@
 				ED4B714525233DF400F8A297 /* MainView.swift */,
 				ED4B714425233DF400F8A297 /* TrainingProgramView.swift */,
 				EDFCE6212526174F00FD9486 /* ProgramDetailView.swift */,
+				EDFCE636252B0F7100FD9486 /* UpdateExerciseLogView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -434,6 +437,7 @@
 				ED4B714A25233DF500F8A297 /* AddExerciseView.swift in Sources */,
 				ED4B714925233DF500F8A297 /* MainView.swift in Sources */,
 				ED4B714825233DF500F8A297 /* TrainingProgramView.swift in Sources */,
+				EDFCE637252B0F7100FD9486 /* UpdateExerciseLogView.swift in Sources */,
 				ED4B715125233E1700F8A297 /* TrainingProgramItem.swift in Sources */,
 				04590606252323150064209C /* CustomTextLabel.swift in Sources */,
 				EDFCE63225261C4D00FD9486 /* Date.swift in Sources */,
