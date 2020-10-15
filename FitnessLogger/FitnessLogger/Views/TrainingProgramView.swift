@@ -15,7 +15,8 @@ struct TrainingProgramView: View {
                 }
             } else {
                 List(viewmodel.trainingPrograms) { trainingProgram in
-                    NavigationLink(destination: ProgramDetailView(trainingProgram: trainingProgram, globalExercise: trainingProgram.exercises.first!)) {
+                    let vm = ProgramDetailViewModel(trainingProgram: trainingProgram)
+                    NavigationLink(destination: ProgramDetailView(viewmodel: vm)) {
                         TrainingProgramItem(trainingProgram: trainingProgram)
                     }
                 }.navigationBarItems(trailing:

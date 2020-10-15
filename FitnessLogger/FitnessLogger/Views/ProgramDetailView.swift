@@ -2,24 +2,27 @@ import Foundation
 import SwiftUI
 
 struct ProgramDetailView: View {
-    var trainingProgram: TrainingProgram
     @State var showSheet: Bool = false
-    @State var globalExercise: Exercise
+    @ObservedObject private var vm: ProgramDetailViewModel
+    
+    init(viewmodel: ProgramDetailViewModel) {
+        self.vm = viewmodel
+    }
     
     var body: some View {
         VStack {
-            List(trainingProgram.exercises) { exercise in
+            List(self.vm.trainingProgram.exercises) { exercise in
                 Button("", action: {
-                    globalExercise = exercise
+                    self.vm.exercise = exercise
                     self.showSheet.toggle()
                 })
-                ExerciseDetailItem(exercise: globalExercise)
+                ExerciseDetailItem(exercise: exercise)
             }.sheet(isPresented: self.$showSheet) {
-                let vm = UpdateExerciseLogViewModel(with: globalExercise)
+                let vm = UpdateExerciseLogViewModel(with: self.vm.exercise!)
                 UpdateExerciseLogView(with: vm, show: self.$showSheet)
             }
         }
-        .navigationBarTitle(Text(self.trainingProgram.name))
+        .navigationBarTitle(Text(self.vm.trainingProgram.name))
         .navigationBarItems(trailing: Button(action: {
             print("Edit pressed")
         }) {
