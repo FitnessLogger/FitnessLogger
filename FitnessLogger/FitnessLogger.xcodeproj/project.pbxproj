@@ -26,7 +26,6 @@
 		ED4B713525233D4200F8A297 /* TrainingProgram.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4B713325233D4200F8A297 /* TrainingProgram.swift */; };
 		ED4B713D25233DA200F8A297 /* AddExerciseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4B713A25233DA200F8A297 /* AddExerciseViewModel.swift */; };
 		ED4B713E25233DA200F8A297 /* TrainingProgramViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4B713B25233DA200F8A297 /* TrainingProgramViewModel.swift */; };
-		ED4B713F25233DA200F8A297 /* AddTrainingProgramViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4B713C25233DA200F8A297 /* AddTrainingProgramViewModel.swift */; };
 		ED4B714825233DF500F8A297 /* TrainingProgramView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4B714425233DF400F8A297 /* TrainingProgramView.swift */; };
 		ED4B714925233DF500F8A297 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4B714525233DF400F8A297 /* MainView.swift */; };
 		ED4B714A25233DF500F8A297 /* AddExerciseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4B714625233DF500F8A297 /* AddExerciseView.swift */; };
@@ -36,6 +35,7 @@
 		EDC585A825233A0900B1B9D1 /* Oswald-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EDC585A625233A0900B1B9D1 /* Oswald-Medium.ttf */; };
 		EDDA75A2253854F90042D9CF /* UpdateExerciseLogViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDA75A1253854F90042D9CF /* UpdateExerciseLogViewModel.swift */; };
 		EDDA75B425386BFE0042D9CF /* ProgramDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDA75B325386BFE0042D9CF /* ProgramDetailViewModel.swift */; };
+		EDDA75CA25389EA20042D9CF /* AddTrainingProgramViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDA75C925389EA20042D9CF /* AddTrainingProgramViewModel.swift */; };
 		EDFCE6142525F89B00FD9486 /* Oswald-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EDFCE6122525F89B00FD9486 /* Oswald-Regular.ttf */; };
 		EDFCE6152525F89B00FD9486 /* Oswald-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EDFCE6132525F89B00FD9486 /* Oswald-ExtraLight.ttf */; };
 		EDFCE61D25260F5D00FD9486 /* ExerciseItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFCE61C25260F5D00FD9486 /* ExerciseItem.swift */; };
@@ -89,7 +89,6 @@
 		ED4B713325233D4200F8A297 /* TrainingProgram.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrainingProgram.swift; sourceTree = "<group>"; };
 		ED4B713A25233DA200F8A297 /* AddExerciseViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddExerciseViewModel.swift; sourceTree = "<group>"; };
 		ED4B713B25233DA200F8A297 /* TrainingProgramViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrainingProgramViewModel.swift; sourceTree = "<group>"; };
-		ED4B713C25233DA200F8A297 /* AddTrainingProgramViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTrainingProgramViewModel.swift; sourceTree = "<group>"; };
 		ED4B714425233DF400F8A297 /* TrainingProgramView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrainingProgramView.swift; sourceTree = "<group>"; };
 		ED4B714525233DF400F8A297 /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		ED4B714625233DF500F8A297 /* AddExerciseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddExerciseView.swift; sourceTree = "<group>"; };
@@ -99,6 +98,7 @@
 		EDC585A625233A0900B1B9D1 /* Oswald-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oswald-Medium.ttf"; sourceTree = "<group>"; };
 		EDDA75A1253854F90042D9CF /* UpdateExerciseLogViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateExerciseLogViewModel.swift; sourceTree = "<group>"; };
 		EDDA75B325386BFE0042D9CF /* ProgramDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramDetailViewModel.swift; sourceTree = "<group>"; };
+		EDDA75C925389EA20042D9CF /* AddTrainingProgramViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTrainingProgramViewModel.swift; sourceTree = "<group>"; };
 		EDFCE6122525F89B00FD9486 /* Oswald-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oswald-Regular.ttf"; sourceTree = "<group>"; };
 		EDFCE6132525F89B00FD9486 /* Oswald-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oswald-ExtraLight.ttf"; sourceTree = "<group>"; };
 		EDFCE61C25260F5D00FD9486 /* ExerciseItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseItem.swift; sourceTree = "<group>"; };
@@ -264,10 +264,10 @@
 			isa = PBXGroup;
 			children = (
 				ED4B713A25233DA200F8A297 /* AddExerciseViewModel.swift */,
-				ED4B713C25233DA200F8A297 /* AddTrainingProgramViewModel.swift */,
 				ED4B713B25233DA200F8A297 /* TrainingProgramViewModel.swift */,
 				EDDA75A1253854F90042D9CF /* UpdateExerciseLogViewModel.swift */,
 				EDDA75B325386BFE0042D9CF /* ProgramDetailViewModel.swift */,
+				EDDA75C925389EA20042D9CF /* AddTrainingProgramViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -462,11 +462,11 @@
 				043DBF6B25231611002F0394 /* SceneDelegate.swift in Sources */,
 				ED4B714B25233DF500F8A297 /* AddTrainingProgramView.swift in Sources */,
 				EDDA75B425386BFE0042D9CF /* ProgramDetailViewModel.swift in Sources */,
+				EDDA75CA25389EA20042D9CF /* AddTrainingProgramViewModel.swift in Sources */,
 				ED4B712525233D0C00F8A297 /* TrainingCategory.swift in Sources */,
 				ED4B713E25233DA200F8A297 /* TrainingProgramViewModel.swift in Sources */,
 				EDFCE61D25260F5D00FD9486 /* ExerciseItem.swift in Sources */,
 				EDFCE62725261A5400FD9486 /* ExerciseDetailItem.swift in Sources */,
-				ED4B713F25233DA200F8A297 /* AddTrainingProgramViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
