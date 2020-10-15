@@ -2,11 +2,13 @@ import Foundation
 import SwiftUI
 
 struct UpdateExerciseLogView: View {
+    @ObservedObject private var vm: UpdateExerciseLogViewModel
     @Binding var showSheet: Bool
     
-    @State var left: Int
-    @State var right: Int
-    @State var exercise: Exercise
+    init(with viewmodel: UpdateExerciseLogViewModel, show: Binding<Bool>) {
+        self.vm = viewmodel
+        self._showSheet = show
+    }
     
     var body: some View {
         NavigationView {
@@ -14,32 +16,36 @@ struct UpdateExerciseLogView: View {
                 VStack(alignment: .leading) {
                     Text("Left")
                     HStack {
-                        TextField("Weight", value: self.$left, formatter: NumberFormatter())
+                        TextField("Weight", value: self.$vm.left, formatter: NumberFormatter())
                         
                         VStack {
                             Button("+", action: {
-                                self.left += 1
+                                let value = self.vm.left + 1
+                                self.vm.updateValue(left: true, with: value)
                             }).padding()
                             
                             Button("-", action: {
-                                self.left -= 1
+                                let value = self.vm.left - 1
+                                self.vm.updateValue(left: true, with: value)
                             }).padding()
                         }
                     }.padding()
                     
                     
-                    if exercise.trainTogether {
+                    if vm.exercise.trainTogether {
                         Text("Right")
                         HStack {
-                            TextField("Weight", value: self.$right, formatter: NumberFormatter())
+                            TextField("Weight", value: $vm.right, formatter: NumberFormatter())
                             
                             VStack {
                                 Button("+", action: {
-                                    self.right += 1
+                                    let value = self.vm.right + 1
+                                    self.vm.updateValue(left: false, with: value)
                                 }).padding()
                                 
                                 Button("-", action: {
-                                    self.right -= 1
+                                    let value = self.vm.right - 1
+                                    self.vm.updateValue(left: false, with: value)
                                 }).padding()
                             }
                         }.padding()
@@ -48,13 +54,13 @@ struct UpdateExerciseLogView: View {
                 
                 Spacer()
                 
-                if !self.exercise.log.isEmpty {
+                if !self.vm.exercise.log.isEmpty {
                     Button("Same as last time", action: {
-                        let item = exercise.log.last
+                        let item = self.vm.exercise.log.last
                         
                         if var item = item {
                             item.time = Date().millisecondsSince1970
-                            self.exercise.log.append(item)
+                            self.vm.exercise.log.append(item)
                         }
                         
                         self.showSheet.toggle()
@@ -63,8 +69,8 @@ struct UpdateExerciseLogView: View {
                 
                 
                 Button("Save", action: {
-                    let item = Log(left: self.left, right: self.right, time: Date().millisecondsSince1970)
-                    self.exercise.log.append(item)
+                    let item = Log(left: self.vm.left, right: self.vm.right, time: Date().millisecondsSince1970)
+                    self.vm.exercise.log.append(item)
                     self.showSheet.toggle()
                 })
             }
