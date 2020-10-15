@@ -29,4 +29,18 @@ class UpdateExerciseLogViewModel: ObservableObject {
             self.right = value
         }
     }
+    
+    func updateLog(withSameValues: Bool) {
+        if withSameValues {
+            let item = self.exercise.log.last
+            
+            if var item = item {
+                item.time = Date().millisecondsSince1970
+                self.exercise.log.append(item)
+            }
+        } else {
+            let item = Log(left: self.left, right: self.right, time: Date().millisecondsSince1970)
+            self.exercise.log.append(item)
+        }
+    }
 }

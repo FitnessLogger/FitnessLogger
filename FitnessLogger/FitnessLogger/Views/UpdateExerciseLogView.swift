@@ -56,21 +56,14 @@ struct UpdateExerciseLogView: View {
                 
                 if !self.vm.exercise.log.isEmpty {
                     Button("Same as last time", action: {
-                        let item = self.vm.exercise.log.last
-                        
-                        if var item = item {
-                            item.time = Date().millisecondsSince1970
-                            self.vm.exercise.log.append(item)
-                        }
-                        
+                        self.vm.updateLog(withSameValues: true)
                         self.showSheet.toggle()
                     }).padding()
                 }
                 
                 
                 Button("Save", action: {
-                    let item = Log(left: self.vm.left, right: self.vm.right, time: Date().millisecondsSince1970)
-                    self.vm.exercise.log.append(item)
+                    self.vm.updateLog(withSameValues: false)
                     self.showSheet.toggle()
                 })
             }
