@@ -2,7 +2,6 @@ import Foundation
 import SwiftUI
 
 struct ProgramDetailView: View {
-    @State var showSheet: Bool = false
     @ObservedObject private var vm: ProgramDetailViewModel
     
     init(viewmodel: ProgramDetailViewModel) {
@@ -14,19 +13,22 @@ struct ProgramDetailView: View {
             List(self.vm.trainingProgram.exercises) { exercise in
                 Button("", action: {
                     self.vm.exercise = exercise
-                    self.showSheet.toggle()
+                    self.vm.showSheet.toggle()
                 })
                 ExerciseDetailItem(exercise: exercise)
-            }.sheet(isPresented: self.$showSheet) {
+            }.sheet(isPresented: self.$vm.showSheet) {
                 let vm = UpdateExerciseLogViewModel(with: self.vm.exercise!)
-                UpdateExerciseLogView(with: vm, show: self.$showSheet)
+                UpdateExerciseLogView(with: vm, show: self.$vm.showSheet)
             }
         }
         .navigationBarTitle(Text(self.vm.trainingProgram.name))
         .navigationBarItems(trailing: Button(action: {
-            print("Edit pressed")
+            self.vm.showProgramSheet.toggle()
         }) {
             Text("Edit").bold()
+        }.sheet(isPresented: self.$vm.showProgramSheet) {
+            let viewmodel = AddTrainingProgramViewModel(trainingProgram: self.vm.trainingProgram)
+            AddTrainingProgramView(viewmodel: viewmodel, show: self.$vm.showProgramSheet)
         })
     }
 }

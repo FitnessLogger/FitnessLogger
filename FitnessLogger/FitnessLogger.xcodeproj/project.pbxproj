@@ -263,11 +263,11 @@
 		ED4B713925233D8A00F8A297 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				ED4B713A25233DA200F8A297 /* AddExerciseViewModel.swift */,
 				ED4B713B25233DA200F8A297 /* TrainingProgramViewModel.swift */,
-				EDDA75A1253854F90042D9CF /* UpdateExerciseLogViewModel.swift */,
-				EDDA75B325386BFE0042D9CF /* ProgramDetailViewModel.swift */,
 				EDDA75C925389EA20042D9CF /* AddTrainingProgramViewModel.swift */,
+				ED4B713A25233DA200F8A297 /* AddExerciseViewModel.swift */,
+				EDDA75B325386BFE0042D9CF /* ProgramDetailViewModel.swift */,
+				EDDA75A1253854F90042D9CF /* UpdateExerciseLogViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -276,10 +276,10 @@
 			isa = PBXGroup;
 			children = (
 				ED4B714F25233E0100F8A297 /* ListItems */,
-				ED4B714625233DF500F8A297 /* AddExerciseView.swift */,
-				ED4B714725233DF500F8A297 /* AddTrainingProgramView.swift */,
 				ED4B714525233DF400F8A297 /* MainView.swift */,
 				ED4B714425233DF400F8A297 /* TrainingProgramView.swift */,
+				ED4B714725233DF500F8A297 /* AddTrainingProgramView.swift */,
+				ED4B714625233DF500F8A297 /* AddExerciseView.swift */,
 				EDFCE6212526174F00FD9486 /* ProgramDetailView.swift */,
 				EDFCE636252B0F7100FD9486 /* UpdateExerciseLogView.swift */,
 			);

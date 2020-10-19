@@ -2,38 +2,36 @@ import Foundation
 import SwiftUI
 
 struct AddExerciseView: View {
-    @Binding var showingAddExercise: Bool
-    @State private var trainedSeparately: Bool = false
-    @State var exerciseName: String = ""
+    @ObservedObject private var vm: AddExerciseViewModel
+    @Binding private var showAddExercise: Bool
     
-    var trainingProgram: TrainingProgram
-    
-    let strings = ["this", "is", "a", "test"]
+    init(viewmodel: AddExerciseViewModel, show: Binding<Bool>) {
+        self.vm = viewmodel
+        self._showAddExercise = show
+    }
     
     var body: some View {
         NavigationView {
             VStack {
-                TextField("Exercise name", text: $exerciseName)
+                TextField("Exercise name", text: self.$vm.exerciseName)
                 
-                List(strings, id: \.self) { string in
+                List(self.vm.strings, id: \.self) { string in
                     Text(string)
                 }
                 
-                
-                Toggle("Trained separately", isOn: self.$trainedSeparately)
+                Toggle("Trained separately", isOn: self.$vm.trainedSeparately)
                 
                 Spacer()
                 
                 Button("Save", action: {
-                    let exercise: Exercise = Exercise(name: self.exerciseName, category: .arms, trainTogether: self.trainedSeparately, log: [])
-                    self.trainingProgram.exercises.append(exercise)
-                    self.showingAddExercise = false
+                    self.vm.saveExercise()
+                    self.showAddExercise.toggle()
                 })
                 
             }.padding()
             .navigationBarTitle(Text("Add Exercise"), displayMode: .inline)
             .navigationBarItems(trailing: Button(action: {
-                self.showingAddExercise = false
+                self.showAddExercise.toggle()
             }) {
                 Text("Done").bold()
             })

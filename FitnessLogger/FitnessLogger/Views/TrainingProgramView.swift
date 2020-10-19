@@ -2,8 +2,12 @@ import Foundation
 import SwiftUI
 
 struct TrainingProgramView: View {
-    @ObservedObject var viewmodel = TrainingProgramViewModel()
+    @ObservedObject var viewmodel: TrainingProgramViewModel
     @State var showingAddProgramSheet = false
+    
+    init(viewmodel: TrainingProgramViewModel) {
+        self.viewmodel = viewmodel
+    }
     
     var body: some View {
         VStack {
@@ -11,7 +15,7 @@ struct TrainingProgramView: View {
                 Button("Add training program", action: {
                     self.showingAddProgramSheet.toggle()
                 }).sheet(isPresented: $showingAddProgramSheet) {
-                    let viewmodel = AddTrainingProgramViewModel()
+                    let viewmodel = AddTrainingProgramViewModel(programs: self.viewmodel.trainingPrograms)
                     AddTrainingProgramView(viewmodel: viewmodel, show: self.$showingAddProgramSheet)
                 }
             } else {
@@ -27,7 +31,7 @@ struct TrainingProgramView: View {
                         }) {
                             Image(systemName: "plus").imageScale(.large)
                         }.sheet(isPresented: $showingAddProgramSheet) {
-                            let viewmodel = AddTrainingProgramViewModel()
+                            let viewmodel = AddTrainingProgramViewModel(programs: self.viewmodel.trainingPrograms)
                             AddTrainingProgramView(viewmodel: viewmodel, show: self.$showingAddProgramSheet)
                         }
                     }
