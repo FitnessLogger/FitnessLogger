@@ -1,12 +1,12 @@
 import SwiftUI
 
 struct MainView: View {
-    @ObservedObject private var viewmodel = TrainingProgramViewModel()
+    var tp: Program = Program()
     
     var body: some View {
         TabView {
             NavigationView {
-                TrainingProgramView(viewmodel: viewmodel).navigationBarTitle(Text("12 - 15 reps"))
+                TrainingProgramView(tp: tp).navigationBarTitle(Text("12 - 15 reps"))
             }.tabItem {
                 Image(systemName: "1.circle")
                 Text("Easy")
@@ -14,7 +14,7 @@ struct MainView: View {
 
             
             NavigationView {
-                TrainingProgramView(viewmodel: viewmodel).navigationBarTitle(Text("8 - 10 reps"))
+                TrainingProgramView(tp: tp).navigationBarTitle(Text("8 - 10 reps"))
             }.tabItem {
                 Image(systemName: "2.circle")
                 Text("Medium")
@@ -22,7 +22,7 @@ struct MainView: View {
 
             
             NavigationView {
-                TrainingProgramView(viewmodel: viewmodel).navigationBarTitle(Text("3 - 5 reps"))
+                TrainingProgramView(tp: tp).navigationBarTitle(Text("3 - 5 reps"))
             }.tabItem {
                 Image(systemName: "3.circle")
                 Text("Hard")

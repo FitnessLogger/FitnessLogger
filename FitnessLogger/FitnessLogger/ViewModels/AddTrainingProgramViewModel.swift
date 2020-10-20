@@ -2,7 +2,7 @@ import Foundation
 import SwiftUI
 
 class AddTrainingProgramViewModel: ObservableObject {
-    @Published var trainingPrograms: [TrainingProgram]?
+    @Published var trainingPrograms: Program?
     @Published var currentTrainingProgram: TrainingProgram
     @Published var name: String
     @Published var showAddExercise: Bool = false
@@ -12,14 +12,14 @@ class AddTrainingProgramViewModel: ObservableObject {
         self.name = trainingProgram.name
     }
     
-    init(programs: [TrainingProgram]) {
+    init(program: Program) {
         self.currentTrainingProgram = TrainingProgram(name: "", exercises: [])
         self.name = ""
-        self.trainingPrograms = programs
+        self.trainingPrograms = program
     }
     
     func saveTrainingProgram() {
         currentTrainingProgram.name = self.name
-        self.trainingPrograms?.append(currentTrainingProgram)
+        self.trainingPrograms?.append(trainingProgram: currentTrainingProgram)
     }
 }

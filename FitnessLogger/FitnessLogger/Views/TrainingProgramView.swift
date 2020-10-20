@@ -2,24 +2,20 @@ import Foundation
 import SwiftUI
 
 struct TrainingProgramView: View {
-    @ObservedObject var viewmodel: TrainingProgramViewModel
+    @ObservedObject var tp: Program
     @State var showingAddProgramSheet = false
-    
-    init(viewmodel: TrainingProgramViewModel) {
-        self.viewmodel = viewmodel
-    }
     
     var body: some View {
         VStack {
-            if viewmodel.trainingPrograms.isEmpty {
+            if tp.items.isEmpty {
                 Button("Add training program", action: {
                     self.showingAddProgramSheet.toggle()
                 }).sheet(isPresented: $showingAddProgramSheet) {
-                    let viewmodel = AddTrainingProgramViewModel(programs: self.viewmodel.trainingPrograms)
+                    let viewmodel = AddTrainingProgramViewModel(program: self.tp)
                     AddTrainingProgramView(viewmodel: viewmodel, show: self.$showingAddProgramSheet)
                 }
             } else {
-                List(viewmodel.trainingPrograms) { trainingProgram in
+                List(self.tp.items) { trainingProgram in
                     let vm = ProgramDetailViewModel(trainingProgram: trainingProgram)
                     NavigationLink(destination: ProgramDetailView(viewmodel: vm)) {
                         TrainingProgramItem(trainingProgram: trainingProgram)
@@ -31,7 +27,7 @@ struct TrainingProgramView: View {
                         }) {
                             Image(systemName: "plus").imageScale(.large)
                         }.sheet(isPresented: $showingAddProgramSheet) {
-                            let viewmodel = AddTrainingProgramViewModel(programs: self.viewmodel.trainingPrograms)
+                            let viewmodel = AddTrainingProgramViewModel(program: self.tp)
                             AddTrainingProgramView(viewmodel: viewmodel, show: self.$showingAddProgramSheet)
                         }
                     }
