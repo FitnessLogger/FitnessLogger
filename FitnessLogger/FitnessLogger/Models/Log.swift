@@ -20,4 +20,17 @@ struct Log: Identifiable {
         
         return "\(left)"
     }
+    
+    func getValue(for orientation: Orientation) -> Int {
+        if orientation == .left {
+            return left
+        }
+        
+        return right
+    }
+}
+
+enum Orientation {
+    case left
+    case right
 }
