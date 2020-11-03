@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -37,6 +37,10 @@
 		EDC585A725233A0900B1B9D1 /* Oswald-Heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EDC585A525233A0900B1B9D1 /* Oswald-Heavy.ttf */; };
 		EDC585A825233A0900B1B9D1 /* Oswald-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EDC585A625233A0900B1B9D1 /* Oswald-Medium.ttf */; };
 		EDD7FA50255052000048795E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EDD7FA4F255052000048795E /* GoogleService-Info.plist */; };
+		EDD7FA6E25514BF10048795E /* SessionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD7FA6D25514BF10048795E /* SessionStore.swift */; };
+		EDD7FA7325514CBE0048795E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD7FA7225514CBE0048795E /* User.swift */; };
+		EDD7FA7825514F610048795E /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD7FA7725514F610048795E /* SignInView.swift */; };
+		EDD7FA802551577C0048795E /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD7FA7F2551577B0048795E /* SignUpView.swift */; };
 		EDDA75A2253854F90042D9CF /* UpdateExerciseLogViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDA75A1253854F90042D9CF /* UpdateExerciseLogViewModel.swift */; };
 		EDDA75B425386BFE0042D9CF /* ProgramDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDA75B325386BFE0042D9CF /* ProgramDetailViewModel.swift */; };
 		EDDA75CA25389EA20042D9CF /* AddTrainingProgramViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDA75C925389EA20042D9CF /* AddTrainingProgramViewModel.swift */; };
@@ -112,6 +116,10 @@
 		EDC585A525233A0900B1B9D1 /* Oswald-Heavy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oswald-Heavy.ttf"; sourceTree = "<group>"; };
 		EDC585A625233A0900B1B9D1 /* Oswald-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oswald-Medium.ttf"; sourceTree = "<group>"; };
 		EDD7FA4F255052000048795E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		EDD7FA6D25514BF10048795E /* SessionStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionStore.swift; sourceTree = "<group>"; };
+		EDD7FA7225514CBE0048795E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		EDD7FA7725514F610048795E /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		EDD7FA7F2551577B0048795E /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		EDDA75A1253854F90042D9CF /* UpdateExerciseLogViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateExerciseLogViewModel.swift; sourceTree = "<group>"; };
 		EDDA75B325386BFE0042D9CF /* ProgramDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramDetailViewModel.swift; sourceTree = "<group>"; };
 		EDDA75C925389EA20042D9CF /* AddTrainingProgramViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTrainingProgramViewModel.swift; sourceTree = "<group>"; };
@@ -178,6 +186,7 @@
 		043DBF6725231611002F0394 /* FitnessLogger */ = {
 			isa = PBXGroup;
 			children = (
+				EDD7FA6C25514BB80048795E /* Stores */,
 				EDFCE63025261C2800FD9486 /* Extensions */,
 				ED4B714325233DDF00F8A297 /* Views */,
 				ED4B713925233D8A00F8A297 /* ViewModels */,
@@ -284,7 +293,6 @@
 				CBC6E6100A740CA401E95D29 /* Pods-FitnessLoggerTests.debug.xcconfig */,
 				1223513692C31C76A125E9D9 /* Pods-FitnessLoggerTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -303,6 +311,7 @@
 				ED4B713325233D4200F8A297 /* TrainingProgram.swift */,
 				EDFCE62B25261B0A00FD9486 /* Log.swift */,
 				EDA6BD5D253F2BAF00E78697 /* Program.swift */,
+				EDD7FA7225514CBE0048795E /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -323,6 +332,8 @@
 			isa = PBXGroup;
 			children = (
 				ED4B714F25233E0100F8A297 /* ListItems */,
+				EDD7FA7725514F610048795E /* SignInView.swift */,
+				EDD7FA7F2551577B0048795E /* SignUpView.swift */,
 				ED4B714525233DF400F8A297 /* MainView.swift */,
 				ED4B714425233DF400F8A297 /* TrainingProgramView.swift */,
 				ED4B714725233DF500F8A297 /* AddTrainingProgramView.swift */,
@@ -341,6 +352,14 @@
 				EDFCE62625261A5400FD9486 /* ExerciseDetailItem.swift */,
 			);
 			path = ListItems;
+			sourceTree = "<group>";
+		};
+		EDD7FA6C25514BB80048795E /* Stores */ = {
+			isa = PBXGroup;
+			children = (
+				EDD7FA6D25514BF10048795E /* SessionStore.swift */,
+			);
+			path = Stores;
 			sourceTree = "<group>";
 		};
 		EDFCE63025261C2800FD9486 /* Extensions */ = {
@@ -599,6 +618,7 @@
 				ED4B714A25233DF500F8A297 /* AddExerciseView.swift in Sources */,
 				ED4B714925233DF500F8A297 /* MainView.swift in Sources */,
 				ED4B714825233DF500F8A297 /* TrainingProgramView.swift in Sources */,
+				EDD7FA7325514CBE0048795E /* User.swift in Sources */,
 				EDFCE637252B0F7100FD9486 /* UpdateExerciseLogView.swift in Sources */,
 				ED4B715125233E1700F8A297 /* TrainingProgramItem.swift in Sources */,
 				04590606252323150064209C /* CustomTextLabel.swift in Sources */,
@@ -608,7 +628,9 @@
 				EDDA75A2253854F90042D9CF /* UpdateExerciseLogViewModel.swift in Sources */,
 				04590604252320BF0064209C /* CustomTextButton.swift in Sources */,
 				0459060125231FDB0064209C /* Font.swift in Sources */,
+				EDD7FA7825514F610048795E /* SignInView.swift in Sources */,
 				045905F4252318A10064209C /* CustomButton.swift in Sources */,
+				EDD7FA802551577C0048795E /* SignUpView.swift in Sources */,
 				ED4B713425233D4200F8A297 /* Exercise.swift in Sources */,
 				EDFCE6222526174F00FD9486 /* ProgramDetailView.swift in Sources */,
 				04590608252323E50064209C /* FontType.swift in Sources */,
@@ -621,6 +643,7 @@
 				EDDA75B425386BFE0042D9CF /* ProgramDetailViewModel.swift in Sources */,
 				EDDA75CA25389EA20042D9CF /* AddTrainingProgramViewModel.swift in Sources */,
 				ED4B712525233D0C00F8A297 /* TrainingCategory.swift in Sources */,
+				EDD7FA6E25514BF10048795E /* SessionStore.swift in Sources */,
 				ED4B713E25233DA200F8A297 /* TrainingProgramViewModel.swift in Sources */,
 				EDFCE61D25260F5D00FD9486 /* ExerciseItem.swift in Sources */,
 				EDFCE62725261A5400FD9486 /* ExerciseDetailItem.swift in Sources */,
