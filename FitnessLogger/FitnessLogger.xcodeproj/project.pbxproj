@@ -28,6 +28,7 @@
 		04BA2D8625514F5E00BF12DB /* treadmill.json in Resources */ = {isa = PBXBuildFile; fileRef = 04BA2D8525514F5E00BF12DB /* treadmill.json */; };
 		04BA2D8E2551519C00BF12DB /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BA2D8D2551519C00BF12DB /* Global.swift */; };
 		04BA2D93255151EC00BF12DB /* ControllerRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BA2D92255151EC00BF12DB /* ControllerRegister.swift */; };
+		04BA2DBC2551589D00BF12DB /* success.json in Resources */ = {isa = PBXBuildFile; fileRef = 04BA2DBB2551589D00BF12DB /* success.json */; };
 		B62B653D7328B19BFD8935DD /* Pods_FitnessLogger_FitnessLoggerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A36E219A9AFF9D9044DE21B /* Pods_FitnessLogger_FitnessLoggerUITests.framework */; };
 		C38B1F3995C4B0E3433E711A /* Pods_FitnessLogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57C6ADD23DCDD72E5CC7FB47 /* Pods_FitnessLogger.framework */; };
 		ED4B712525233D0C00F8A297 /* TrainingCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4B712425233D0C00F8A297 /* TrainingCategory.swift */; };
@@ -100,6 +101,7 @@
 		04BA2D8525514F5E00BF12DB /* treadmill.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = treadmill.json; sourceTree = "<group>"; };
 		04BA2D8D2551519C00BF12DB /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
 		04BA2D92255151EC00BF12DB /* ControllerRegister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerRegister.swift; sourceTree = "<group>"; };
+		04BA2DBB2551589D00BF12DB /* success.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = success.json; sourceTree = "<group>"; };
 		1223513692C31C76A125E9D9 /* Pods-FitnessLoggerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FitnessLoggerTests.release.xcconfig"; path = "Target Support Files/Pods-FitnessLoggerTests/Pods-FitnessLoggerTests.release.xcconfig"; sourceTree = "<group>"; };
 		1B4DCEDE1DF910764841F593 /* Pods-FitnessLogger.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FitnessLogger.debug.xcconfig"; path = "Target Support Files/Pods-FitnessLogger/Pods-FitnessLogger.debug.xcconfig"; sourceTree = "<group>"; };
 		4A36E219A9AFF9D9044DE21B /* Pods_FitnessLogger_FitnessLoggerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FitnessLogger_FitnessLoggerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -277,6 +279,7 @@
 		04BA2D8425514F4500BF12DB /* Animation */ = {
 			isa = PBXGroup;
 			children = (
+				04BA2DBB2551589D00BF12DB /* success.json */,
 				04BA2D8525514F5E00BF12DB /* treadmill.json */,
 			);
 			path = Animation;
@@ -493,6 +496,7 @@
 				EDC585A825233A0900B1B9D1 /* Oswald-Medium.ttf in Resources */,
 				04BA2D8625514F5E00BF12DB /* treadmill.json in Resources */,
 				043DBF7225231612002F0394 /* Preview Assets.xcassets in Resources */,
+				04BA2DBC2551589D00BF12DB /* success.json in Resources */,
 				043DBF6F25231612002F0394 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
