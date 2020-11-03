@@ -32,7 +32,7 @@ struct CustomTextLabel: View {
     var body: some View {
         Text(self.text)
             .foregroundColor(Color.blackWhite)
-            .font(.custom(self.isTextBold ? Font.oswaldHeavy : Font.oswaldRegular, size: self.textSize))
+            .font(.custom(self.isTextBold ? Font.oswaldHeavy : Font.oswaldMedium, size: self.textSize))
             .multilineTextAlignment(self.alignment)
     }
 }

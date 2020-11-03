@@ -3,6 +3,7 @@ import SwiftUI
 
 struct TrainingProgramView: View {
     @ObservedObject var tp: Program
+    @ObservedObject var global = ControllerRegister.global
     @State var showingAddProgramSheet = false
     
     var body: some View {
