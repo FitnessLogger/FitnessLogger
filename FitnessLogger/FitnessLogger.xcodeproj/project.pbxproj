@@ -21,6 +21,8 @@
 		04590606252323150064209C /* CustomTextLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04590605252323150064209C /* CustomTextLabel.swift */; };
 		04590608252323E50064209C /* FontType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04590607252323E50064209C /* FontType.swift */; };
 		0459060A252324580064209C /* FontSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04590609252324580064209C /* FontSize.swift */; };
+		B62B653D7328B19BFD8935DD /* Pods_FitnessLogger_FitnessLoggerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A36E219A9AFF9D9044DE21B /* Pods_FitnessLogger_FitnessLoggerUITests.framework */; };
+		C38B1F3995C4B0E3433E711A /* Pods_FitnessLogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57C6ADD23DCDD72E5CC7FB47 /* Pods_FitnessLogger.framework */; };
 		ED4B712525233D0C00F8A297 /* TrainingCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4B712425233D0C00F8A297 /* TrainingCategory.swift */; };
 		ED4B713425233D4200F8A297 /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4B713225233D4200F8A297 /* Exercise.swift */; };
 		ED4B713525233D4200F8A297 /* TrainingProgram.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4B713325233D4200F8A297 /* TrainingProgram.swift */; };
@@ -34,6 +36,7 @@
 		EDA6BD5E253F2BAF00E78697 /* Program.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA6BD5D253F2BAF00E78697 /* Program.swift */; };
 		EDC585A725233A0900B1B9D1 /* Oswald-Heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EDC585A525233A0900B1B9D1 /* Oswald-Heavy.ttf */; };
 		EDC585A825233A0900B1B9D1 /* Oswald-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EDC585A625233A0900B1B9D1 /* Oswald-Medium.ttf */; };
+		EDD7FA50255052000048795E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EDD7FA4F255052000048795E /* GoogleService-Info.plist */; };
 		EDDA75A2253854F90042D9CF /* UpdateExerciseLogViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDA75A1253854F90042D9CF /* UpdateExerciseLogViewModel.swift */; };
 		EDDA75B425386BFE0042D9CF /* ProgramDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDA75B325386BFE0042D9CF /* ProgramDetailViewModel.swift */; };
 		EDDA75CA25389EA20042D9CF /* AddTrainingProgramViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDA75C925389EA20042D9CF /* AddTrainingProgramViewModel.swift */; };
@@ -45,6 +48,7 @@
 		EDFCE62C25261B0A00FD9486 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFCE62B25261B0A00FD9486 /* Log.swift */; };
 		EDFCE63225261C4D00FD9486 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFCE63125261C4D00FD9486 /* Date.swift */; };
 		EDFCE637252B0F7100FD9486 /* UpdateExerciseLogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFCE636252B0F7100FD9486 /* UpdateExerciseLogView.swift */; };
+		F6AF6DA627E3CD1A4B09B8B4 /* Pods_FitnessLoggerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A64C76AE96072D9A4B322EA2 /* Pods_FitnessLoggerTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +89,15 @@
 		04590605252323150064209C /* CustomTextLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextLabel.swift; sourceTree = "<group>"; };
 		04590607252323E50064209C /* FontType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontType.swift; sourceTree = "<group>"; };
 		04590609252324580064209C /* FontSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontSize.swift; sourceTree = "<group>"; };
+		1223513692C31C76A125E9D9 /* Pods-FitnessLoggerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FitnessLoggerTests.release.xcconfig"; path = "Target Support Files/Pods-FitnessLoggerTests/Pods-FitnessLoggerTests.release.xcconfig"; sourceTree = "<group>"; };
+		1B4DCEDE1DF910764841F593 /* Pods-FitnessLogger.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FitnessLogger.debug.xcconfig"; path = "Target Support Files/Pods-FitnessLogger/Pods-FitnessLogger.debug.xcconfig"; sourceTree = "<group>"; };
+		4A36E219A9AFF9D9044DE21B /* Pods_FitnessLogger_FitnessLoggerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FitnessLogger_FitnessLoggerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		57C6ADD23DCDD72E5CC7FB47 /* Pods_FitnessLogger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FitnessLogger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E441E8BE9D359391D4456BE /* Pods-FitnessLogger-FitnessLoggerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FitnessLogger-FitnessLoggerUITests.debug.xcconfig"; path = "Target Support Files/Pods-FitnessLogger-FitnessLoggerUITests/Pods-FitnessLogger-FitnessLoggerUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		951662C13C522C8B853055FC /* Pods-FitnessLogger.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FitnessLogger.release.xcconfig"; path = "Target Support Files/Pods-FitnessLogger/Pods-FitnessLogger.release.xcconfig"; sourceTree = "<group>"; };
+		97D456BC4B04ED6155AFDAC5 /* Pods-FitnessLogger-FitnessLoggerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FitnessLogger-FitnessLoggerUITests.release.xcconfig"; path = "Target Support Files/Pods-FitnessLogger-FitnessLoggerUITests/Pods-FitnessLogger-FitnessLoggerUITests.release.xcconfig"; sourceTree = "<group>"; };
+		A64C76AE96072D9A4B322EA2 /* Pods_FitnessLoggerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FitnessLoggerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBC6E6100A740CA401E95D29 /* Pods-FitnessLoggerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FitnessLoggerTests.debug.xcconfig"; path = "Target Support Files/Pods-FitnessLoggerTests/Pods-FitnessLoggerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		ED4B712425233D0C00F8A297 /* TrainingCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrainingCategory.swift; sourceTree = "<group>"; };
 		ED4B713225233D4200F8A297 /* Exercise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
 		ED4B713325233D4200F8A297 /* TrainingProgram.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrainingProgram.swift; sourceTree = "<group>"; };
@@ -98,6 +111,7 @@
 		EDA6BD5D253F2BAF00E78697 /* Program.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Program.swift; sourceTree = "<group>"; };
 		EDC585A525233A0900B1B9D1 /* Oswald-Heavy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oswald-Heavy.ttf"; sourceTree = "<group>"; };
 		EDC585A625233A0900B1B9D1 /* Oswald-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oswald-Medium.ttf"; sourceTree = "<group>"; };
+		EDD7FA4F255052000048795E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EDDA75A1253854F90042D9CF /* UpdateExerciseLogViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateExerciseLogViewModel.swift; sourceTree = "<group>"; };
 		EDDA75B325386BFE0042D9CF /* ProgramDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramDetailViewModel.swift; sourceTree = "<group>"; };
 		EDDA75C925389EA20042D9CF /* AddTrainingProgramViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTrainingProgramViewModel.swift; sourceTree = "<group>"; };
@@ -116,6 +130,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C38B1F3995C4B0E3433E711A /* Pods_FitnessLogger.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -123,6 +138,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6AF6DA627E3CD1A4B09B8B4 /* Pods_FitnessLoggerTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,6 +146,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B62B653D7328B19BFD8935DD /* Pods_FitnessLogger_FitnessLoggerUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,6 +160,8 @@
 				043DBF7E25231612002F0394 /* FitnessLoggerTests */,
 				043DBF8925231612002F0394 /* FitnessLoggerUITests */,
 				043DBF6625231611002F0394 /* Products */,
+				A6B232D52CF1A01824DB9E5D /* Pods */,
+				04C3420C33C433A72683074E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -171,6 +190,7 @@
 				043DBF6E25231612002F0394 /* Assets.xcassets */,
 				043DBF7325231612002F0394 /* LaunchScreen.storyboard */,
 				043DBF7625231612002F0394 /* Info.plist */,
+				EDD7FA4F255052000048795E /* GoogleService-Info.plist */,
 				043DBF7025231612002F0394 /* Preview Content */,
 			);
 			path = FitnessLogger;
@@ -244,6 +264,30 @@
 			path = CustomViews;
 			sourceTree = "<group>";
 		};
+		04C3420C33C433A72683074E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				57C6ADD23DCDD72E5CC7FB47 /* Pods_FitnessLogger.framework */,
+				4A36E219A9AFF9D9044DE21B /* Pods_FitnessLogger_FitnessLoggerUITests.framework */,
+				A64C76AE96072D9A4B322EA2 /* Pods_FitnessLoggerTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A6B232D52CF1A01824DB9E5D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1B4DCEDE1DF910764841F593 /* Pods-FitnessLogger.debug.xcconfig */,
+				951662C13C522C8B853055FC /* Pods-FitnessLogger.release.xcconfig */,
+				6E441E8BE9D359391D4456BE /* Pods-FitnessLogger-FitnessLoggerUITests.debug.xcconfig */,
+				97D456BC4B04ED6155AFDAC5 /* Pods-FitnessLogger-FitnessLoggerUITests.release.xcconfig */,
+				CBC6E6100A740CA401E95D29 /* Pods-FitnessLoggerTests.debug.xcconfig */,
+				1223513692C31C76A125E9D9 /* Pods-FitnessLoggerTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		ED4B712325233CF900F8A297 /* Enums */ = {
 			isa = PBXGroup;
 			children = (
@@ -314,9 +358,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 043DBF8F25231612002F0394 /* Build configuration list for PBXNativeTarget "FitnessLogger" */;
 			buildPhases = (
+				A9AF081FAD14729F9971E17F /* [CP] Check Pods Manifest.lock */,
 				043DBF6125231611002F0394 /* Sources */,
 				043DBF6225231611002F0394 /* Frameworks */,
 				043DBF6325231611002F0394 /* Resources */,
+				ACA9CFAB05866124E16F5029 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -331,6 +377,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 043DBF9225231612002F0394 /* Build configuration list for PBXNativeTarget "FitnessLoggerTests" */;
 			buildPhases = (
+				F8743D96EDD4895E178B6A41 /* [CP] Check Pods Manifest.lock */,
 				043DBF7725231612002F0394 /* Sources */,
 				043DBF7825231612002F0394 /* Frameworks */,
 				043DBF7925231612002F0394 /* Resources */,
@@ -349,9 +396,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 043DBF9525231612002F0394 /* Build configuration list for PBXNativeTarget "FitnessLoggerUITests" */;
 			buildPhases = (
+				743C20B42047EDFD26FE3BE7 /* [CP] Check Pods Manifest.lock */,
 				043DBF8225231612002F0394 /* Sources */,
 				043DBF8325231612002F0394 /* Frameworks */,
 				043DBF8425231612002F0394 /* Resources */,
+				C7CE142C32370B63916CEB4D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -412,6 +461,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EDC585A725233A0900B1B9D1 /* Oswald-Heavy.ttf in Resources */,
+				EDD7FA50255052000048795E /* GoogleService-Info.plist in Resources */,
 				EDFCE6142525F89B00FD9486 /* Oswald-Regular.ttf in Resources */,
 				043DBF7525231612002F0394 /* LaunchScreen.storyboard in Resources */,
 				EDFCE6152525F89B00FD9486 /* Oswald-ExtraLight.ttf in Resources */,
@@ -436,6 +486,109 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		743C20B42047EDFD26FE3BE7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FitnessLogger-FitnessLoggerUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A9AF081FAD14729F9971E17F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FitnessLogger-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ACA9CFAB05866124E16F5029 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FitnessLogger/Pods-FitnessLogger-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FitnessLogger/Pods-FitnessLogger-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FitnessLogger/Pods-FitnessLogger-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C7CE142C32370B63916CEB4D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FitnessLogger-FitnessLoggerUITests/Pods-FitnessLogger-FitnessLoggerUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FitnessLogger-FitnessLoggerUITests/Pods-FitnessLogger-FitnessLoggerUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FitnessLogger-FitnessLoggerUITests/Pods-FitnessLogger-FitnessLoggerUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F8743D96EDD4895E178B6A41 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FitnessLoggerTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		043DBF6125231611002F0394 /* Sources */ = {
@@ -633,6 +786,7 @@
 		};
 		043DBF9025231612002F0394 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1B4DCEDE1DF910764841F593 /* Pods-FitnessLogger.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -652,6 +806,7 @@
 		};
 		043DBF9125231612002F0394 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 951662C13C522C8B853055FC /* Pods-FitnessLogger.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -671,6 +826,7 @@
 		};
 		043DBF9325231612002F0394 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CBC6E6100A740CA401E95D29 /* Pods-FitnessLoggerTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -692,6 +848,7 @@
 		};
 		043DBF9425231612002F0394 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1223513692C31C76A125E9D9 /* Pods-FitnessLoggerTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -713,6 +870,7 @@
 		};
 		043DBF9625231612002F0394 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6E441E8BE9D359391D4456BE /* Pods-FitnessLogger-FitnessLoggerUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -732,6 +890,7 @@
 		};
 		043DBF9725231612002F0394 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 97D456BC4B04ED6155AFDAC5 /* Pods-FitnessLogger-FitnessLoggerUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
