@@ -2,6 +2,7 @@ import Foundation
 import SwiftUI
 
 struct TrainingProgramView: View {
+    @EnvironmentObject var session: SessionStore
     @ObservedObject var tp: Program
     @ObservedObject var global = ControllerRegister.global
     @State var showingAddProgramSheet = false
@@ -15,6 +16,10 @@ struct TrainingProgramView: View {
                     let viewmodel = AddTrainingProgramViewModel(program: self.tp)
                     AddTrainingProgramView(viewmodel: viewmodel, show: self.$showingAddProgramSheet)
                 }
+                
+                Button("Sign Out", action: {
+                    session.signOut()
+                })
             } else {
                 List(self.tp.items) { trainingProgram in
                     let vm = ProgramDetailViewModel(trainingProgram: trainingProgram)

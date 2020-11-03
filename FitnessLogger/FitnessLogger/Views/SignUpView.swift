@@ -5,17 +5,16 @@ struct SignUpView: View {
     
     @State var email: String = ""
     @State var password: String = ""
-    @State var loading = false
     @State var error = false
-
+    @ObservedObject var global = ControllerRegister.global
     @EnvironmentObject var session: SessionStore
     
     func signUp() {
-        loading = true // Vis loading fra Marcus
-        error = false // Måske vise en error lottie
+        self.global.isLoading = true
+        error = false
         
         session.signUp(email: email, password: password) { (result, error) in
-            self.loading = false
+            self.global.isLoading = false
             
             if error != nil {
                 self.error = true
@@ -28,15 +27,17 @@ struct SignUpView: View {
     
     var body: some View {
         VStack {
-            TextField("Email", text: $email)
-            SecureField("Password", text: $password)
             if (error) {
-                Text("ahhh crap")
+                Text("Something went wrong, please try again.")
             }
-            Button(action: signUp) {
-                Text("Sign Up")
-            }
-        }
+            
+            TextField("Email", text: $email).textFieldStyle(RoundedBorderTextFieldStyle())
+            SecureField("Password", text: $password).textFieldStyle(RoundedBorderTextFieldStyle())
+            
+            CustomTextButton(action: {
+                signUp()
+            }, label: "Sign Up")
+        }.padding()
     }
 }
 

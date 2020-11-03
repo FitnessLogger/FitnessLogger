@@ -5,23 +5,20 @@ struct SignInView: View {
     
     @State var email: String = ""
     @State var password: String = ""
-    @State var loading = false
     @State var error = false
-    @State var success = false
-
+    @ObservedObject var global = ControllerRegister.global
     @EnvironmentObject var session: SessionStore
     
     func signIn() {
-        loading = true // Vis loading fra Marcus
-        error = false // Måske vise en error lottie
+        self.global.isLoading = true
+        error = false
         
         session.signIn(email: email, password: password) { (result, error) in
-            self.loading = false
+            self.global.isLoading = false
             
             if error != nil {
                 self.error = true
             } else {
-                success = true
                 self.email = ""
                 self.password = ""
             }
@@ -30,22 +27,23 @@ struct SignInView: View {
     
     var body: some View {
         NavigationView {
-            VStack {
-                TextField("Email", text: $email)
-                SecureField("Password", text: $password)
-                
+            VStack(alignment: .center) {
                 if (error) {
-                    Text("ahhh crap")
+                    Text("Something went wrong, please try again.")
                 }
                 
-                Button(action: signIn) {
-                    Text("Sign in")
-                }
+                TextField("Email", text: $email).textFieldStyle(RoundedBorderTextFieldStyle())
+                SecureField("Password", text: $password).textFieldStyle(RoundedBorderTextFieldStyle())
+                
+                
+                CustomTextButton(action: {
+                    signIn()
+                }, label: "Sign In")
                 
                 NavigationLink(destination: SignUpView()) {
-                    Text("Sign Up")
+                    CustomTextLabel(text: "Sign Up")
                 }
-            }
+            }.padding()
         }
     }
 }
