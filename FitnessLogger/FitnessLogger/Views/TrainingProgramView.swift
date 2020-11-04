@@ -9,11 +9,6 @@ struct TrainingProgramView: View {
     
     let programService = ControllerRegister.programService
     
-    func fetchData() {
-        print("Fetching data")
-        self.tp.fetchDataFromFirebase()
-    }
-    
     var body: some View {
         VStack {
             if tp.items.isEmpty {
@@ -23,10 +18,6 @@ struct TrainingProgramView: View {
                     let viewmodel = AddTrainingProgramViewModel(program: self.tp)
                     AddTrainingProgramView(viewmodel: viewmodel, show: self.$showingAddProgramSheet)
                 }
-                
-                Button("Sign Out", action: {
-                    session.signOut()
-                })
             } else {
                 List(self.tp.items) { trainingProgram in
                     let vm = ProgramDetailViewModel(trainingProgram: trainingProgram)
@@ -46,8 +37,6 @@ struct TrainingProgramView: View {
                     }
                 )
             }
-        }.onAppear {
-            fetchData()
         }
     }
 }

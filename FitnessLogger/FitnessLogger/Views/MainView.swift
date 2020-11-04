@@ -6,7 +6,7 @@ struct MainView: View {
     var tp: Program = Program()
 
     func getUser() {
-        session.listen()
+        session.listen(program: tp)
     }
 
     var body: some View {
