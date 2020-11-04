@@ -7,6 +7,8 @@ struct TrainingProgramView: View {
     @ObservedObject var global = ControllerRegister.global
     @State var showingAddProgramSheet = false
     
+    let programService = ControllerRegister.programService
+    
     func fetchData() {
         print("Fetching data")
         self.tp.fetchDataFromFirebase()

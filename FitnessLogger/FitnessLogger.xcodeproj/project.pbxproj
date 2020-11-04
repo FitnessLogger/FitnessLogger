@@ -33,6 +33,9 @@
 		04BA2D8E2551519C00BF12DB /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BA2D8D2551519C00BF12DB /* Global.swift */; };
 		04BA2D93255151EC00BF12DB /* ControllerRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BA2D92255151EC00BF12DB /* ControllerRegister.swift */; };
 		04BA2DBC2551589D00BF12DB /* success.json in Resources */ = {isa = PBXBuildFile; fileRef = 04BA2DBB2551589D00BF12DB /* success.json */; };
+		04CA2C522552F06300DC48B7 /* Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CA2C512552F06300DC48B7 /* Firebase.swift */; };
+		04CA2C582552F14B00DC48B7 /* ProgramService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CA2C572552F14B00DC48B7 /* ProgramService.swift */; };
+		04CA2C602552FEBC00DC48B7 /* SignOutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CA2C5F2552FEBC00DC48B7 /* SignOutView.swift */; };
 		B62B653D7328B19BFD8935DD /* Pods_FitnessLogger_FitnessLoggerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A36E219A9AFF9D9044DE21B /* Pods_FitnessLogger_FitnessLoggerUITests.framework */; };
 		C38B1F3995C4B0E3433E711A /* Pods_FitnessLogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57C6ADD23DCDD72E5CC7FB47 /* Pods_FitnessLogger.framework */; };
 		ED4B712525233D0C00F8A297 /* TrainingCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4B712425233D0C00F8A297 /* TrainingCategory.swift */; };
@@ -114,6 +117,9 @@
 		04BA2D8D2551519C00BF12DB /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
 		04BA2D92255151EC00BF12DB /* ControllerRegister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerRegister.swift; sourceTree = "<group>"; };
 		04BA2DBB2551589D00BF12DB /* success.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = success.json; sourceTree = "<group>"; };
+		04CA2C512552F06300DC48B7 /* Firebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Firebase.swift; sourceTree = "<group>"; };
+		04CA2C572552F14B00DC48B7 /* ProgramService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramService.swift; sourceTree = "<group>"; };
+		04CA2C5F2552FEBC00DC48B7 /* SignOutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignOutView.swift; sourceTree = "<group>"; };
 		1223513692C31C76A125E9D9 /* Pods-FitnessLoggerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FitnessLoggerTests.release.xcconfig"; path = "Target Support Files/Pods-FitnessLoggerTests/Pods-FitnessLoggerTests.release.xcconfig"; sourceTree = "<group>"; };
 		1B4DCEDE1DF910764841F593 /* Pods-FitnessLogger.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FitnessLogger.debug.xcconfig"; path = "Target Support Files/Pods-FitnessLogger/Pods-FitnessLogger.debug.xcconfig"; sourceTree = "<group>"; };
 		4A36E219A9AFF9D9044DE21B /* Pods_FitnessLogger_FitnessLoggerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FitnessLogger_FitnessLoggerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -215,6 +221,7 @@
 		043DBF6725231611002F0394 /* FitnessLogger */ = {
 			isa = PBXGroup;
 			children = (
+				04CA2C562552F13700DC48B7 /* Services */,
 				EDD7FA6C25514BB80048795E /* Stores */,
 				EDFCE63025261C2800FD9486 /* Extensions */,
 				ED4B714325233DDF00F8A297 /* Views */,
@@ -321,6 +328,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		04CA2C562552F13700DC48B7 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				04CA2C572552F14B00DC48B7 /* ProgramService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		A6B232D52CF1A01824DB9E5D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -353,6 +368,7 @@
 				04BA2D8D2551519C00BF12DB /* Global.swift */,
 				0434F2C3255174B400A8AA9A /* ChartModel.swift */,
 				EDE45D502552B753008DF462 /* Constants.swift */,
+				04CA2C512552F06300DC48B7 /* Firebase.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -385,6 +401,7 @@
 				04B164A725514C5B00903615 /* LottieView.swift */,
 				04B164B525514CD900903615 /* LoadingView.swift */,
 				04B164BA25514CF900903615 /* BlurView.swift */,
+				04CA2C5F2552FEBC00DC48B7 /* SignOutView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -682,6 +699,7 @@
 				0459060A252324580064209C /* FontSize.swift in Sources */,
 				EDDA75A2253854F90042D9CF /* UpdateExerciseLogViewModel.swift in Sources */,
 				04590604252320BF0064209C /* CustomTextButton.swift in Sources */,
+				04CA2C522552F06300DC48B7 /* Firebase.swift in Sources */,
 				0459060125231FDB0064209C /* Font.swift in Sources */,
 				EDD7FA7825514F610048795E /* SignInView.swift in Sources */,
 				045905F4252318A10064209C /* CustomButton.swift in Sources */,
@@ -701,6 +719,8 @@
 				EDA6BD5E253F2BAF00E78697 /* Program.swift in Sources */,
 				EDDA75B425386BFE0042D9CF /* ProgramDetailViewModel.swift in Sources */,
 				04B164BB25514CF900903615 /* BlurView.swift in Sources */,
+				04CA2C602552FEBC00DC48B7 /* SignOutView.swift in Sources */,
+				04CA2C582552F14B00DC48B7 /* ProgramService.swift in Sources */,
 				EDDA75CA25389EA20042D9CF /* AddTrainingProgramViewModel.swift in Sources */,
 				ED4B712525233D0C00F8A297 /* TrainingCategory.swift in Sources */,
 				EDD7FA6E25514BF10048795E /* SessionStore.swift in Sources */,

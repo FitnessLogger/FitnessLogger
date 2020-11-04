@@ -24,7 +24,12 @@ class Exercise: Identifiable, ObservableObject, Codable {
         name = try values.decode(String.self, forKey: .name)
         category = try values.decode(TrainingCategory.self, forKey: .category)
         trainTogether = try values.decode(Bool.self, forKey: .trainedTogether)
-        log = try values.decode([Log].self, forKey: .log)
+        do {
+            log = try values.decode([Log].self, forKey: .log)
+        } catch {
+            log = [Log]()
+        }
+        
     }
     
     func encode(to encoder: Encoder) throws {

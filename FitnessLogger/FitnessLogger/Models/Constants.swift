@@ -1,5 +1,5 @@
 import Foundation
 
 struct Constants {
-    static let trainingPrograms = "trainingsPrograms"
+    static let trainingPrograms = "trainingPrograms"
 }

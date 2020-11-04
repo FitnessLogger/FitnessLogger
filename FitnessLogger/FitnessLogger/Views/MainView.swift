@@ -31,10 +31,10 @@ struct MainView: View {
 
 
                         NavigationView {
-                            TrainingProgramView(tp: tp).navigationBarTitle(Text("3 - 5 reps"))
+                            SignOutView()
                         }.tabItem {
                             Image(systemName: "3.circle")
-                            Text("Hard")
+                            Text("Sign Out")
                         }.tag(2)
                     }
                 } else {

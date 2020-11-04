@@ -6,35 +6,24 @@ import CodableFirebase
 class Program: ObservableObject {
     @Published var items = [TrainingProgram]()
     @ObservedObject var global = ControllerRegister.global
+    private var programService = ControllerRegister.programService
     
     func append(trainingProgram: TrainingProgram) {
         self.items.append(trainingProgram)
     }
     
     func fetchDataFromFirebase() {
-        let ref = Database.database().reference()
-        ref.child(Constants.trainingPrograms).child(self.global.userId)
-        ref.observeSingleEvent(of: .value, with: { snapshot in
-            guard let values = snapshot.value as? [String : Any] else { return }
-            let user = values["trainingsPrograms"]
-            
-            guard let userDict = user as? [String : Any] else { return }
-            
-            for (key, values) in userDict {
-                print(values)
+        programService.getPrograms(for: global.userId) { trainingPrograms in
+            if let programs = trainingPrograms {
+                for program in programs {
+                    if !self.items.contains(where: { $0.id == program.id })  {
+                        DispatchQueue.main.async {
+                            self.items.append(program)
+                        }
+                    }
+                }
             }
-            
-//            print(test!)
-        
-//            do {
-//                let model = try FirebaseDecoder().decode([TrainingProgram].self, from: Array(arrayLiteral: user!))
-//                print(model)
-//            } catch {
-//                print(error)
-//            }
-            
-        }) { error in
-            print(error)
+            self.global.updateLoadingState(isLoading: false)
         }
     }
 }
