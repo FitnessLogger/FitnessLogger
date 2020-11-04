@@ -39,7 +39,6 @@
 		ED4B713425233D4200F8A297 /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4B713225233D4200F8A297 /* Exercise.swift */; };
 		ED4B713525233D4200F8A297 /* TrainingProgram.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4B713325233D4200F8A297 /* TrainingProgram.swift */; };
 		ED4B713D25233DA200F8A297 /* AddExerciseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4B713A25233DA200F8A297 /* AddExerciseViewModel.swift */; };
-		ED4B713E25233DA200F8A297 /* TrainingProgramViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4B713B25233DA200F8A297 /* TrainingProgramViewModel.swift */; };
 		ED4B714825233DF500F8A297 /* TrainingProgramView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4B714425233DF400F8A297 /* TrainingProgramView.swift */; };
 		ED4B714925233DF500F8A297 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4B714525233DF400F8A297 /* MainView.swift */; };
 		ED4B714A25233DF500F8A297 /* AddExerciseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4B714625233DF500F8A297 /* AddExerciseView.swift */; };
@@ -56,6 +55,7 @@
 		EDDA75A2253854F90042D9CF /* UpdateExerciseLogViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDA75A1253854F90042D9CF /* UpdateExerciseLogViewModel.swift */; };
 		EDDA75B425386BFE0042D9CF /* ProgramDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDA75B325386BFE0042D9CF /* ProgramDetailViewModel.swift */; };
 		EDDA75CA25389EA20042D9CF /* AddTrainingProgramViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDA75C925389EA20042D9CF /* AddTrainingProgramViewModel.swift */; };
+		EDE45D512552B753008DF462 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE45D502552B753008DF462 /* Constants.swift */; };
 		EDFCE61D25260F5D00FD9486 /* ExerciseItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFCE61C25260F5D00FD9486 /* ExerciseItem.swift */; };
 		EDFCE6222526174F00FD9486 /* ProgramDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFCE6212526174F00FD9486 /* ProgramDetailView.swift */; };
 		EDFCE62725261A5400FD9486 /* ExerciseDetailItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFCE62625261A5400FD9486 /* ExerciseDetailItem.swift */; };
@@ -127,7 +127,6 @@
 		ED4B713225233D4200F8A297 /* Exercise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
 		ED4B713325233D4200F8A297 /* TrainingProgram.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrainingProgram.swift; sourceTree = "<group>"; };
 		ED4B713A25233DA200F8A297 /* AddExerciseViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddExerciseViewModel.swift; sourceTree = "<group>"; };
-		ED4B713B25233DA200F8A297 /* TrainingProgramViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrainingProgramViewModel.swift; sourceTree = "<group>"; };
 		ED4B714425233DF400F8A297 /* TrainingProgramView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrainingProgramView.swift; sourceTree = "<group>"; };
 		ED4B714525233DF400F8A297 /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		ED4B714625233DF500F8A297 /* AddExerciseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddExerciseView.swift; sourceTree = "<group>"; };
@@ -144,6 +143,7 @@
 		EDDA75A1253854F90042D9CF /* UpdateExerciseLogViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateExerciseLogViewModel.swift; sourceTree = "<group>"; };
 		EDDA75B325386BFE0042D9CF /* ProgramDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramDetailViewModel.swift; sourceTree = "<group>"; };
 		EDDA75C925389EA20042D9CF /* AddTrainingProgramViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTrainingProgramViewModel.swift; sourceTree = "<group>"; };
+		EDE45D502552B753008DF462 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		EDFCE61C25260F5D00FD9486 /* ExerciseItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseItem.swift; sourceTree = "<group>"; };
 		EDFCE6212526174F00FD9486 /* ProgramDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramDetailView.swift; sourceTree = "<group>"; };
 		EDFCE62625261A5400FD9486 /* ExerciseDetailItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseDetailItem.swift; sourceTree = "<group>"; };
@@ -352,6 +352,7 @@
 				EDD7FA7225514CBE0048795E /* User.swift */,
 				04BA2D8D2551519C00BF12DB /* Global.swift */,
 				0434F2C3255174B400A8AA9A /* ChartModel.swift */,
+				EDE45D502552B753008DF462 /* Constants.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -359,7 +360,6 @@
 		ED4B713925233D8A00F8A297 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				ED4B713B25233DA200F8A297 /* TrainingProgramViewModel.swift */,
 				EDDA75C925389EA20042D9CF /* AddTrainingProgramViewModel.swift */,
 				ED4B713A25233DA200F8A297 /* AddExerciseViewModel.swift */,
 				EDDA75B325386BFE0042D9CF /* ProgramDetailViewModel.swift */,
@@ -676,6 +676,7 @@
 				ED4B715125233E1700F8A297 /* TrainingProgramItem.swift in Sources */,
 				04590606252323150064209C /* CustomTextLabel.swift in Sources */,
 				0434F2C4255174B400A8AA9A /* ChartModel.swift in Sources */,
+				EDE45D512552B753008DF462 /* Constants.swift in Sources */,
 				EDFCE63225261C4D00FD9486 /* Date.swift in Sources */,
 				ED4B713D25233DA200F8A297 /* AddExerciseViewModel.swift in Sources */,
 				0459060A252324580064209C /* FontSize.swift in Sources */,
@@ -703,7 +704,6 @@
 				EDDA75CA25389EA20042D9CF /* AddTrainingProgramViewModel.swift in Sources */,
 				ED4B712525233D0C00F8A297 /* TrainingCategory.swift in Sources */,
 				EDD7FA6E25514BF10048795E /* SessionStore.swift in Sources */,
-				ED4B713E25233DA200F8A297 /* TrainingProgramViewModel.swift in Sources */,
 				EDFCE61D25260F5D00FD9486 /* ExerciseItem.swift in Sources */,
 				04B164B625514CD900903615 /* LoadingView.swift in Sources */,
 				EDFCE62725261A5400FD9486 /* ExerciseDetailItem.swift in Sources */,

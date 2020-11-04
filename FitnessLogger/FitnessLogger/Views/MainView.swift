@@ -2,12 +2,10 @@ import SwiftUI
 
 struct MainView: View {
     @EnvironmentObject var session: SessionStore
-
-    var tp: Program = Program()
     @ObservedObject var global = ControllerRegister.global
+    var tp: Program = Program()
 
     func getUser() {
-        print("Started listening")
         session.listen()
     }
 

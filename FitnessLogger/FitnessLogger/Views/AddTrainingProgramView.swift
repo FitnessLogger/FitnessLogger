@@ -46,7 +46,6 @@ struct AddTrainingProgramView: View {
             .navigationBarTitle(Text("Add program"), displayMode: .inline)
             .navigationBarItems(trailing: Button(action: {
                 self.vm.saveTrainingProgram()
-                // It needs to be apended
                 self.showingAddProgramSheet.toggle()
             }) {
                 Text("Save").bold()

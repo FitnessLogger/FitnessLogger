@@ -1,6 +1,6 @@
 import Foundation
 
-struct Log: Identifiable {
+struct Log: Identifiable, Codable {
     var id = UUID()
     var left: Int
     var right: Int
@@ -27,6 +27,17 @@ struct Log: Identifiable {
         }
         
         return right
+    }
+    
+    func toDict() -> [String : Any] {
+        var dict : [String : Any] = [:]
+        
+        dict["id"] = id
+        dict["left"] = left
+        dict["right"] = right
+        dict["time"] = time
+        
+        return dict
     }
 }
 

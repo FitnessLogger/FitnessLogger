@@ -3,12 +3,14 @@ import Firebase
 
 class SessionStore : ObservableObject {
     @Published var session: User?
+    @ObservedObject var global = ControllerRegister.global
     var handle: AuthStateDidChangeListenerHandle?
     
     func listen() {
         handle = Auth.auth().addStateDidChangeListener { (auth, user) in
             if let user = user {
                 self.session = User(uid: user.uid, displayName: user.displayName, email: user.email)
+                self.global.userId = user.uid
             } else {
                 self.session = nil
             }
