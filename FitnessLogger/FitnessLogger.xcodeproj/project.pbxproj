@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0415F9F4255164B400F4A994 /* BarChartItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0415F9F3255164B400F4A994 /* BarChartItem.swift */; };
+		0434F2BC25516EF400A8AA9A /* BarChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0434F2BB25516EF400A8AA9A /* BarChartView.swift */; };
+		0434F2C4255174B400A8AA9A /* ChartModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0434F2C3255174B400A8AA9A /* ChartModel.swift */; };
+		0434F2C92551762300A8AA9A /* BarChartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0434F2C82551762300A8AA9A /* BarChartViewModel.swift */; };
 		043DBF6925231611002F0394 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043DBF6825231611002F0394 /* AppDelegate.swift */; };
 		043DBF6B25231611002F0394 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043DBF6A25231611002F0394 /* SceneDelegate.swift */; };
 		043DBF6F25231612002F0394 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 043DBF6E25231612002F0394 /* Assets.xcassets */; };
@@ -79,6 +83,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0415F9F3255164B400F4A994 /* BarChartItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarChartItem.swift; sourceTree = "<group>"; };
+		0434F2BB25516EF400A8AA9A /* BarChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarChartView.swift; sourceTree = "<group>"; };
+		0434F2C3255174B400A8AA9A /* ChartModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartModel.swift; sourceTree = "<group>"; };
+		0434F2C82551762300A8AA9A /* BarChartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarChartViewModel.swift; sourceTree = "<group>"; };
 		043DBF6525231611002F0394 /* FitnessLogger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitnessLogger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		043DBF6825231611002F0394 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		043DBF6A25231611002F0394 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -173,6 +181,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0415F9F22551649B00F4A994 /* Chart */ = {
+			isa = PBXGroup;
+			children = (
+				0415F9F3255164B400F4A994 /* BarChartItem.swift */,
+				0434F2BB25516EF400A8AA9A /* BarChartView.swift */,
+			);
+			path = Chart;
+			sourceTree = "<group>";
+		};
 		043DBF5C25231611002F0394 = {
 			isa = PBXGroup;
 			children = (
@@ -334,6 +351,7 @@
 				EDA6BD5D253F2BAF00E78697 /* Program.swift */,
 				EDD7FA7225514CBE0048795E /* User.swift */,
 				04BA2D8D2551519C00BF12DB /* Global.swift */,
+				0434F2C3255174B400A8AA9A /* ChartModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -346,6 +364,7 @@
 				ED4B713A25233DA200F8A297 /* AddExerciseViewModel.swift */,
 				EDDA75B325386BFE0042D9CF /* ProgramDetailViewModel.swift */,
 				EDDA75A1253854F90042D9CF /* UpdateExerciseLogViewModel.swift */,
+				0434F2C82551762300A8AA9A /* BarChartViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -353,6 +372,7 @@
 		ED4B714325233DDF00F8A297 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				0415F9F22551649B00F4A994 /* Chart */,
 				ED4B714F25233E0100F8A297 /* ListItems */,
 				EDD7FA7725514F610048795E /* SignInView.swift */,
 				EDD7FA7F2551577B0048795E /* SignUpView.swift */,
@@ -652,8 +672,10 @@
 				EDD7FA7325514CBE0048795E /* User.swift in Sources */,
 				04BA2D93255151EC00BF12DB /* ControllerRegister.swift in Sources */,
 				EDFCE637252B0F7100FD9486 /* UpdateExerciseLogView.swift in Sources */,
+				0415F9F4255164B400F4A994 /* BarChartItem.swift in Sources */,
 				ED4B715125233E1700F8A297 /* TrainingProgramItem.swift in Sources */,
 				04590606252323150064209C /* CustomTextLabel.swift in Sources */,
+				0434F2C4255174B400A8AA9A /* ChartModel.swift in Sources */,
 				EDFCE63225261C4D00FD9486 /* Date.swift in Sources */,
 				ED4B713D25233DA200F8A297 /* AddExerciseViewModel.swift in Sources */,
 				0459060A252324580064209C /* FontSize.swift in Sources */,
@@ -670,8 +692,10 @@
 				04B164A825514C5B00903615 /* LottieView.swift in Sources */,
 				EDFCE62C25261B0A00FD9486 /* Log.swift in Sources */,
 				045905F6252318FE0064209C /* Colors.swift in Sources */,
+				0434F2BC25516EF400A8AA9A /* BarChartView.swift in Sources */,
 				043DBF6925231611002F0394 /* AppDelegate.swift in Sources */,
 				043DBF6B25231611002F0394 /* SceneDelegate.swift in Sources */,
+				0434F2C92551762300A8AA9A /* BarChartViewModel.swift in Sources */,
 				ED4B714B25233DF500F8A297 /* AddTrainingProgramView.swift in Sources */,
 				EDA6BD5E253F2BAF00E78697 /* Program.swift in Sources */,
 				EDDA75B425386BFE0042D9CF /* ProgramDetailViewModel.swift in Sources */,
