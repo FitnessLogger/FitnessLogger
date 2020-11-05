@@ -40,6 +40,8 @@
 		04CA2C772553E3A500DC48B7 /* failure.json in Resources */ = {isa = PBXBuildFile; fileRef = 04CA2C762553E3A500DC48B7 /* failure.json */; };
 		04CA2C7F2553E92700DC48B7 /* uploading.json in Resources */ = {isa = PBXBuildFile; fileRef = 04CA2C7E2553E92700DC48B7 /* uploading.json */; };
 		04CA2C872553EC1300DC48B7 /* UploadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CA2C862553EC1300DC48B7 /* UploadingView.swift */; };
+		04CA2C8C2553FACF00DC48B7 /* ExerciseCategoryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CA2C8B2553FACF00DC48B7 /* ExerciseCategoryItem.swift */; };
+		04CA2C91255407CA00DC48B7 /* check-mark.json in Resources */ = {isa = PBXBuildFile; fileRef = 04CA2C90255407CA00DC48B7 /* check-mark.json */; };
 		B62B653D7328B19BFD8935DD /* Pods_FitnessLogger_FitnessLoggerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A36E219A9AFF9D9044DE21B /* Pods_FitnessLogger_FitnessLoggerUITests.framework */; };
 		C38B1F3995C4B0E3433E711A /* Pods_FitnessLogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57C6ADD23DCDD72E5CC7FB47 /* Pods_FitnessLogger.framework */; };
 		ED4B712525233D0C00F8A297 /* TrainingCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4B712425233D0C00F8A297 /* TrainingCategory.swift */; };
@@ -128,6 +130,8 @@
 		04CA2C762553E3A500DC48B7 /* failure.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = failure.json; sourceTree = "<group>"; };
 		04CA2C7E2553E92700DC48B7 /* uploading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = uploading.json; sourceTree = "<group>"; };
 		04CA2C862553EC1300DC48B7 /* UploadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadingView.swift; sourceTree = "<group>"; };
+		04CA2C8B2553FACF00DC48B7 /* ExerciseCategoryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseCategoryItem.swift; sourceTree = "<group>"; };
+		04CA2C90255407CA00DC48B7 /* check-mark.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "check-mark.json"; sourceTree = "<group>"; };
 		1223513692C31C76A125E9D9 /* Pods-FitnessLoggerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FitnessLoggerTests.release.xcconfig"; path = "Target Support Files/Pods-FitnessLoggerTests/Pods-FitnessLoggerTests.release.xcconfig"; sourceTree = "<group>"; };
 		1B4DCEDE1DF910764841F593 /* Pods-FitnessLogger.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FitnessLogger.debug.xcconfig"; path = "Target Support Files/Pods-FitnessLogger/Pods-FitnessLogger.debug.xcconfig"; sourceTree = "<group>"; };
 		4A36E219A9AFF9D9044DE21B /* Pods_FitnessLogger_FitnessLoggerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FitnessLogger_FitnessLoggerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -325,6 +329,7 @@
 				04BA2D8525514F5E00BF12DB /* treadmill.json */,
 				04CA2C762553E3A500DC48B7 /* failure.json */,
 				04CA2C7E2553E92700DC48B7 /* uploading.json */,
+				04CA2C90255407CA00DC48B7 /* check-mark.json */,
 			);
 			path = Animation;
 			sourceTree = "<group>";
@@ -432,6 +437,7 @@
 				ED4B715025233E1700F8A297 /* TrainingProgramItem.swift */,
 				EDFCE61C25260F5D00FD9486 /* ExerciseItem.swift */,
 				EDFCE62625261A5400FD9486 /* ExerciseDetailItem.swift */,
+				04CA2C8B2553FACF00DC48B7 /* ExerciseCategoryItem.swift */,
 			);
 			path = ListItems;
 			sourceTree = "<group>";
@@ -571,6 +577,7 @@
 				EDD7FA50255052000048795E /* GoogleService-Info.plist in Resources */,
 				043DBF7525231612002F0394 /* LaunchScreen.storyboard in Resources */,
 				EDC585A825233A0900B1B9D1 /* Oswald-Medium.ttf in Resources */,
+				04CA2C91255407CA00DC48B7 /* check-mark.json in Resources */,
 				04CA2C7F2553E92700DC48B7 /* uploading.json in Resources */,
 				04BA2D8625514F5E00BF12DB /* treadmill.json in Resources */,
 				04CA2C772553E3A500DC48B7 /* failure.json in Resources */,
@@ -714,6 +721,7 @@
 				0415F9F4255164B400F4A994 /* BarChartItem.swift in Sources */,
 				ED4B715125233E1700F8A297 /* TrainingProgramItem.swift in Sources */,
 				04590606252323150064209C /* CustomTextLabel.swift in Sources */,
+				04CA2C8C2553FACF00DC48B7 /* ExerciseCategoryItem.swift in Sources */,
 				0434F2C4255174B400A8AA9A /* ChartModel.swift in Sources */,
 				EDE45D512552B753008DF462 /* Constants.swift in Sources */,
 				EDFCE63225261C4D00FD9486 /* Date.swift in Sources */,

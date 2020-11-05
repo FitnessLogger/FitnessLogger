@@ -6,7 +6,7 @@ class AddExerciseViewModel: ObservableObject {
     @Published var exerciseName: String
     @Published var trainingProgram: TrainingProgram
     
-    let strings = ["this", "is", "a", "test"]
+    let avaliableCategories : [TrainingCategory] = [.fullBody, .upperBody, .lowerBody]
     
     init(trainingProgram: TrainingProgram) {
         self.trainingProgram = trainingProgram
@@ -14,8 +14,8 @@ class AddExerciseViewModel: ObservableObject {
         self.exerciseName = ""
     }
     
-    func saveExercise() {
-        let exercise: Exercise = Exercise(name: self.exerciseName, category: .arms, trainTogether: self.trainedSeparately, log: [])
+    func saveExercise(category : TrainingCategory) {
+        let exercise: Exercise = Exercise(name: self.exerciseName, category: category, trainTogether: self.trainedSeparately, log: [])
         self.trainingProgram.exercises.append(exercise)
     }
 }

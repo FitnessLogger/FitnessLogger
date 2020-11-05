@@ -75,6 +75,6 @@ struct BarChartView_Previews: PreviewProvider {
             Log(left: 45, right: 20, time: 1234),
             Log(left: 45, right: 20, time: 1234),
             Log(left: 60, right: 20, time: 123412412)]
-        BarChartView(viewModel: BarChartViewModel(exercice: Exercise(name: "Something", category: .legs, trainTogether: false, log: logs)))
+        BarChartView(viewModel: BarChartViewModel(exercice: Exercise(name: "Something", category: .lowerBody, trainTogether: false, log: logs)))
     }
 }

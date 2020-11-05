@@ -2,8 +2,9 @@ import Foundation
 import SwiftUI
 
 struct AddExerciseView: View {
-    @ObservedObject private var vm: AddExerciseViewModel
+    @ObservedObject var vm: AddExerciseViewModel
     @Binding private var showAddExercise: Bool
+    @State private var selectedCategory = TrainingCategory.fullBody
     
     init(viewmodel: AddExerciseViewModel, show: Binding<Bool>) {
         self.vm = viewmodel
@@ -15,8 +16,8 @@ struct AddExerciseView: View {
             VStack {
                 TextField("Exercise name", text: self.$vm.exerciseName)
                 
-                List(self.vm.strings, id: \.self) { string in
-                    Text(string)
+                List(self.vm.avaliableCategories, id: \.self) { item in
+                    ExerciseCategoryItem(selectedItem: self.$selectedCategory, trainingCategory: item)
                 }
                 
                 Toggle("Trained separately", isOn: self.$vm.trainedSeparately)
@@ -24,7 +25,7 @@ struct AddExerciseView: View {
                 Spacer()
                 
                 Button("Save", action: {
-                    self.vm.saveExercise()
+                    self.vm.saveExercise(category: selectedCategory)
                     self.showAddExercise.toggle()
                 })
                 
