@@ -21,15 +21,26 @@ class AddTrainingProgramViewModel: ObservableObject {
         self.trainingPrograms = program
     }
     
-    func saveTrainingProgram() {
+    func saveTrainingProgram(completion: @escaping (Bool) -> Void) {
         currentTrainingProgram.name = self.name
         self.trainingPrograms?.append(trainingProgram: currentTrainingProgram)
-        saveToFirestore(trainingProgram: currentTrainingProgram)
+        saveToFirestore(trainingProgram: currentTrainingProgram) { success in
+            completion(success)
+        }
     }
     
-    private func saveToFirestore(trainingProgram: TrainingProgram) {
+    private func saveToFirestore(trainingProgram: TrainingProgram, completion: @escaping (Bool) -> Void) {
         let ref = Database.database().reference().child(Constants.trainingPrograms).child(self.global.userId)
         let data = try! FirebaseEncoder().encode(trainingProgram)
-        ref.child(trainingProgram.id).setValue(data)
+        ref.child(trainingProgram.id).setValue(data) { (error, ref) in
+            completion(error == nil)
+        }
     }
+}
+
+enum UploadingState {
+    case passiv
+    case uploading
+    case success
+    case failure
 }

@@ -17,7 +17,13 @@ class TrainingProgram: ObservableObject, Identifiable, Codable {
         
         id = try values.decode(String.self, forKey: .id)
         name = try values.decode(String.self, forKey: .name)
-        exercises = try values.decode([Exercise].self, forKey: .exercises)
+        do {
+            exercises = try values.decode([Exercise].self, forKey: .exercises)
+        }
+        catch {
+            exercises = [Exercise]()
+        }
+        
     }
     
     func encode(to encoder: Encoder) throws {

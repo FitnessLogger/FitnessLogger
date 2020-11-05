@@ -4,10 +4,26 @@ import SwiftUI
 struct AddTrainingProgramView: View {
     @ObservedObject private var vm: AddTrainingProgramViewModel
     @Binding var showingAddProgramSheet: Bool
+    @State var something : UploadingState = .passiv
     
     init(viewmodel: AddTrainingProgramViewModel, show: Binding<Bool>) {
         self.vm = viewmodel
         self._showingAddProgramSheet = show
+    }
+    
+    var animationFile : String {
+        print("Trying to get animation")
+        print("State: \(something)")
+        switch something {
+        case .success:
+            return "success"
+        case .failure:
+            return "failure"
+        case .uploading:
+            return "uploading"
+        default:
+            return ""
+        }
     }
 
     var body: some View {
@@ -44,9 +60,24 @@ struct AddTrainingProgramView: View {
                 }
             }.padding()
             .navigationBarTitle(Text("Add program"), displayMode: .inline)
-            .navigationBarItems(trailing: Button(action: {
-                self.vm.saveTrainingProgram()
-                self.showingAddProgramSheet.toggle()
+            .navigationBarItems(
+                leading:
+                    UploadingView(state: self.something)
+                ,
+                trailing: Button(action: {
+                    self.something = .uploading
+                    self.vm.saveTrainingProgram { success in
+                        if success {
+                            self.something = .success
+                            Utility.delay(delayInSeconds: 1) {
+                                self.showingAddProgramSheet.toggle()
+                            }
+                        }
+                        else {
+                            self.something = .failure
+                        }
+//                        self.something = .passiv
+                    }
             }) {
                 Text("Save").bold()
             })
