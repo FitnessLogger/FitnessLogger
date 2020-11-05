@@ -15,18 +15,18 @@ struct MainView: View {
                 if (session.session != nil) {
                     TabView {
                         NavigationView {
-                            TrainingProgramView(tp: tp).navigationBarTitle(Text("12 - 15 reps"))
+                            TrainingProgramView(tp: tp).navigationBarTitle(Text("My Programs"))
                         }.tabItem {
                             Image(systemName: "1.circle")
-                            Text("Easy")
+                            Text("Programs")
                         }.tag(0)
 
 
                         NavigationView {
-                            TrainingProgramView(tp: tp).navigationBarTitle(Text("8 - 10 reps"))
+                            TrainingProgramView(tp: tp).navigationBarTitle(Text("Program History"))
                         }.tabItem {
                             Image(systemName: "2.circle")
-                            Text("Medium")
+                            Text("History")
                         }.tag(1)
 
 
@@ -34,7 +34,7 @@ struct MainView: View {
                             SignOutView()
                         }.tabItem {
                             Image(systemName: "3.circle")
-                            Text("Sign Out")
+                            Text("Settings")
                         }.tag(2)
                     }
                 } else {
