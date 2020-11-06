@@ -31,7 +31,7 @@ struct MainView: View {
 
 
                         NavigationView {
-                            SignOutView()
+                            SettingsView()
                         }.tabItem {
                             Image(systemName: "3.circle")
                             Text("Settings")

@@ -1,25 +1,23 @@
-//
-//  CustomButton.swift
-//  FitnessLogger
-//
-//  Created by Marcus August Christiansen on 29/09/2020.
-//  Copyright © 2020 FitnessLogger. All rights reserved.
-//
-
 import SwiftUI
 
 struct CustomButton<Label>: View where Label : View {
     
     let action: () -> Void
     let label: Label
+    let isClear : Bool
+    
+    init(action: @escaping () -> Void, label: Label, isClear: Bool = false) {
+        self.action = action
+        self.label = label
+        self.isClear = isClear
+    }
     
     var body: some View {
-        
         Button(action: self.action) {
             self.label
                 .frame(minWidth: 0, maxWidth: .infinity)
                 .padding()
-                .background(Color.blackWhite)
+                .background(isClear ? Color.clear : Color.blackWhite)
                 .cornerRadius(5)
         }
         .buttonStyle(PlainButtonStyle())
