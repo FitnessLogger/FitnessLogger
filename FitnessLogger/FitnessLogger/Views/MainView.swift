@@ -5,6 +5,10 @@ struct MainView: View {
     @ObservedObject var global = ControllerRegister.global
     var tp: Program = Program()
 
+    init() {
+        
+    }
+    
     func getUser() {
         session.listen(program: tp)
     }
