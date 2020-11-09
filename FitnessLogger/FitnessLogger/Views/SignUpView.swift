@@ -27,16 +27,27 @@ struct SignUpView: View {
     
     var body: some View {
         VStack {
+            
+            Image("FL-Banner").resizable().scaledToFit().padding([.leading, .trailing], 48)
+            
+            Spacer()
+            
             if (error) {
                 Text("Something went wrong, please try again.")
             }
             
-            TextField("Email", text: $email).textFieldStyle(RoundedBorderTextFieldStyle())
-            SecureField("Password", text: $password).textFieldStyle(RoundedBorderTextFieldStyle())
+            TextField("Email", text: $email)
+                .font(.custom(Font.oswaldHeavy, size: 20))
+                .multilineTextAlignment(.center)
+            SecureField("Password", text: $password)
+                .font(.custom(Font.oswaldHeavy, size: 20))
+                .multilineTextAlignment(.center)
             
             CustomTextButton(action: {
                 signUp()
             }, label: "Sign Up")
+            
+            Spacer()
         }.padding()
     }
 }

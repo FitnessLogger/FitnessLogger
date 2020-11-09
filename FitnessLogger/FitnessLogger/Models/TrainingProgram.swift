@@ -1,7 +1,9 @@
 import Foundation
 import SwiftUI
 
-class TrainingProgram: ObservableObject, Identifiable, Codable {
+class TrainingProgram: ObservableObject, Identifiable, Codable, Equatable {
+
+    
 
     var id: String
     var name: String
@@ -33,6 +35,10 @@ class TrainingProgram: ObservableObject, Identifiable, Codable {
         self.id = "\(Date().millisecondsSince1970)"
         self.name = name
         self.exercises = exercises
+    }
+    
+    static func == (lhs: TrainingProgram, rhs: TrainingProgram) -> Bool {
+        return lhs.id == rhs.id
     }
     
     enum CodingKeys: String, CodingKey {

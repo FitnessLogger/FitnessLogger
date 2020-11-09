@@ -28,21 +28,30 @@ struct SignInView: View {
     var body: some View {
         NavigationView {
             VStack(alignment: .center) {
+                
+                Image("FL-Banner").resizable().scaledToFit().padding([.leading, .trailing], 48)
+                
+                Spacer()
+                
                 if (error) {
-                    Text("Something went wrong, please try again.")
+                    CustomTextLabel(text: "Something went wrong, please try again.")
                 }
                 
-                TextField("Email", text: $email).textFieldStyle(RoundedBorderTextFieldStyle())
-                SecureField("Password", text: $password).textFieldStyle(RoundedBorderTextFieldStyle())
-                
+                TextField("Email", text: $email)
+                    .font(.custom(Font.oswaldHeavy, size: 20))
+                    .multilineTextAlignment(.center)
+                SecureField("Password", text: $password)
+                    .font(.custom(Font.oswaldHeavy, size: 20))
+                    .multilineTextAlignment(.center)
                 
                 CustomTextButton(action: {
                     signIn()
                 }, label: "Sign In")
                 
-                NavigationLink(destination: SignUpView()) {
-                    CustomTextLabel(text: "Sign Up")
-                }
+                Spacer()
+                
+                NavigationButton(destination: SignUpView(), content: "Sign Up", isClear: true)
+                    .padding(.top, 8)
             }.padding()
         }
     }

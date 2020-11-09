@@ -40,26 +40,40 @@ struct TrainingProgramView: View {
                     }
                 }
             } else {
-                List(self.tp.items) { trainingProgram in
-                    let vm = ProgramDetailViewModel(trainingProgram: trainingProgram, isHistory: isHistory)
-                    NavigationLink(destination: ProgramDetailView(viewmodel: vm)) {
-                        TrainingProgramItem(trainingProgram: trainingProgram)
-                    }
-                }.navigationBarItems(trailing:
-                    HStack {
-                        if !isHistory {
-                            Button(action: {
-                                self.showingAddProgramSheet.toggle()
-                            }) {
-                                Image(systemName: "plus").imageScale(.large)
-                            }.sheet(isPresented: $showingAddProgramSheet) {
-                                let viewmodel = AddTrainingProgramViewModel(program: self.tp)
-                                AddTrainingProgramView(viewmodel: viewmodel, show: self.$showingAddProgramSheet)
-                            }
+                List {
+                    ForEach(self.tp.items) { item in
+                        let vm = ProgramDetailViewModel(trainingProgram: item, isHistory: isHistory)
+                        NavigationLink(destination: ProgramDetailView(viewmodel: vm)) {
+                            TrainingProgramItem(trainingProgram: item)
                         }
-                    }
-                )
+                    }.onDelete(perform: delete)
+                }
             }
-        }
+        }.navigationBarItems(trailing:
+            HStack {
+                if !isHistory {
+                    Button(action: {
+                        self.showingAddProgramSheet.toggle()
+                    }) {
+                        Image(systemName: "plus").imageScale(.large)
+                    }.sheet(isPresented: $showingAddProgramSheet) {
+                        let viewmodel = AddTrainingProgramViewModel(program: self.tp)
+                        AddTrainingProgramView(viewmodel: viewmodel, show: self.$showingAddProgramSheet)
+                    }
+                }
+            }
+        )
+    }
+    
+//    private func delete(program : TrainingProgram) {
+//        let index = self.tp.items.firstIndex(of: program)
+//
+//        if let programIndex = index {
+//            self.tp.items.remove(at: programIndex)
+//        }
+//    }
+    
+    private func delete(with indexSet: IndexSet) {
+        indexSet.forEach { self.tp.items.remove(at: $0) }
     }
 }
