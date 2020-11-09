@@ -28,7 +28,7 @@ struct ProgramDetailView: View {
             Text("Edit").bold()
         }.sheet(isPresented: self.$vm.showProgramSheet) {
             let viewmodel = AddTrainingProgramViewModel(trainingProgram: self.vm.trainingProgram)
-            AddTrainingProgramView(viewmodel: viewmodel, show: self.$vm.showProgramSheet)
+            AddTrainingProgramView(viewmodel: viewmodel, show: self.$vm.showProgramSheet, editMode: true)
         })
     }
 }

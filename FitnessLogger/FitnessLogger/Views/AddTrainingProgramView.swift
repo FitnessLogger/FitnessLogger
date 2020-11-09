@@ -5,10 +5,12 @@ struct AddTrainingProgramView: View {
     @ObservedObject private var vm: AddTrainingProgramViewModel
     @Binding var showingAddProgramSheet: Bool
     @State var uploadingState : UploadingState = .passiv
+    let editMode : Bool
     
-    init(viewmodel: AddTrainingProgramViewModel, show: Binding<Bool>) {
+    init(viewmodel: AddTrainingProgramViewModel, show: Binding<Bool>, editMode : Bool = false) {
         self.vm = viewmodel
         self._showingAddProgramSheet = show
+        self.editMode = editMode
     }
 
     var body: some View {
@@ -40,7 +42,7 @@ struct AddTrainingProgramView: View {
                     AddExerciseView(viewmodel: viewmodel, show: self.$vm.showAddExercise)
                 }
             }.padding()
-            .navigationBarTitle(Text("Add program"), displayMode: .inline)
+            .navigationBarTitle(Text(editMode ? "Edit program" : "Add program"), displayMode: .inline)
             .navigationBarItems(
                 leading:
                     UploadingView(state: self.uploadingState)
