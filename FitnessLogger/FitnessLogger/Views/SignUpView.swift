@@ -39,6 +39,7 @@ struct SignUpView: View {
             TextField("Email", text: $email)
                 .font(.custom(Font.oswaldHeavy, size: 20))
                 .multilineTextAlignment(.center)
+                .padding()
             SecureField("Password", text: $password)
                 .font(.custom(Font.oswaldHeavy, size: 20))
                 .multilineTextAlignment(.center)
@@ -46,6 +47,7 @@ struct SignUpView: View {
             CustomTextButton(action: {
                 signUp()
             }, label: "Sign Up")
+            .padding()
             
             Spacer()
         }.padding()
