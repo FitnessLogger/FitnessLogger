@@ -21,6 +21,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         // Create the SwiftUI view that provides the window contents.
         let contentView = MainView().environmentObject(SessionStore())
+        
+        // setting custom fonts
+        UINavigationBar.appearance().titleTextAttributes = [.font : UIFont(name: Font.oswaldMedium, size: 20)!]
+        UINavigationBar.appearance().largeTitleTextAttributes = [.font : UIFont(name: Font.oswaldHeavy, size: 30)!]
+        UITabBarItem.appearance().setTitleTextAttributes([.font: UIFont(name: Font.oswaldMedium, size: 10)! ], for: .normal)
 
         // Use a UIHostingController as window root view controller.
         if let windowScene = scene as? UIWindowScene {

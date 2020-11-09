@@ -6,8 +6,8 @@ struct ExerciseItem: View {
     
     var body: some View {
         VStack(alignment: .leading) {
-            Text(exercise.name)
-            Text(exercise.category.rawValue)
+            CustomTextLabel(text: exercise.name, fontType: .heading)
+            CustomTextLabel(text: exercise.category.rawValue)
         }
     }
 }

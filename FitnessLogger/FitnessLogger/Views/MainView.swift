@@ -5,6 +5,10 @@ struct MainView: View {
     @ObservedObject var global = ControllerRegister.global
     var tp: Program = Program()
 
+    init() {
+        
+    }
+    
     func getUser() {
         session.listen(program: tp)
     }
@@ -31,7 +35,7 @@ struct MainView: View {
 
 
                         NavigationView {
-                            SignOutView()
+                            SettingsView()
                         }.tabItem {
                             Image(systemName: "3.circle")
                             Text("Settings")

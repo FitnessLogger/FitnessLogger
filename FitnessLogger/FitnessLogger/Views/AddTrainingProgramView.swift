@@ -4,80 +4,62 @@ import SwiftUI
 struct AddTrainingProgramView: View {
     @ObservedObject private var vm: AddTrainingProgramViewModel
     @Binding var showingAddProgramSheet: Bool
-    @State var something : UploadingState = .passiv
+    @State var uploadingState : UploadingState = .passiv
+    let editMode : Bool
     
-    init(viewmodel: AddTrainingProgramViewModel, show: Binding<Bool>) {
+    init(viewmodel: AddTrainingProgramViewModel, show: Binding<Bool>, editMode : Bool = false) {
         self.vm = viewmodel
         self._showingAddProgramSheet = show
-    }
-    
-    var animationFile : String {
-        print("Trying to get animation")
-        print("State: \(something)")
-        switch something {
-        case .success:
-            return "success"
-        case .failure:
-            return "failure"
-        case .uploading:
-            return "uploading"
-        default:
-            return ""
-        }
+        self.editMode = editMode
     }
 
     var body: some View {
         NavigationView {
-            VStack {
+            VStack(alignment: .center) {
                 TextField("Enter program name", text: self.$vm.name)
+                    .font(.custom(Font.oswaldHeavy, size: 30))
+                    .multilineTextAlignment(.center)
+                    .padding()
+                
                 Spacer()
                 
-                
                 if self.vm.currentTrainingProgram.exercises.isEmpty {
-                    Button("Add exercise", action: {
-                        self.vm.showAddExercise.toggle()
-                    })
-                    .sheet(isPresented: self.$vm.showAddExercise) {
-                        let viewmodel = AddExerciseViewModel(trainingProgram: self.vm.currentTrainingProgram)
-                        AddExerciseView(viewmodel: viewmodel, show: self.$vm.showAddExercise)
-                    }
-                    
-                    Spacer()
+                    CustomTextLabel(text: "You have no exercises in this program. Click the button below to create your exercises.", alignment: .center)
                 } else {
                     List(self.vm.currentTrainingProgram.exercises) { exercise in
                         ExerciseItem(exercise: exercise)
                     }
-                    
-                    Spacer()
-                    
-                    Button("Add more exercises", action: {
-                        self.vm.showAddExercise.toggle()
-                    }).sheet(isPresented: self.$vm.showAddExercise) {
-                        let viewmodel = AddExerciseViewModel(trainingProgram: self.vm.currentTrainingProgram)
-                        AddExerciseView(viewmodel: viewmodel, show: self.$vm.showAddExercise)
-                        
-                    }
+                }
+                
+                Spacer()
+                
+                CustomTextButton(action: {
+                    self.vm.showAddExercise.toggle()
+                }, label: self.vm.currentTrainingProgram.exercises.isEmpty ? "Add exercise" : "Add more exercises")
+                .padding([.leading, .trailing], 8)
+                .sheet(isPresented: self.$vm.showAddExercise) {
+                    let viewmodel = AddExerciseViewModel(trainingProgram: self.vm.currentTrainingProgram)
+                    AddExerciseView(viewmodel: viewmodel, show: self.$vm.showAddExercise)
                 }
             }.padding()
-            .navigationBarTitle(Text("Add program"), displayMode: .inline)
+            .navigationBarTitle(Text(editMode ? "Edit program" : "Add program"), displayMode: .inline)
             .navigationBarItems(
                 leading:
-                    UploadingView(state: self.something)
+                    UploadingView(state: self.uploadingState)
                 ,
                 trailing: Button(action: {
-                    self.something = .uploading
+                    self.uploadingState = .uploading
                     self.vm.saveTrainingProgram { success in
                         if success {
-                            self.something = .success
+                            self.uploadingState = .success
                             Utility.delay(delayInSeconds: 1) {
                                 self.showingAddProgramSheet.toggle()
                             }
                         }
                         else {
-                            self.something = .failure
+                            self.uploadingState = .failure
                         }
-//                        self.something = .passiv
-                    }
+                     }
             }) {
                 Text("Save").bold()
             })

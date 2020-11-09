@@ -13,62 +13,75 @@ struct UpdateExerciseLogView: View {
     var body: some View {
         NavigationView {
             VStack {
-                VStack(alignment: .leading) {
-                    Text("Left")
-                    HStack {
-                        TextField("Weight", value: self.$vm.left, formatter: NumberFormatter())
-                        
-                        VStack {
-                            Button("+", action: {
-                                let value = self.vm.left + 1
-                                self.vm.updateValue(left: true, with: value)
-                            }).padding()
-                            
-                            Button("-", action: {
-                                let value = self.vm.left - 1
-                                self.vm.updateValue(left: true, with: value)
-                            }).padding()
-                        }
-                    }.padding()
+                VStack(alignment: .center) {
                     
+                    Spacer()
                     
                     if vm.exercise.trainTogether {
-                        Text("Right")
-                        HStack {
-                            TextField("Weight", value: $vm.right, formatter: NumberFormatter())
-                            
-                            VStack {
-                                Button("+", action: {
-                                    let value = self.vm.right + 1
-                                    self.vm.updateValue(left: false, with: value)
-                                }).padding()
-                                
-                                Button("-", action: {
-                                    let value = self.vm.right - 1
-                                    self.vm.updateValue(left: false, with: value)
-                                }).padding()
-                            }
-                        }.padding()
+                        CustomTextLabel(text: "Left", fontType: .heading)
                     }
+                    
+                    TextField("Weight", value: self.$vm.left, formatter: NumberFormatter())
+                        .font(.custom(Font.oswaldHeavy, size: 60))
+                        .multilineTextAlignment(.center)
+                    
+                    HStack(alignment: .center, spacing: 64, content: {
+                        CustomTextButton(action: {
+                            let value = self.vm.left - 1
+                            self.vm.updateValue(left: true, with: value)
+                        }, label: "-")
+
+                        CustomTextButton(action: {
+                            let value = self.vm.left + 1
+                            self.vm.updateValue(left: true, with: value)
+                        }, label: "+")
+                    }).padding([.leading, .trailing, .bottom], 16)
+                    
+                    if vm.exercise.trainTogether {
+                        
+                        Spacer()
+                        
+                        CustomTextLabel(text: "Right", fontType: .heading)
+                        
+                        TextField("Weight", value: $vm.right, formatter: NumberFormatter())
+                            .font(.custom(Font.oswaldHeavy, size: 60))
+                            .multilineTextAlignment(.center)
+                        
+                        HStack(alignment: .center, spacing: 64, content: {
+                            CustomTextButton(action: {
+                                let value = self.vm.right - 1
+                                self.vm.updateValue(left: false, with: value)
+                            }, label: "-")
+
+                            CustomTextButton(action: {
+                                let value = self.vm.right + 1
+                                self.vm.updateValue(left: false, with: value)
+                            }, label: "+")
+                        }).padding([.leading, .trailing, .bottom], 16)
+                    }
+                    
+                    Spacer()
                 }
                 
                 Spacer()
                 
                 if !self.vm.exercise.log.isEmpty {
-                    Button("Same as last time", action: {
+                    CustomTextButton(action: {
                         self.vm.updateLog(withSameValues: true)
                         self.showSheet.toggle()
-                    }).padding()
+                    }, label: "Same as last time", isClear: true)
+                    .padding([.leading, .trailing], 8)
                 }
                 
                 
-                Button("Save", action: {
+                CustomTextButton(action: {
                     self.vm.updateLog(withSameValues: false)
                     self.showSheet.toggle()
-                })
+                }, label: "Save")
+                .padding()
             }
             .padding()
-            .navigationBarTitle(Text("Update log"), displayMode: .inline)
+            .navigationBarTitle(Text("Update Weight"), displayMode: .inline)
         }
     }
 }

@@ -16,7 +16,8 @@ struct ExerciseCategoryItem: View {
                     selectedItem = trainingCategory
                 }
             }, label: {
-                Text("\(trainingCategory.toString())")
+                CustomTextLabel(text: trainingCategory.toString(), fontType: .normal)
+//                Text("\(trainingCategory.toString())")
             })
             
             Spacer()
