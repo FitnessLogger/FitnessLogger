@@ -3,8 +3,8 @@ import SwiftUI
 
 struct SignInView: View {
     
-    @State var email: String = ""
-    @State var password: String = ""
+    @State var email: String = "J@t.dk"
+    @State var password: String = "hejmeddig"
     @State var error = false
     @ObservedObject var global = ControllerRegister.global
     @EnvironmentObject var session: SessionStore
