@@ -9,7 +9,7 @@ class BarChartViewModel {
     }
     
     var showChartsSeperately : Bool {
-        return !exercise.trainTogether
+        return exercise.trainTogether
     }
     
     

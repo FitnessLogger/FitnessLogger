@@ -11,24 +11,42 @@ struct ProgramDetailView: View {
     var body: some View {
         VStack {
             List(self.vm.trainingProgram.exercises) { exercise in
-                Button("", action: {
-                    self.vm.exercise = exercise
-                    self.vm.showSheet.toggle()
-                })
-                ExerciseDetailItem(exercise: exercise)
+                
+                if vm.isHistory {
+                    let vm = BarChartViewModel(exercice: exercise)
+                    NavigationLink(destination: BarChartView(viewModel: vm)) {
+                        ExerciseDetailItem(exercise: exercise)
+                    }
+                }
+                else {
+                    Button("", action: {
+                        self.vm.exercise = exercise
+                        if !vm.isHistory {
+                            self.vm.showSheet.toggle()
+                        }
+                    })
+                    ExerciseDetailItem(exercise: exercise)
+                }
+               
+                
             }.sheet(isPresented: self.$vm.showSheet) {
                 let vm = UpdateExerciseLogViewModel(with: self.vm.exercise!, for: self.vm.trainingProgram)
                 UpdateExerciseLogView(with: vm, show: self.$vm.showSheet)
             }
         }
         .navigationBarTitle(Text(self.vm.trainingProgram.name))
-        .navigationBarItems(trailing: Button(action: {
-            self.vm.showProgramSheet.toggle()
-        }) {
-            Text("Edit").bold()
-        }.sheet(isPresented: self.$vm.showProgramSheet) {
-            let viewmodel = AddTrainingProgramViewModel(trainingProgram: self.vm.trainingProgram)
-            AddTrainingProgramView(viewmodel: viewmodel, show: self.$vm.showProgramSheet, editMode: true)
+        .navigationBarItems(trailing:
+            HStack {
+            if !vm.isHistory {
+                Button(action: {
+                    self.vm.showProgramSheet.toggle()
+                }) {
+                    Text("Edit").bold()
+                }.sheet(isPresented: self.$vm.showProgramSheet) {
+                    let viewmodel = AddTrainingProgramViewModel(trainingProgram: self.vm.trainingProgram)
+                    AddTrainingProgramView(viewmodel: viewmodel, show: self.$vm.showProgramSheet, editMode: true)
+                }
+            }
         })
     }
 }

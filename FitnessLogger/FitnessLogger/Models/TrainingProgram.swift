@@ -2,12 +2,7 @@ import Foundation
 import SwiftUI
 
 class TrainingProgram: ObservableObject, Identifiable, Codable {
-    enum CodingKeys: String, CodingKey {
-        case id
-        case name
-        case exercises
-    }
-    
+
     var id: String
     var name: String
     @Published var exercises: [Exercise]
@@ -35,24 +30,14 @@ class TrainingProgram: ObservableObject, Identifiable, Codable {
     }
     
     init(name: String, exercises: [Exercise]) {
-        self.id = UUID().description
+        self.id = "\(Date().millisecondsSince1970)"
         self.name = name
         self.exercises = exercises
     }
     
-    func toDict() -> [String : Any] {
-        var dict: [String : Any] = [:]
-        
-        dict["id"] = self.id
-        dict["name"] = self.name
-        
-//        var localExercices: [[String : Any]] = []
-//        for exercise in exercises {
-//            localExercices.append(exercise.toDict())
-//        }
-//        
-//        dict["exercises"] = localExercices
-        
-        return dict
+    enum CodingKeys: String, CodingKey {
+        case id
+        case name
+        case exercises
     }
 }

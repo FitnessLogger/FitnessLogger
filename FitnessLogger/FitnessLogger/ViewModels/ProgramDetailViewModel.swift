@@ -5,8 +5,10 @@ class ProgramDetailViewModel: ObservableObject {
     @Published var exercise: Exercise?
     @Published var showSheet: Bool = false
     @Published var showProgramSheet: Bool = false
+    let isHistory : Bool
     
-    init(trainingProgram: TrainingProgram) {
+    init(trainingProgram: TrainingProgram, isHistory : Bool = false) {
         self.trainingProgram = trainingProgram
+        self.isHistory = isHistory
     }
 }

@@ -35,11 +35,6 @@ struct AddExerciseView: View {
                 }, label: "Save")
             }.padding()
             .navigationBarTitle(Text("Add Exercise"), displayMode: .inline)
-            .navigationBarItems(trailing: Button(action: {
-                self.showAddExercise.toggle()
-            }) {
-                Text("Done").bold()
-            })
         }
     }
 }

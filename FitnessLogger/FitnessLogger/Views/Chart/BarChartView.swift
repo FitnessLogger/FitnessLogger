@@ -32,8 +32,8 @@ struct BarChartView: View {
     
     var body: some View {
         VStack(alignment: .leading) {
-            Spacer()
             
+            Spacer()
             if viewModel.showChartsSeperately {
                 CustomTextLabel(text: "Left", fontType: .heading)
             }
@@ -62,7 +62,7 @@ struct BarChartView: View {
                 Spacer()
             }
             
-        }
+        }.navigationBarTitle(self.viewModel.exercise.name)
     }
     
 }

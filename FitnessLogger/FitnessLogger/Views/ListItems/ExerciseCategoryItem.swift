@@ -17,7 +17,6 @@ struct ExerciseCategoryItem: View {
                 }
             }, label: {
                 CustomTextLabel(text: trainingCategory.toString(), fontType: .normal)
-//                Text("\(trainingCategory.toString())")
             })
             
             Spacer()

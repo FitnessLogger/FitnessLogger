@@ -27,7 +27,7 @@ struct MainView: View {
 
 
                         NavigationView {
-                            TrainingProgramView(tp: tp).navigationBarTitle(Text("Program History"))
+                            TrainingProgramView(tp: tp, isHistory: true).navigationBarTitle(Text("Program History"))
                         }.tabItem {
                             Image(systemName: "2.circle")
                             Text("History")
