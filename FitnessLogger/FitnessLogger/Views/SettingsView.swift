@@ -14,7 +14,7 @@ struct SettingsView: View {
             Spacer()
             
             CustomTextButton(action: {
-                session.signOut()
+                _ = session.signOut()
             }, label: "Sign Out", isClear: true).padding()
             
         }.navigationBarTitle("Settings")

@@ -21,11 +21,11 @@ class AddTrainingProgramViewModel: ObservableObject {
         self.trainingPrograms = program
     }
     
-    func saveTrainingProgram(completion: @escaping (Bool) -> Void) {
+    func saveTrainingProgram() {
         currentTrainingProgram.name = self.name
         self.trainingPrograms?.append(trainingProgram: currentTrainingProgram)
         saveToFirestore(trainingProgram: currentTrainingProgram) { success in
-            completion(success)
+            // gem lokalt hvis fejl...
         }
     }
     

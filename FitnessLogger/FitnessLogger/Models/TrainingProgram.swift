@@ -3,8 +3,6 @@ import SwiftUI
 
 class TrainingProgram: ObservableObject, Identifiable, Codable, Equatable {
 
-    
-
     var id: String
     var name: String
     @Published var exercises: [Exercise]
@@ -16,6 +14,7 @@ class TrainingProgram: ObservableObject, Identifiable, Codable, Equatable {
         name = try values.decode(String.self, forKey: .name)
         do {
             exercises = try values.decode([Exercise].self, forKey: .exercises)
+            exercises = exercises.sorted(by: { $0.id < $1.id })
         }
         catch {
             exercises = [Exercise]()
@@ -34,7 +33,7 @@ class TrainingProgram: ObservableObject, Identifiable, Codable, Equatable {
     init(name: String, exercises: [Exercise]) {
         self.id = "\(Date().millisecondsSince1970)"
         self.name = name
-        self.exercises = exercises
+        self.exercises = exercises.sorted(by: { $0.id < $1.id })
     }
     
     static func == (lhs: TrainingProgram, rhs: TrainingProgram) -> Bool {

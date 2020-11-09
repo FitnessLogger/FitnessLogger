@@ -44,22 +44,9 @@ struct AddTrainingProgramView: View {
             }.padding()
             .navigationBarTitle(Text(editMode ? "Edit program" : "Add program"), displayMode: .inline)
             .navigationBarItems(
-                leading:
-                    UploadingView(state: self.uploadingState)
-                ,
                 trailing: Button(action: {
-                    self.uploadingState = .uploading
-                    self.vm.saveTrainingProgram { success in
-                        if success {
-                            self.uploadingState = .success
-                            Utility.delay(delayInSeconds: 1) {
-                                self.showingAddProgramSheet.toggle()
-                            }
-                        }
-                        else {
-                            self.uploadingState = .failure
-                        }
-                     }
+                    self.vm.saveTrainingProgram()
+                    self.showingAddProgramSheet.toggle()
             }) {
                 Text("Save").bold()
             })

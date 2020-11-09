@@ -42,7 +42,7 @@ class Exercise: Identifiable, ObservableObject, Codable {
     }
     
     init(name: String, category: TrainingCategory, trainTogether: Bool, log: [Log]) {
-        self.id = UUID().description
+        self.id = "\(Date().millisecondsSince1970)"
         self.name = name
         self.category = category
         self.trainTogether = trainTogether

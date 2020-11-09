@@ -40,6 +40,7 @@ struct SignInView: View {
                 TextField("Email", text: $email)
                     .font(.custom(Font.oswaldHeavy, size: 20))
                     .multilineTextAlignment(.center)
+                    .padding()
                 SecureField("Password", text: $password)
                     .font(.custom(Font.oswaldHeavy, size: 20))
                     .multilineTextAlignment(.center)
@@ -47,6 +48,7 @@ struct SignInView: View {
                 CustomTextButton(action: {
                     signIn()
                 }, label: "Sign In")
+                .padding()
                 
                 Spacer()
                 

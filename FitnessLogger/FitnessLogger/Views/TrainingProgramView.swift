@@ -1,4 +1,5 @@
 import Foundation
+import Firebase
 import SwiftUI
 
 struct TrainingProgramView: View {
@@ -65,15 +66,16 @@ struct TrainingProgramView: View {
         )
     }
     
-//    private func delete(program : TrainingProgram) {
-//        let index = self.tp.items.firstIndex(of: program)
-//
-//        if let programIndex = index {
-//            self.tp.items.remove(at: programIndex)
-//        }
-//    }
-    
     private func delete(with indexSet: IndexSet) {
-        indexSet.forEach { self.tp.items.remove(at: $0) }
+        
+        if let indexToDelete = indexSet.first {
+            
+            // delete in firebase
+            self.programService.deleteProgram(for: self.global.userId, with: self.tp.items[indexToDelete].id) { success in
+                // for future development
+            }
+            
+            self.tp.items.remove(at: indexToDelete)
+        }
     }
 }

@@ -10,25 +10,25 @@ struct ProgramDetailView: View {
     
     var body: some View {
         VStack {
-            List(self.vm.trainingProgram.exercises) { exercise in
-                
-                if vm.isHistory {
-                    let vm = BarChartViewModel(exercice: exercise)
-                    NavigationLink(destination: BarChartView(viewModel: vm)) {
-                        ExerciseDetailItem(exercise: exercise)
+            List {
+                ForEach(self.vm.trainingProgram.exercises) { exercise in
+                    if vm.isHistory {
+                        let vm = BarChartViewModel(exercice: exercise)
+                        NavigationLink(destination: BarChartView(viewModel: vm)) {
+                            ExerciseDetailItem(exercise: exercise)
+                        }
+                    }
+                    else {
+                        Button {
+                            self.vm.exercise = exercise
+                            if !vm.isHistory {
+                                self.vm.showSheet.toggle()
+                            }
+                        } label: {
+                            ExerciseDetailItem(exercise: exercise)
+                        }
                     }
                 }
-                else {
-                    Button("", action: {
-                        self.vm.exercise = exercise
-                        if !vm.isHistory {
-                            self.vm.showSheet.toggle()
-                        }
-                    })
-                    ExerciseDetailItem(exercise: exercise)
-                }
-               
-                
             }.sheet(isPresented: self.$vm.showSheet) {
                 let vm = UpdateExerciseLogViewModel(with: self.vm.exercise!, for: self.vm.trainingProgram)
                 UpdateExerciseLogView(with: vm, show: self.$vm.showSheet)
