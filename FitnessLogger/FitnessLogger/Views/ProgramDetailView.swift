@@ -17,7 +17,7 @@ struct ProgramDetailView: View {
                 })
                 ExerciseDetailItem(exercise: exercise)
             }.sheet(isPresented: self.$vm.showSheet) {
-                let vm = UpdateExerciseLogViewModel(with: self.vm.exercise!)
+                let vm = UpdateExerciseLogViewModel(with: self.vm.exercise!, for: self.vm.trainingProgram)
                 UpdateExerciseLogView(with: vm, show: self.$vm.showSheet)
             }
         }
