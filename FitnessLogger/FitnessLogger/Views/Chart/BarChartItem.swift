@@ -18,7 +18,7 @@ struct BarChartItem: View {
                     .opacity(0.1)
                     .frame(width: width, height: (fullHeight ? height : height/2))
                 VStack {
-                    Text("\(value)")
+                    CustomTextLabel(text: "\(value)")
                     Capsule()
                         .fill(barColor)
                         .frame(width: width, height: CGFloat(value) / CGFloat(maxValue) * (fullHeight ? height : height/2))
@@ -26,8 +26,7 @@ struct BarChartItem: View {
                 }
                
             }
-            
-            Text("\(valueName)")
+            CustomTextLabel(text: valueName)
         }
     }
 }
