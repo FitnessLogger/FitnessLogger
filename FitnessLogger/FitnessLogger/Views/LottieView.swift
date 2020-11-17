@@ -2,6 +2,7 @@ import Foundation
 import SwiftUI
 import Lottie
 
+// Lånt og modificeret fra: https://www.hackingwithswift.com/forums/swiftui/how-to-switch-animations-with-lottie-in-swiftui/1704
 struct LottieView : UIViewRepresentable {
 
     let animationView = AnimationView()
