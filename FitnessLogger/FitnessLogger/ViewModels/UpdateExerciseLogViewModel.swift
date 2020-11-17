@@ -39,6 +39,8 @@ class UpdateExerciseLogViewModel: ObservableObject {
     }
     
     func updateLog(withSameValues: Bool) {
+        guard let currentUserId = global.userId else { return }
+        
         if withSameValues {
             let item = self.exercise.log.last
             
@@ -52,7 +54,7 @@ class UpdateExerciseLogViewModel: ObservableObject {
         }
         
         // Save to firebase
-        let ref = Database.database().reference().child(Constants.trainingPrograms).child(self.global.userId)
+        let ref = Database.database().reference().child(Constants.trainingPrograms).child(currentUserId)
         let data = try! FirebaseEncoder().encode(self.trainingProgram)
         ref.child(trainingProgram.id).setValue(data)
     }

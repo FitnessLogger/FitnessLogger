@@ -3,23 +3,26 @@ import SwiftUI
 struct MainView: View {
     @EnvironmentObject var session: SessionStore
     @ObservedObject var global = ControllerRegister.global
-    var tp: Program = Program()
 
     init() {
         
     }
     
     func getUser() {
-        session.listen(program: tp)
+        self.global.updateUserId(userId: UserDefaults.standard.string(forKey: "userId"))
+        
+        if self.global.userId != nil {
+            self.session.fetchDataFromFirebase()
+        }
     }
 
     var body: some View {
         ZStack {
             Group {
-                if (session.session != nil) {
+                if (global.userId != nil) {
                     TabView {
                         NavigationView {
-                            TrainingProgramView(tp: tp).navigationBarTitle(Text("My Programs"))
+                            TrainingProgramView().navigationBarTitle(Text("My Programs"))
                         }.tabItem {
                             Image(systemName: "1.circle")
                             Text("Programs")
@@ -27,7 +30,7 @@ struct MainView: View {
 
 
                         NavigationView {
-                            TrainingProgramView(tp: tp, isHistory: true).navigationBarTitle(Text("Program History"))
+                            TrainingProgramView(isHistory: true).navigationBarTitle(Text("Program History"))
                         }.tabItem {
                             Image(systemName: "2.circle")
                             Text("History")
@@ -45,7 +48,7 @@ struct MainView: View {
                     SignInView()
                 }
             }.onAppear(perform: {
-                getUser()
+                self.getUser()
             })
             
             if global.isLoading {

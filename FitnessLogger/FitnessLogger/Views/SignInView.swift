@@ -19,6 +19,8 @@ struct SignInView: View {
             if error != nil {
                 self.error = true
             } else {
+                self.global.updateUserId(userId: result?.user.uid)
+                self.session.fetchDataFromFirebase()
                 self.email = ""
                 self.password = ""
             }

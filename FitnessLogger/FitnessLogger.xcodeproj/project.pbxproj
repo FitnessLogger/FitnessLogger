@@ -55,7 +55,6 @@
 		ED4B714A25233DF500F8A297 /* AddExerciseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4B714625233DF500F8A297 /* AddExerciseView.swift */; };
 		ED4B714B25233DF500F8A297 /* AddTrainingProgramView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4B714725233DF500F8A297 /* AddTrainingProgramView.swift */; };
 		ED4B715125233E1700F8A297 /* TrainingProgramItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4B715025233E1700F8A297 /* TrainingProgramItem.swift */; };
-		EDA6BD5E253F2BAF00E78697 /* Program.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA6BD5D253F2BAF00E78697 /* Program.swift */; };
 		EDC585A725233A0900B1B9D1 /* Oswald-Heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EDC585A525233A0900B1B9D1 /* Oswald-Heavy.ttf */; };
 		EDC585A825233A0900B1B9D1 /* Oswald-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EDC585A625233A0900B1B9D1 /* Oswald-Medium.ttf */; };
 		EDD7FA50255052000048795E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EDD7FA4F255052000048795E /* GoogleService-Info.plist */; };
@@ -154,7 +153,6 @@
 		ED4B714625233DF500F8A297 /* AddExerciseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddExerciseView.swift; sourceTree = "<group>"; };
 		ED4B714725233DF500F8A297 /* AddTrainingProgramView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTrainingProgramView.swift; sourceTree = "<group>"; };
 		ED4B715025233E1700F8A297 /* TrainingProgramItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrainingProgramItem.swift; sourceTree = "<group>"; };
-		EDA6BD5D253F2BAF00E78697 /* Program.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Program.swift; sourceTree = "<group>"; };
 		EDC585A525233A0900B1B9D1 /* Oswald-Heavy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oswald-Heavy.ttf"; sourceTree = "<group>"; };
 		EDC585A625233A0900B1B9D1 /* Oswald-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oswald-Medium.ttf"; sourceTree = "<group>"; };
 		EDD7FA4F255052000048795E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -393,7 +391,6 @@
 				ED4B713225233D4200F8A297 /* Exercise.swift */,
 				ED4B713325233D4200F8A297 /* TrainingProgram.swift */,
 				EDFCE62B25261B0A00FD9486 /* Log.swift */,
-				EDA6BD5D253F2BAF00E78697 /* Program.swift */,
 				EDD7FA7225514CBE0048795E /* User.swift */,
 				04BA2D8D2551519C00BF12DB /* Global.swift */,
 				0434F2C3255174B400A8AA9A /* ChartModel.swift */,
@@ -756,7 +753,6 @@
 				043DBF6B25231611002F0394 /* SceneDelegate.swift in Sources */,
 				0434F2C92551762300A8AA9A /* BarChartViewModel.swift in Sources */,
 				ED4B714B25233DF500F8A297 /* AddTrainingProgramView.swift in Sources */,
-				EDA6BD5E253F2BAF00E78697 /* Program.swift in Sources */,
 				EDDA75B425386BFE0042D9CF /* ProgramDetailViewModel.swift in Sources */,
 				04B164BB25514CF900903615 /* BlurView.swift in Sources */,
 				04CA2C602552FEBC00DC48B7 /* SettingsView.swift in Sources */,

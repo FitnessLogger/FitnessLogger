@@ -5,15 +5,18 @@ class SessionStore : ObservableObject {
     @Published var session: User?
     @ObservedObject var global = ControllerRegister.global
     var handle: AuthStateDidChangeListenerHandle?
+    @Published var programs = [TrainingProgram]()
+    var programService = ControllerRegister.programService
     
-    func listen(program : Program) {
+    func listen() {
         handle = Auth.auth().addStateDidChangeListener { (auth, user) in
+            print("State changed")
             if let user = user {
                 self.session = User(uid: user.uid, displayName: user.displayName, email: user.email)
                 self.global.userId = user.uid
                 
-                if program.items.isEmpty {
-                    program.fetchDataFromFirebase()
+                if self.programs.isEmpty {
+                    self.fetchDataFromFirebase()
                 }
             } else {
                 self.session = nil
@@ -33,9 +36,31 @@ class SessionStore : ObservableObject {
         do {
             try Auth.auth().signOut()
             self.session = nil
+            self.global.updateUserId(userId: nil)
+            programs.removeAll()
             return true
         } catch {
+            print(error)
             return false
+        }
+    }
+    
+    func fetchDataFromFirebase() {
+        guard let currentUserId = global.userId else { return }
+        self.programService.getPrograms(for: currentUserId) { trainingPrograms in
+            
+            print("Downloading data")
+            
+            if let programs = trainingPrograms {
+                for program in programs {
+                    if !self.programs.contains(where: { $0.id == program.id }) {
+                        DispatchQueue.main.async {
+                            self.programs.append(program)
+                        }
+                    }
+                }
+            }
+            self.global.updateLoadingState(isLoading: false)
         }
     }
     

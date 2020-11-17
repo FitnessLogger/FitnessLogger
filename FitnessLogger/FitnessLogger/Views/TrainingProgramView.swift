@@ -4,15 +4,13 @@ import SwiftUI
 
 struct TrainingProgramView: View {
     @EnvironmentObject var session: SessionStore
-    @ObservedObject var tp: Program
     @ObservedObject var global = ControllerRegister.global
     @State var showingAddProgramSheet = false
     let isHistory : Bool
     
     let programService = ControllerRegister.programService
     
-    init(tp: Program, isHistory : Bool = false) {
-        self.tp = tp
+    init(isHistory : Bool = false) {
         self.isHistory = isHistory
     }
     
@@ -21,7 +19,7 @@ struct TrainingProgramView: View {
     
     var body: some View {
         VStack {
-            if tp.items.isEmpty {
+            if session.programs.isEmpty {
                 
                 Spacer()
                 
@@ -36,13 +34,13 @@ struct TrainingProgramView: View {
                     }, label: "Add training program")
                     .padding()
                     .sheet(isPresented: $showingAddProgramSheet) {
-                        let viewmodel = AddTrainingProgramViewModel(program: self.tp)
+                        let viewmodel = AddTrainingProgramViewModel(program: self.session.programs)
                         AddTrainingProgramView(viewmodel: viewmodel, show: self.$showingAddProgramSheet)
                     }
                 }
             } else {
                 List {
-                    ForEach(self.tp.items) { item in
+                    ForEach(session.programs) { item in
                         let vm = ProgramDetailViewModel(trainingProgram: item, isHistory: isHistory)
                         NavigationLink(destination: ProgramDetailView(viewmodel: vm)) {
                             TrainingProgramItem(trainingProgram: item)
@@ -58,7 +56,7 @@ struct TrainingProgramView: View {
                     }) {
                         Image(systemName: "plus").imageScale(.large)
                     }.sheet(isPresented: $showingAddProgramSheet) {
-                        let viewmodel = AddTrainingProgramViewModel(program: self.tp)
+                        let viewmodel = AddTrainingProgramViewModel(program: self.session.programs)
                         AddTrainingProgramView(viewmodel: viewmodel, show: self.$showingAddProgramSheet)
                     }
                 }
@@ -70,12 +68,14 @@ struct TrainingProgramView: View {
         
         if let indexToDelete = indexSet.first {
             
+            guard let currentUserId = global.userId else { return }
+            
             // delete in firebase
-            self.programService.deleteProgram(for: self.global.userId, with: self.tp.items[indexToDelete].id) { success in
+            self.programService.deleteProgram(for: currentUserId, with: self.session.programs[indexToDelete].id) { success in
                 // for future development
             }
             
-            self.tp.items.remove(at: indexToDelete)
+            self.session.programs.remove(at: indexToDelete)
         }
     }
 }

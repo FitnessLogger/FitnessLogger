@@ -14,17 +14,12 @@ struct SettingsView: View {
             Spacer()
             
             CustomTextButton(action: {
-                _ = session.signOut()
+                let result = session.signOut()
+                print("Log out result:", result)
             }, label: "Sign Out", isClear: true).padding()
             
         }.navigationBarTitle("Settings")
         
         
-    }
-}
-
-struct SignOutView_Previews: PreviewProvider {
-    static var previews: some View {
-        SettingsView()
     }
 }

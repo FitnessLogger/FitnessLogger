@@ -19,6 +19,8 @@ struct SignUpView: View {
             if error != nil {
                 self.error = true
             } else {
+                UserDefaults.standard.set(result?.user.uid, forKey: "userId")
+                self.session.fetchDataFromFirebase()
                 self.email = ""
                 self.password = ""
             }

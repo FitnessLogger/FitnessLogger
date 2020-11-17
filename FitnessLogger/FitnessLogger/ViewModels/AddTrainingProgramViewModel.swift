@@ -4,7 +4,7 @@ import Firebase
 import CodableFirebase
 
 class AddTrainingProgramViewModel: ObservableObject {
-    @Published var trainingPrograms: Program?
+    @Published var trainingPrograms: [TrainingProgram]?
     @Published var currentTrainingProgram: TrainingProgram
     @Published var name: String
     @Published var showAddExercise: Bool = false
@@ -15,7 +15,7 @@ class AddTrainingProgramViewModel: ObservableObject {
         self.name = trainingProgram.name
     }
     
-    init(program: Program) {
+    init(program: [TrainingProgram]) {
         self.currentTrainingProgram = TrainingProgram(name: "", exercises: [])
         self.name = ""
         self.trainingPrograms = program
@@ -23,14 +23,15 @@ class AddTrainingProgramViewModel: ObservableObject {
     
     func saveTrainingProgram() {
         currentTrainingProgram.name = self.name
-        self.trainingPrograms?.append(trainingProgram: currentTrainingProgram)
+        self.trainingPrograms?.append(currentTrainingProgram)
         saveToFirestore(trainingProgram: currentTrainingProgram) { success in
             // gem lokalt hvis fejl...
         }
     }
     
     private func saveToFirestore(trainingProgram: TrainingProgram, completion: @escaping (Bool) -> Void) {
-        let ref = Database.database().reference().child(Constants.trainingPrograms).child(self.global.userId)
+        guard let currentUserId = global.userId else { completion(false); return }
+        let ref = Database.database().reference().child(Constants.trainingPrograms).child(currentUserId)
         let data = try! FirebaseEncoder().encode(trainingProgram)
         ref.child(trainingProgram.id).setValue(data) { (error, ref) in
             completion(error == nil)

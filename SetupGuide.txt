@@ -1,0 +1,9 @@
+Installering gennem xcode:
+1 : Installér CocoaPods på din mac
+2 : Åben terminal
+3 : Navigere til projekt mappen, hvor pod filen er lokaliseret
+4 : Kør komandoen "pod install"
+5 : Åben FitnessLogger.xcworkspace filen (Den hvide projekt mappe)
+6 : Kør projektet på den ønskede iPhone
+
+Github link : https://github.com/FitnessLogger/FitnessLogger/graphs/contributors
