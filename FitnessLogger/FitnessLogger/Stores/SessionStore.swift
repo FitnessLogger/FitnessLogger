@@ -5,7 +5,7 @@ class SessionStore : ObservableObject {
     @Published var session: User?
     @ObservedObject var global = ControllerRegister.global
     var handle: AuthStateDidChangeListenerHandle?
-    @Published var programs = [TrainingProgram]()
+    @Published var programs = Programs()
     var programService = ControllerRegister.programService
     
     func listen() {
@@ -15,7 +15,7 @@ class SessionStore : ObservableObject {
                 self.session = User(uid: user.uid, displayName: user.displayName, email: user.email)
                 self.global.userId = user.uid
                 
-                if self.programs.isEmpty {
+                if self.programs.trainingPrograms.isEmpty {
                     self.fetchDataFromFirebase()
                 }
             } else {
@@ -37,7 +37,7 @@ class SessionStore : ObservableObject {
             try Auth.auth().signOut()
             self.session = nil
             self.global.updateUserId(userId: nil)
-            programs.removeAll()
+            programs.trainingPrograms.removeAll()
             return true
         } catch {
             print(error)
@@ -53,9 +53,9 @@ class SessionStore : ObservableObject {
             
             if let programs = trainingPrograms {
                 for program in programs {
-                    if !self.programs.contains(where: { $0.id == program.id }) {
+                    if !self.programs.trainingPrograms.contains(where: { $0.id == program.id }) {
                         DispatchQueue.main.async {
-                            self.programs.append(program)
+                            self.programs.trainingPrograms.append(program)
                         }
                     }
                 }

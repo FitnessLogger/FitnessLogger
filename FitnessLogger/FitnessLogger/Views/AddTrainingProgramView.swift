@@ -5,6 +5,7 @@ struct AddTrainingProgramView: View {
     @ObservedObject private var vm: AddTrainingProgramViewModel
     @Binding var showingAddProgramSheet: Bool
     @State var uploadingState : UploadingState = .passiv
+    @EnvironmentObject var session: SessionStore
     let editMode : Bool
     
     init(viewmodel: AddTrainingProgramViewModel, show: Binding<Bool>, editMode : Bool = false) {
@@ -45,7 +46,7 @@ struct AddTrainingProgramView: View {
             .navigationBarTitle(Text(editMode ? "Edit program" : "Add program"), displayMode: .inline)
             .navigationBarItems(
                 trailing: Button(action: {
-                    self.vm.saveTrainingProgram()
+                    session.programs = self.vm.saveTrainingProgram()
                     self.showingAddProgramSheet.toggle()
             }) {
                 Text("Save").bold()

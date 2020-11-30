@@ -2,6 +2,7 @@ import Foundation
 import SwiftUI
 
 struct ProgramDetailView: View {
+    @EnvironmentObject var session: SessionStore
     @ObservedObject private var vm: ProgramDetailViewModel
     
     init(viewmodel: ProgramDetailViewModel) {
@@ -43,7 +44,7 @@ struct ProgramDetailView: View {
                 }) {
                     Text("Edit").bold()
                 }.sheet(isPresented: self.$vm.showProgramSheet) {
-                    let viewmodel = AddTrainingProgramViewModel(trainingProgram: self.vm.trainingProgram)
+                    let viewmodel = AddTrainingProgramViewModel(programs: self.session.programs, trainingProgram: self.vm.trainingProgram)
                     AddTrainingProgramView(viewmodel: viewmodel, show: self.$vm.showProgramSheet, editMode: true)
                 }
             }

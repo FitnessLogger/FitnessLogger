@@ -19,7 +19,7 @@ struct TrainingProgramView: View {
     
     var body: some View {
         VStack {
-            if session.programs.isEmpty {
+            if session.programs.trainingPrograms.isEmpty {
                 
                 Spacer()
                 
@@ -34,13 +34,13 @@ struct TrainingProgramView: View {
                     }, label: "Add training program")
                     .padding()
                     .sheet(isPresented: $showingAddProgramSheet) {
-                        let viewmodel = AddTrainingProgramViewModel(program: self.session.programs)
+                        let viewmodel = AddTrainingProgramViewModel(programs: self.session.programs)
                         AddTrainingProgramView(viewmodel: viewmodel, show: self.$showingAddProgramSheet)
                     }
                 }
             } else {
                 List {
-                    ForEach(session.programs) { item in
+                    ForEach(session.programs.trainingPrograms) { item in
                         let vm = ProgramDetailViewModel(trainingProgram: item, isHistory: isHistory)
                         NavigationLink(destination: ProgramDetailView(viewmodel: vm)) {
                             TrainingProgramItem(trainingProgram: item)
@@ -56,7 +56,7 @@ struct TrainingProgramView: View {
                     }) {
                         Image(systemName: "plus").imageScale(.large)
                     }.sheet(isPresented: $showingAddProgramSheet) {
-                        let viewmodel = AddTrainingProgramViewModel(program: self.session.programs)
+                        let viewmodel = AddTrainingProgramViewModel(programs: self.session.programs)
                         AddTrainingProgramView(viewmodel: viewmodel, show: self.$showingAddProgramSheet)
                     }
                 }
@@ -71,11 +71,11 @@ struct TrainingProgramView: View {
             guard let currentUserId = global.userId else { return }
             
             // delete in firebase
-            self.programService.deleteProgram(for: currentUserId, with: self.session.programs[indexToDelete].id) { success in
+            self.programService.deleteProgram(for: currentUserId, with: self.session.programs.trainingPrograms[indexToDelete].id) { success in
                 // for future development
             }
             
-            self.session.programs.remove(at: indexToDelete)
+            self.session.programs.trainingPrograms.remove(at: indexToDelete)
         }
     }
 }
