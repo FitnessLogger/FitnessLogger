@@ -25,6 +25,7 @@
 		04590606252323150064209C /* CustomTextLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04590605252323150064209C /* CustomTextLabel.swift */; };
 		04590608252323E50064209C /* FontType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04590607252323E50064209C /* FontType.swift */; };
 		0459060A252324580064209C /* FontSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04590609252324580064209C /* FontSize.swift */; };
+		046443FC2576548E00A41FB1 /* FitnessLoggerMonkeyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046443FB2576548E00A41FB1 /* FitnessLoggerMonkeyUITests.swift */; };
 		049512CC25596014006A5E02 /* CustomNavigationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049512CB25596014006A5E02 /* CustomNavigationButton.swift */; };
 		049512D12559614F006A5E02 /* NavigationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049512D02559614F006A5E02 /* NavigationButton.swift */; };
 		04B164A825514C5B00903615 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B164A725514C5B00903615 /* LottieView.swift */; };
@@ -118,6 +119,7 @@
 		04590605252323150064209C /* CustomTextLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextLabel.swift; sourceTree = "<group>"; };
 		04590607252323E50064209C /* FontType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontType.swift; sourceTree = "<group>"; };
 		04590609252324580064209C /* FontSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontSize.swift; sourceTree = "<group>"; };
+		046443FB2576548E00A41FB1 /* FitnessLoggerMonkeyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitnessLoggerMonkeyUITests.swift; sourceTree = "<group>"; };
 		049512CB25596014006A5E02 /* CustomNavigationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationButton.swift; sourceTree = "<group>"; };
 		049512D02559614F006A5E02 /* NavigationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationButton.swift; sourceTree = "<group>"; };
 		04B164A725514C5B00903615 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
@@ -279,6 +281,7 @@
 			isa = PBXGroup;
 			children = (
 				043DBF8A25231612002F0394 /* FitnessLoggerUITests.swift */,
+				046443FB2576548E00A41FB1 /* FitnessLoggerMonkeyUITests.swift */,
 				043DBF8C25231612002F0394 /* Info.plist */,
 			);
 			path = FitnessLoggerUITests;
@@ -497,6 +500,7 @@
 				043DBF7725231612002F0394 /* Sources */,
 				043DBF7825231612002F0394 /* Frameworks */,
 				043DBF7925231612002F0394 /* Resources */,
+				88C20677FBCED1D232758C68 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -630,6 +634,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		88C20677FBCED1D232758C68 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FitnessLoggerTests/Pods-FitnessLoggerTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FitnessLoggerTests/Pods-FitnessLoggerTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FitnessLoggerTests/Pods-FitnessLoggerTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A9AF081FAD14729F9971E17F /* [CP] Check Pods Manifest.lock */ = {
@@ -782,6 +803,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				046443FC2576548E00A41FB1 /* FitnessLoggerMonkeyUITests.swift in Sources */,
 				043DBF8B25231612002F0394 /* FitnessLoggerUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -938,6 +960,7 @@
 				DEVELOPMENT_TEAM = F699A64Z86;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = FitnessLogger/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -959,6 +982,7 @@
 				DEVELOPMENT_TEAM = F699A64Z86;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = FitnessLogger/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

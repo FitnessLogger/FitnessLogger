@@ -88,6 +88,8 @@ PODS:
   - nanopb/decode (2.30906.0)
   - nanopb/encode (2.30906.0)
   - PromisesObjC (1.2.11)
+  - SwiftMonkey (2.1.1)
+  - SwiftMonkeyPaws (2.1.1)
 
 DEPENDENCIES:
   - CodableFirebase
@@ -95,6 +97,8 @@ DEPENDENCIES:
   - Firebase/Auth
   - Firebase/Crashlytics
   - Firebase/Database
+  - SwiftMonkey (from `https://github.com/zalando/SwiftMonkey.git`)
+  - SwiftMonkeyPaws (~> 2.1.0)
 
 SPEC REPOS:
   trunk:
@@ -114,6 +118,16 @@ SPEC REPOS:
     - leveldb-library
     - nanopb
     - PromisesObjC
+    - SwiftMonkeyPaws
+
+EXTERNAL SOURCES:
+  SwiftMonkey:
+    :git: https://github.com/zalando/SwiftMonkey.git
+
+CHECKOUT OPTIONS:
+  SwiftMonkey:
+    :commit: be8bc822c7e95e1447c7d960449450f9137de446
+    :git: https://github.com/zalando/SwiftMonkey.git
 
 SPEC CHECKSUMS:
   CodableFirebase: 0bf201991eeec35eb9fcd987d271ea463cf34a80
@@ -132,7 +146,9 @@ SPEC CHECKSUMS:
   leveldb-library: 55d93ee664b4007aac644a782d11da33fba316f7
   nanopb: 1bf24dd71191072e120b83dd02d08f3da0d65e53
   PromisesObjC: 8c196f5a328c2cba3e74624585467a557dcb482f
+  SwiftMonkey: 2930564fb57ea6bcffaa60353e59ca61f3aa1192
+  SwiftMonkeyPaws: 655524bb402df5ac2be836f9f604aca1068fbde6
 
-PODFILE CHECKSUM: 4ba2b2a05dfcaefa863b9c890d4b5e4f4f2ad1dc
+PODFILE CHECKSUM: c1c9cc744810f6bcfe849ba2645c9e19eda96536
 
 COCOAPODS: 1.10.0

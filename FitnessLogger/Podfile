@@ -11,16 +11,19 @@ target 'FitnessLogger' do
   pod 'Firebase/Crashlytics'
   pod 'Firebase/Database'
   pod 'CodableFirebase'
+  pod 'SwiftMonkeyPaws', '~> 2.1.0'
 
   # Pods for FitnessLogger
 
   target 'FitnessLoggerTests' do
     inherit! :search_paths
     # Pods for testing
+    pod 'SwiftMonkey', :git => 'https://github.com/zalando/SwiftMonkey.git'
   end
 
   target 'FitnessLoggerUITests' do
     # Pods for testing
+    pod 'SwiftMonkey', :git => 'https://github.com/zalando/SwiftMonkey.git'
   end
 
 end

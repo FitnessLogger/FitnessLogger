@@ -1,17 +1,8 @@
-//
-//  FitnessLoggerUITests.swift
-//  FitnessLoggerUITests
-//
-//  Created by Marcus August Christiansen on 29/09/2020.
-//  Copyright © 2020 FitnessLogger. All rights reserved.
-//
-
 import XCTest
 
 class FitnessLoggerUITests: XCTestCase {
     
     var app = XCUIApplication()
-    
     var isLaunched = false
     
     override func setUpWithError() throws {
@@ -20,15 +11,9 @@ class FitnessLoggerUITests: XCTestCase {
         // In UI tests it is usually best to stop immediately when a failure occurs.
         continueAfterFailure = false
         
-//        app.launch()
-        
-//        print(isLaunched)
         if !isLaunched {
-
-            print("Launching....")
             app.launch()
             isLaunched.toggle()
-            print(isLaunched)
         }
 
         // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
@@ -113,7 +98,6 @@ class FitnessLoggerUITests: XCTestCase {
 
         XCTAssertTrue(app.buttons["Sign In"].isHittable)
     }
-
 }
 
 // Lån fra : https://stackoverflow.com/questions/32821880/ui-test-deleting-text-in-text-field
