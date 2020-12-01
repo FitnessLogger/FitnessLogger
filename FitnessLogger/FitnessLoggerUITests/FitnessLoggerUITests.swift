@@ -76,7 +76,7 @@ class FitnessLoggerUITests: XCTestCase {
         sleep(1)
         app.navigationBars["Add program"].buttons["Save"].tap()
 
-//        XCTAssertTrue(app.tables.containing(.cell, identifier:"Something\n1 exercise").count == 1)
+        XCTAssertTrue(app.tables.containing(.cell, identifier:"Something\n1 exercise").count == 1)
     }
     
     func test3_AddLog() throws {
