@@ -1,6 +1,5 @@
 import SwiftUI
 import Firebase
-import CodableFirebase
 
 class SessionStore : ObservableObject {
     @Published var session: User?
