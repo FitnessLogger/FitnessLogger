@@ -10,14 +10,13 @@ struct SignInView: View {
     @EnvironmentObject var session: SessionStore
     
     func signIn() {
-        self.global.isLoading = true
+        self.global.updateLoadingState(isLoading: true)
         error = false
         
         session.signIn(email: email, password: password) { (result, error) in
-            self.global.isLoading = false
-            
             if error != nil {
                 self.error = true
+                self.global.updateLoadingState(isLoading: false)
             } else {
                 self.global.updateUserId(userId: result?.user.uid)
                 self.session.fetchDataFromFirebase()

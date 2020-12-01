@@ -55,7 +55,12 @@ class UpdateExerciseLogViewModel: ObservableObject {
         
         // Save to firebase
         let ref = Database.database().reference().child(Constants.trainingPrograms).child(currentUserId)
-        let data = try! FirebaseEncoder().encode(self.trainingProgram)
-        ref.child(trainingProgram.id).setValue(data)
+        do {
+            let data = try FirebaseEncoder().encode(self.trainingProgram)
+            ref.child(trainingProgram.id).setValue(data)
+        } catch {
+            NSLog(error.localizedDescription)
+        }
+        
     }
 }

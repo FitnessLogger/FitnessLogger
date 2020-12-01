@@ -11,7 +11,7 @@ struct MainView: View {
     func getUser() {
         self.global.updateUserId(userId: UserDefaults.standard.string(forKey: "userId"))
         
-        if self.global.userId != nil {
+        if self.global.userId != nil && self.session.programs.isEmpty {
             self.session.fetchDataFromFirebase()
         }
     }

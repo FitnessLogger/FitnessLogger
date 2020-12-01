@@ -7,7 +7,6 @@ struct TrainingProgramView: View {
     @ObservedObject var global = ControllerRegister.global
     @State var showingAddProgramSheet = false
     let isHistory : Bool
-    
     let programService = ControllerRegister.programService
     
     init(isHistory : Bool = false) {
@@ -34,14 +33,14 @@ struct TrainingProgramView: View {
                     }, label: "Add training program")
                     .padding()
                     .sheet(isPresented: $showingAddProgramSheet) {
-                        let viewmodel = AddTrainingProgramViewModel(program: self.session.programs)
+                        let viewmodel = AddTrainingProgramViewModel(programs: self.session.programs)
                         AddTrainingProgramView(viewmodel: viewmodel, show: self.$showingAddProgramSheet)
                     }
                 }
             } else {
                 List {
                     ForEach(session.programs) { item in
-                        let vm = ProgramDetailViewModel(trainingProgram: item, isHistory: isHistory)
+                        let vm = ProgramDetailViewModel(trainingProgram: item, programs: session.programs, isHistory: isHistory)
                         NavigationLink(destination: ProgramDetailView(viewmodel: vm)) {
                             TrainingProgramItem(trainingProgram: item)
                         }
@@ -56,7 +55,7 @@ struct TrainingProgramView: View {
                     }) {
                         Image(systemName: "plus").imageScale(.large)
                     }.sheet(isPresented: $showingAddProgramSheet) {
-                        let viewmodel = AddTrainingProgramViewModel(program: self.session.programs)
+                        let viewmodel = AddTrainingProgramViewModel(programs: self.session.programs)
                         AddTrainingProgramView(viewmodel: viewmodel, show: self.$showingAddProgramSheet)
                     }
                 }
@@ -67,14 +66,14 @@ struct TrainingProgramView: View {
     private func delete(with indexSet: IndexSet) {
         
         if let indexToDelete = indexSet.first {
-            
+
             guard let currentUserId = global.userId else { return }
-            
+
             // delete in firebase
             self.programService.deleteProgram(for: currentUserId, with: self.session.programs[indexToDelete].id) { success in
                 // for future development
             }
-            
+
             self.session.programs.remove(at: indexToDelete)
         }
     }

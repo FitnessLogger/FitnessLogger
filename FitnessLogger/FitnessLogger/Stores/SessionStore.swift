@@ -7,6 +7,7 @@ class SessionStore : ObservableObject {
     var handle: AuthStateDidChangeListenerHandle?
     @Published var programs = [TrainingProgram]()
     var programService = ControllerRegister.programService
+    var isDownloading = false
     
     func listen() {
         handle = Auth.auth().addStateDidChangeListener { (auth, user) in
@@ -15,9 +16,6 @@ class SessionStore : ObservableObject {
                 self.session = User(uid: user.uid, displayName: user.displayName, email: user.email)
                 self.global.userId = user.uid
                 
-                if self.programs.isEmpty {
-                    self.fetchDataFromFirebase()
-                }
             } else {
                 self.session = nil
             }
@@ -46,7 +44,12 @@ class SessionStore : ObservableObject {
     }
     
     func fetchDataFromFirebase() {
+        if isDownloading {
+            return
+        }
+        
         guard let currentUserId = global.userId else { return }
+        isDownloading.toggle()
         self.programService.getPrograms(for: currentUserId) { trainingPrograms in
             
             print("Downloading data")
@@ -61,6 +64,7 @@ class SessionStore : ObservableObject {
                 }
             }
             self.global.updateLoadingState(isLoading: false)
+            self.isDownloading = false
         }
     }
     
@@ -68,5 +72,9 @@ class SessionStore : ObservableObject {
         if let handle = handle {
             Auth.auth().removeStateDidChangeListener(handle)
         }
+    }
+    
+    func updateTrainingProgramList(trainingProgram: TrainingProgram) {
+        self.programs.append(trainingProgram)
     }
 }
