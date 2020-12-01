@@ -22,6 +22,16 @@ class FitnessLoggerTests: XCTestCase {
     func testExample() throws {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+        
+        let sessionStore = SessionStore()
+        
+        let tp = TrainingProgram(name: "Unit Test", exercises: [Exercise]())
+        
+        XCTAssert(sessionStore.programs.count == 0)
+        
+        sessionStore.updateTrainingProgramList(trainingProgram: tp)
+        
+        XCTAssert(sessionStore.programs.count == 1)
     }
 
     func testPerformanceExample() throws {
