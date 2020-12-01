@@ -26,6 +26,9 @@ class FitnessLoggerMonkeyUITests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
     
+    /**
+        !CAN ONLY BE RUN ON TARGET 13.6!
+     */
     func testMonkey() throws {
         
         let monkey = Monkey(frame: app.frame)
