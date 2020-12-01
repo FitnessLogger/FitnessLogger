@@ -4,34 +4,31 @@ import Firebase
 import CodableFirebase
 
 class AddTrainingProgramViewModel: ObservableObject {
-    @Published var trainingPrograms: Programs?
+    @Published var trainingPrograms: [TrainingProgram]
     @Published var currentTrainingProgram: TrainingProgram
     @Published var name: String
     @Published var showAddExercise: Bool = false
     @ObservedObject var global = ControllerRegister.global
     
-    init(programs: Programs, trainingProgram: TrainingProgram) {
+    init(trainingProgram: TrainingProgram, programs: [TrainingProgram]) {
         self.trainingPrograms = programs
         self.currentTrainingProgram = trainingProgram
         self.name = trainingProgram.name
     }
     
-    init(programs: Programs) {
+    init(programs: [TrainingProgram]) {
         self.currentTrainingProgram = TrainingProgram(name: "", exercises: [])
         self.name = ""
         self.trainingPrograms = programs
     }
     
-    func saveTrainingProgram() -> Programs {
+    func saveTrainingProgram() -> TrainingProgram {
         currentTrainingProgram.name = self.name
-        print("before: Array size", self.trainingPrograms?.trainingPrograms.count)
-        self.trainingPrograms?.trainingPrograms.append(currentTrainingProgram)
-        print("after: Array size", self.trainingPrograms?.trainingPrograms.count)
-        saveToFirestore(trainingProgram: currentTrainingProgram) { success in
-            // gem lokalt hvis fejl...
+        saveToFirestore(trainingProgram: currentTrainingProgram) { (success) in
+            // do something
         }
         
-        return self.trainingPrograms!
+        return currentTrainingProgram
     }
     
     private func saveToFirestore(trainingProgram: TrainingProgram, completion: @escaping (Bool) -> Void) {

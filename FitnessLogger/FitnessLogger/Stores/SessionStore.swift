@@ -1,12 +1,14 @@
 import SwiftUI
 import Firebase
+import CodableFirebase
 
 class SessionStore : ObservableObject {
     @Published var session: User?
     @ObservedObject var global = ControllerRegister.global
     var handle: AuthStateDidChangeListenerHandle?
-    @Published var programs = Programs()
+    @Published var programs = [TrainingProgram]()
     var programService = ControllerRegister.programService
+    var isDownloading = false
     
     func listen() {
         handle = Auth.auth().addStateDidChangeListener { (auth, user) in
@@ -15,9 +17,6 @@ class SessionStore : ObservableObject {
                 self.session = User(uid: user.uid, displayName: user.displayName, email: user.email)
                 self.global.userId = user.uid
                 
-                if self.programs.trainingPrograms.isEmpty {
-                    self.fetchDataFromFirebase()
-                }
             } else {
                 self.session = nil
             }
@@ -37,7 +36,7 @@ class SessionStore : ObservableObject {
             try Auth.auth().signOut()
             self.session = nil
             self.global.updateUserId(userId: nil)
-            programs.trainingPrograms.removeAll()
+            programs.removeAll()
             return true
         } catch {
             print(error)
@@ -46,21 +45,27 @@ class SessionStore : ObservableObject {
     }
     
     func fetchDataFromFirebase() {
+        if isDownloading {
+            return
+        }
+        
         guard let currentUserId = global.userId else { return }
+        isDownloading.toggle()
         self.programService.getPrograms(for: currentUserId) { trainingPrograms in
             
             print("Downloading data")
             
             if let programs = trainingPrograms {
                 for program in programs {
-                    if !self.programs.trainingPrograms.contains(where: { $0.id == program.id }) {
+                    if !self.programs.contains(where: { $0.id == program.id }) {
                         DispatchQueue.main.async {
-                            self.programs.trainingPrograms.append(program)
+                            self.programs.append(program)
                         }
                     }
                 }
             }
             self.global.updateLoadingState(isLoading: false)
+            self.isDownloading = false
         }
     }
     
@@ -68,5 +73,9 @@ class SessionStore : ObservableObject {
         if let handle = handle {
             Auth.auth().removeStateDidChangeListener(handle)
         }
+    }
+    
+    func updateTrainingProgramList(trainingProgram: TrainingProgram) {
+        self.programs.append(trainingProgram)
     }
 }

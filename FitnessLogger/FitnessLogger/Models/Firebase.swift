@@ -7,8 +7,6 @@ struct Firebase {
     private let global = ControllerRegister.global
     
     func getData<T: Codable>(returnType: T.Type, url: String, completion: @escaping (T?) -> Void) {
-
-        self.global.updateLoadingState(isLoading: true)
         
         guard let url = URL(string: "\(baseUrl)\(url).json") else { completion(nil); return }
 
@@ -31,8 +29,6 @@ struct Firebase {
     }
 
     func getListOfData<T: Codable>(returnType: T.Type, url: String, completion: @escaping ([T]?) -> Void) {
-        
-        self.global.updateLoadingState(isLoading: true)
         
         guard let url = URL(string: "\(baseUrl)\(url).json") else { completion(nil); return }
         
