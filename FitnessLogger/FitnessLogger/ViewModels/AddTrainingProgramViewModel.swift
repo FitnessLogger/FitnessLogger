@@ -34,9 +34,14 @@ class AddTrainingProgramViewModel: ObservableObject {
     private func saveToFirestore(trainingProgram: TrainingProgram, completion: @escaping (Bool) -> Void) {
         guard let currentUserId = global.userId else { completion(false); return }
         let ref = Database.database().reference().child(Constants.trainingPrograms).child(currentUserId)
-        let data = try! FirebaseEncoder().encode(trainingProgram)
-        ref.child(trainingProgram.id).setValue(data) { (error, ref) in
-            completion(error == nil)
+        do {
+            let data = try FirebaseEncoder().encode(trainingProgram)
+            ref.child(trainingProgram.id).setValue(data) { (error, ref) in
+                completion(error == nil)
+            }
+        }
+        catch {
+            completion(false)
         }
     }
 }

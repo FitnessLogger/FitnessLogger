@@ -2,7 +2,6 @@ import Foundation
 import SwiftUI
 
 struct ProgramDetailView: View {
-//    @EnvironmentObject var session: SessionStore
     @ObservedObject private var vm: ProgramDetailViewModel
     
     init(viewmodel: ProgramDetailViewModel) {
