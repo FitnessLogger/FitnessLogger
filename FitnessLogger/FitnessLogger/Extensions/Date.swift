@@ -1,5 +1,7 @@
 import Foundation
 
+// Inspiration hentet fra: https://stackoverflow.com/questions/40134323/date-to-milliseconds-and-back-to-date-in-swift
+
 extension Date {
     var millisecondsSince1970 : Int64 {
         return Int64((self.timeIntervalSince1970 * 1000.0).rounded())

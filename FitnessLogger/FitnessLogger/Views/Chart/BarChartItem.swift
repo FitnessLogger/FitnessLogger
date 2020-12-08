@@ -1,5 +1,7 @@
 import SwiftUI
 
+// Inspiration fra: https://medium.com/better-programming/how-to-draw-beautifully-animated-graphs-in-swiftui-part-1-8688c38a2db0
+
 struct BarChartItem: View {
     var value: Int
     var maxValue: Int

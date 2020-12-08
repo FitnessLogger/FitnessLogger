@@ -1,5 +1,7 @@
 import SwiftUI
 
+// Inspiration fra: https://stackoverflow.com/questions/64014476/create-background-blurred-roundedrectangle-in-swiftui
+
 struct BlurView : UIViewRepresentable {
     var style: UIBlurEffect.Style = .systemMaterial
     

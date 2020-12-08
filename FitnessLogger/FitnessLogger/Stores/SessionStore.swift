@@ -1,6 +1,8 @@
 import SwiftUI
 import Firebase
 
+// Inspiration hentet fra: https://benmcmahen.com/authentication-with-swiftui-and-firebase/
+
 class SessionStore : ObservableObject {
     @Published var session: User?
     @ObservedObject var global = ControllerRegister.global
