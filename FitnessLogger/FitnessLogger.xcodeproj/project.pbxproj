@@ -57,8 +57,8 @@
 		ED4B714A25233DF500F8A297 /* AddExerciseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4B714625233DF500F8A297 /* AddExerciseView.swift */; };
 		ED4B714B25233DF500F8A297 /* AddTrainingProgramView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4B714725233DF500F8A297 /* AddTrainingProgramView.swift */; };
 		ED4B715125233E1700F8A297 /* TrainingProgramItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4B715025233E1700F8A297 /* TrainingProgramItem.swift */; };
-		EDC585A725233A0900B1B9D1 /* Oswald-Heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EDC585A525233A0900B1B9D1 /* Oswald-Heavy.ttf */; };
-		EDC585A825233A0900B1B9D1 /* Oswald-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EDC585A625233A0900B1B9D1 /* Oswald-Medium.ttf */; };
+		ED7A37FA257FA139004BFAF3 /* Oswald-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ED7A37F8257FA139004BFAF3 /* Oswald-Medium.ttf */; };
+		ED7A37FB257FA139004BFAF3 /* Oswald-Heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ED7A37F9257FA139004BFAF3 /* Oswald-Heavy.ttf */; };
 		EDD7FA50255052000048795E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EDD7FA4F255052000048795E /* GoogleService-Info.plist */; };
 		EDD7FA6E25514BF10048795E /* SessionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD7FA6D25514BF10048795E /* SessionStore.swift */; };
 		EDD7FA7325514CBE0048795E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD7FA7225514CBE0048795E /* User.swift */; };
@@ -157,8 +157,8 @@
 		ED4B714625233DF500F8A297 /* AddExerciseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddExerciseView.swift; sourceTree = "<group>"; };
 		ED4B714725233DF500F8A297 /* AddTrainingProgramView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTrainingProgramView.swift; sourceTree = "<group>"; };
 		ED4B715025233E1700F8A297 /* TrainingProgramItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrainingProgramItem.swift; sourceTree = "<group>"; };
-		EDC585A525233A0900B1B9D1 /* Oswald-Heavy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oswald-Heavy.ttf"; sourceTree = "<group>"; };
-		EDC585A625233A0900B1B9D1 /* Oswald-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oswald-Medium.ttf"; sourceTree = "<group>"; };
+		ED7A37F8257FA139004BFAF3 /* Oswald-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oswald-Medium.ttf"; sourceTree = "<group>"; };
+		ED7A37F9257FA139004BFAF3 /* Oswald-Heavy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oswald-Heavy.ttf"; sourceTree = "<group>"; };
 		EDD7FA4F255052000048795E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EDD7FA6D25514BF10048795E /* SessionStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionStore.swift; sourceTree = "<group>"; };
 		EDD7FA7225514CBE0048795E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -301,22 +301,12 @@
 		045905F825231BEF0064209C /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				045905FB25231C1D0064209C /* Oswald */,
+				ED7A37F7257FA0F4004BFAF3 /* Oswald */,
 				0459060025231FDB0064209C /* Font.swift */,
 				04590607252323E50064209C /* FontType.swift */,
 				04590609252324580064209C /* FontSize.swift */,
 			);
 			path = Fonts;
-			sourceTree = "<group>";
-		};
-		045905FB25231C1D0064209C /* Oswald */ = {
-			isa = PBXGroup;
-			children = (
-				EDC585A525233A0900B1B9D1 /* Oswald-Heavy.ttf */,
-				EDC585A625233A0900B1B9D1 /* Oswald-Medium.ttf */,
-			);
-			name = Oswald;
-			path = "../../../../../FootballPracticeFeasibilityAppleWatch/KickDetection/KickDetection WatchKit Extension/Resources/Fonts/Oswald";
 			sourceTree = "<group>";
 		};
 		0459060B252329E00064209C /* CustomViews */ = {
@@ -451,6 +441,15 @@
 			path = ListItems;
 			sourceTree = "<group>";
 		};
+		ED7A37F7257FA0F4004BFAF3 /* Oswald */ = {
+			isa = PBXGroup;
+			children = (
+				ED7A37F9257FA139004BFAF3 /* Oswald-Heavy.ttf */,
+				ED7A37F8257FA139004BFAF3 /* Oswald-Medium.ttf */,
+			);
+			path = Oswald;
+			sourceTree = "<group>";
+		};
 		EDD7FA6C25514BB80048795E /* Stores */ = {
 			isa = PBXGroup;
 			children = (
@@ -583,15 +582,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EDC585A725233A0900B1B9D1 /* Oswald-Heavy.ttf in Resources */,
 				EDD7FA50255052000048795E /* GoogleService-Info.plist in Resources */,
 				043DBF7525231612002F0394 /* LaunchScreen.storyboard in Resources */,
-				EDC585A825233A0900B1B9D1 /* Oswald-Medium.ttf in Resources */,
 				04CA2C91255407CA00DC48B7 /* check-mark.json in Resources */,
 				04CA2C7F2553E92700DC48B7 /* uploading.json in Resources */,
 				04BA2D8625514F5E00BF12DB /* treadmill.json in Resources */,
+				ED7A37FB257FA139004BFAF3 /* Oswald-Heavy.ttf in Resources */,
 				04CA2C772553E3A500DC48B7 /* failure.json in Resources */,
 				043DBF7225231612002F0394 /* Preview Assets.xcassets in Resources */,
+				ED7A37FA257FA139004BFAF3 /* Oswald-Medium.ttf in Resources */,
 				04BA2DBC2551589D00BF12DB /* success.json in Resources */,
 				043DBF6F25231612002F0394 /* Assets.xcassets in Resources */,
 			);
