@@ -52,6 +52,7 @@ class SessionStore : ObservableObject {
         
         guard let currentUserId = global.userId else { return }
         isDownloading.toggle()
+        self.global.updateLoadingState(isLoading: true)
         self.programService.getPrograms(for: currentUserId) { trainingPrograms in
             
             print("Downloading data")
